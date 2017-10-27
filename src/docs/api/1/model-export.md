@@ -32,7 +32,7 @@ Supported texture maps per file format:
 | ---      | ---         | ---          | ---        | ---       |
 | `3ds`    | no          | no           | no         | no        |
 | `blend`  | yes         | yes          | yes        | yes       |
-| `dae`    | no          | no           | no         | no        |
+| `dae`    | yes         | yes          | yes        | no        |
 | `dxf`    | no          | no           | no         | no        |
 | `fbx`    | yes         | yes          | yes        | yes       |
 | `obj`    | yes         | yes          | map_Bump channel | no        |
