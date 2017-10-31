@@ -67,7 +67,7 @@ The resulting storageId url of the transformed model gets logged upon task compl
 
 ## collisionObject
 
-This API calculates a collision mesh, that is a more accurate shape for most models then a primitive mesh such as a collision box, sphere or capsule.
+This API calculates more accurate collision mesh for complex models then a commonly used primitive such as a collision box, sphere or capsule.
 A collision mesh is a low-polygonal, convex model used for physics calculation. It is invisible and extremely low-detail compared to the visible model. Compared to using the high-polygonal model, the physics performance is improved greatly in the simulation and the lack of precision will not be noticed.
 
 | Parameter | Type | Required? | Description |
@@ -89,4 +89,4 @@ The resulting storageId url of the transformed model gets logged upon task compl
     .then(io3d.utils.processing.whenDone)
     .then(io3d.storage.getUrlFromStorageId)
     .then(console.log)
-``
+```
