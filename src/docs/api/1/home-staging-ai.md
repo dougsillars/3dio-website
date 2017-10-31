@@ -4,6 +4,11 @@ The Home Staging AI allows you to automatically create furnishings for interior 
 
 Home Staging API calls require an API key. You can find out how to get one [here](https://3d.io/docs/api/1/get-started-browser.html#using-publishable-api-keys).
 
+![Home Staging AI](../../../img/docs/homestaging-3dio.gif)
+
+[Live Example](https://app.3d.io/j0IYPW)
+
+
 ## Get Furnishings
 
 `io3d.staging.getFurnishings(sceneStructure, options)` computes furnishing proposals for residential spaces based on the architecture defined in the `sceneStructure`. Walls, doors, windows, kitchens and fixed closets and the space required to walk around them are taken into account to place furniture items.
