@@ -32,7 +32,10 @@ The following snippet sends a bake API request with storageID from a scene. The 
 ```javascript
   var storageId = '535e624259ee6b0200000484/bake/2017-10-20_15-22-15_lKCBcz/lighting.gz.data3d.buffer'
 
-  io3d.light.bakeLoRes(storageId, { sunDirection: [ -0.73, -0.3, 0.6 ] })
+  io3d.light
+    .bakeLoRes(storageId, {
+      sunDirection: [ -0.73, -0.3, 0.6 ]
+    })
     .then(io3d.utils.processing.whenDone)
     .then(io3d.storage.getUrlFromStorageId)
     .then(console.log)
@@ -69,10 +72,12 @@ The following snippet sends a bake API request with storageID from a scene. The 
 ```javascript
   var storageId = '535e624259ee6b0200000484/bake/2017-10-20_15-22-15_lKCBcz/lighting.gz.data3d.buffer'
   
-  io3d.light.bakeHiRes(storageId,
-                       { sunDirection: [ -0.73, -0.3, 0.6 ],
-                         lightMapCount: 1,
-                         samples: 1000 })
+  io3d.light
+    .bakeHiRes(storageId, { 
+      sunDirection: [ -0.73, -0.3, 0.6 ],
+      lightMapCount: 1,
+      samples: 1000 
+    })
     .then(io3d.utils.processing.whenDone)
     .then(io3d.storage.getUrlFromStorageId)
     .then(console.log)

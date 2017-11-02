@@ -54,7 +54,10 @@ The resulting url of the converted zip archive gets logged upon task completion 
 ```javascript
   var storageId = '/535e624259ee6b0200000484/bake/2017-03-03_10-15-49_M7nYrh/regular/lighting.gz.data3d.buffer'
   
-  io3d.storage.exportBlend( storageId, { filename: 'material-test' })
+  io3d.storage
+    .exportBlend( storageId, {
+      filename: 'material-test'
+    })
     .then(io3d.utils.processing.whenDone)
     .then(io3d.storage.getUrlFromStorageId)
     .then(console.log)
@@ -77,7 +80,11 @@ The resulting url of the projected 2d floorplan gets logged upon task completion
 ```javascript
   var storageId = '535e624259ee6b0200000484/processing/2017-10-17_07-26-42_eqgq9n/lighting.gz.data3d.buffer'
   
-  io3d.storage.exportDxf(storageId, { filename: 'my-floorplan', projection: 'top' })
+  io3d.storage
+    .exportDxf(storageId, {
+      filename: 'my-floorplan',
+      projection: 'top'
+    })
     .then(io3d.utils.processing.whenDone)
     .then(io3d.storage.getUrlFromStorageId)
     .then(console.log)
