@@ -1,6 +1,6 @@
 # Configs
 
-## Set
+## Set Configs
 
 Using the `io3d.config` method you can specify one or multiple configuration parameters:
 
@@ -10,7 +10,7 @@ io3d.config({
 })
 ```
 
-## Read
+## Read Configs
 
 The config parameters are exposed as properties of `io3d.config`. You can read them directly:
 
@@ -18,14 +18,14 @@ The config parameters are exposed as properties of `io3d.config`. You can read t
 console.log(io3d.config.publishableApiKey)
 ```
 
-## Parameters
+## Config Parameters
 
 | Parameter | Type | Dafault | Description |
 | --- | --- | --- | --- |
 | `publishableApiKey` | String | 'null' | Your publishable API key |
 | `secretApiKey` | String | 'null' | Your secret API key |
 
-## Advanced Parameters
+## Advanced Config Parameters
 
 This configs paramters are mainly for debugging and local development. 
 
