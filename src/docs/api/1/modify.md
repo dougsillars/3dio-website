@@ -16,7 +16,7 @@ Applies a low poly, paper crafted style to the model.
 
 | Parameter | Type | Required? | Description |
 | --- | --- | --- | --- |
-| `storageId` | String | Yes | The storageId of the model to modify. Format: `data3d.buffer`, `obj` |
+| `storageId` | String | Yes | The storageId of the model. Valid formats: `data3d.buffer`, `obj` |
 
 [coming soon] modify settings
 
@@ -43,7 +43,7 @@ This API fixes inconsistencies in supposedly continuous surfaces. This is useful
 
 | Parameter | Type | Required? | Description |
 | --- | --- | --- | --- |
-| `storageId` | String | Yes | The storageId of the model to modify. Format: `data3d.buffer`, `obj` |
+| `storageId` | String | Yes | The storageId of the model. Valid formats: `data3d.buffer`, `obj` |
 
 [coming soon] consolidateFaceSides settings
 
