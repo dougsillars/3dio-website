@@ -1,7 +1,7 @@
 <script id="partner-info" type="application/x-yaml">
 PUBLISh: true
 NAME: SmartView Media
-TAGLINE: Turning Physical Property into Digital Property with SmartView Media
+TAGLINE: Turning Physical Property into Digital Property
 DESCRIPTION: Offering low cost Off The Plan 3D Virtual Tours for developers & real estate agents to use in their online marketing campaigns.
 LOGO: https://storage.3d.io/535e624259ee6b0200000484/2017-11-08_09-25-09_nBCVOM/SVM_Beside_au_black.png
 LOGO_SIZE: 90 #percent
