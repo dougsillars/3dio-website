@@ -14,7 +14,7 @@ CITY: Melbourne
 LOCATION_LAT_LNG: -37.8, 145.0
 SAMPLES:
     - TITLE: Single Story Home
-      DESCRIPTION: Single story Off The Plan property tour for to help builders show new customers what their dream home will look like without the need for expensive renders or boring 2D floor plans.
+      DESCRIPTION: Single story Off The Plan property tour to help builders show new customers what their dream home will look like without the need for expensive renders or boring 2D floor plans.
       IMAGE: https://storage.3d.io/535e624259ee6b0200000484/2017-11-08_09-29-33_99j8sX/Sample_1.jpg
       URL: https://smartviewmedia.com.au/offtheplan3d/
       PRICE: 350
