@@ -195,7 +195,7 @@ SceneStructure Json
 
 A-Frame Component
 ```html
-<a-entity io3d-door="l: 0.9; h: 2; w: 0.05; hinge: "right"; side: "back"; v: 3; doorType: "singleSwing";" position="0 0 0"></a-entity>
+<a-entity io3d-door="l: 0.9; h: 2; w: 0.05; hinge: right; side: back; v: 3; doorType: singleSwing;" position="0 0 0"></a-entity>
 ```
 
 
