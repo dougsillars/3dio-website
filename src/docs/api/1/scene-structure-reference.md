@@ -1,6 +1,6 @@
 # Scene Structure Reference
 
-Index
+Types
 * [`box`](#box)
 * [`camera-bookmark`](#camera-bookmark)
 * [`closet`](#closet)
@@ -28,23 +28,33 @@ Index
 
 | param | description | type | default | optional | min | values |
 |---|---|---|---|---|---|---|
-| `w` |  | `number` | `1` | `false` | `0.01` | `` |
-| `h` |  | `number` | `1` | `false` | `0.01` | `` |
-| `l` |  | `number` | `1` | `false` | `0.01` | `` |
+| `type` |  | `string` | `"box"` | `false` |  | `box` |
+| `x` |  | `number` | `0` | `false` |  |  |
+| `y` |  | `number` | `0` | `false` |  |  |
+| `z` |  | `number` | `0` | `false` |  |  |
+| `ry` | rotation around y axis | `number` | `0` | `false` |  |  |
+| `l` | length | `number` | `1` | `false` | `0.01` |  |
+| `h` | height | `number` | `1` | `false` | `0.01` |  |
+| `w` | width | `number` | `1` | `false` | `0.01` |  |
+| `id` | unique identifier | `string` |  | `true` |  |  |
+| `materials` |  | `object` |  | `true` |  |  |
 
 SceneStructure Json
 ```json
 {
   "type": "box",
-  "w": 1,
+  "x": 0,
+  "y": 0,
+  "z": 0,
+  "ry": 0,
+  "l": 1,
   "h": 1,
-  "l": 1
-}
-```
+  "w": 1
+}```
 
 A-Frame Component
 ```html
-<a-entity io3d-box="w: 1; h: 1; l: 1;"></a-entity>
+<a-entity io3d-box="l: 1; h: 1; w: 1;" position="0 0 0"></a-entity>
 ```
 
 
@@ -52,42 +62,62 @@ A-Frame Component
 
 | param | description | type | default | optional | min | values |
 |---|---|---|---|---|---|---|
-| `distance` |  | `number` | `` | `false` | `` | `` |
+| `type` |  | `string` | `"camera-bookmark"` | `false` |  | `camera-bookmark` |
+| `x` |  | `number` | `0` | `false` |  |  |
+| `y` |  | `number` | `0` | `false` |  |  |
+| `z` |  | `number` | `0` | `false` |  |  |
+| `ry` | rotation around y axis | `number` | `0` | `false` |  |  |
+| `distance` |  | `number` |  | `false` |  |  |
+| `id` | unique identifier | `string` |  | `true` |  |  |
+| `materials` |  | `object` |  | `true` |  |  |
 
 SceneStructure Json
 ```json
 {
   "type": "camera-bookmark",
+  "x": 0,
+  "y": 0,
+  "z": 0,
+  "ry": 0,
   "distance": undefined
-}
-```
+}```
 
 ## closet
 
 | param | description | type | default | optional | min | values |
 |---|---|---|---|---|---|---|
-| `w` |  | `number` | `0.6` | `false` | `0.01` | `` |
-| `h` |  | `number` | `2.4` | `false` | `0.01` | `` |
-| `l` |  | `number` | `1.8` | `false` | `0.01` | `` |
-| `baseboard` |  | `number` | `0.1` | `true` | `0.01` | `` |
-| `doorWidth` |  | `number` | `0.02` | `true` | `0.01` | `` |
-| `handleLength` |  | `number` | `0.02` | `true` | `0.01` | `` |
-| `handleWidth` |  | `number` | `0.02` | `true` | `0.01` | `` |
-| `handleHeight` |  | `number` | `0.3` | `true` | `0.01` | `` |
+| `type` |  | `string` | `"closet"` | `false` |  | `closet` |
+| `x` |  | `number` | `0` | `false` |  |  |
+| `y` |  | `number` | `0` | `false` |  |  |
+| `z` |  | `number` | `0` | `false` |  |  |
+| `ry` | rotation around y axis | `number` | `0` | `false` |  |  |
+| `l` | length | `number` | `1.8` | `false` | `0.01` |  |
+| `h` | height | `number` | `2.4` | `false` | `0.01` |  |
+| `w` | width | `number` | `0.6` | `false` | `0.01` |  |
+| `handleWidth` | thickness of closet door handle | `number` | `0.02` | `true` | `0.01` |  |
+| `handleHeight` | height of closet door handle | `number` | `0.3` | `true` | `0.01` |  |
+| `handleLength` | length of closet door handle | `number` | `0.02` | `true` | `0.01` |  |
+| `doorWidth` | thickness of closet door | `number` | `0.02` | `true` | `0.01` |  |
+| `baseboard` | height of baseboard | `number` | `0.1` | `true` | `0.01` |  |
+| `id` | unique identifier | `string` |  | `true` |  |  |
+| `materials` |  | `object` |  | `true` |  |  |
 
 SceneStructure Json
 ```json
 {
   "type": "closet",
-  "w": 0.6,
+  "x": 0,
+  "y": 0,
+  "z": 0,
+  "ry": 0,
+  "l": 1.8,
   "h": 2.4,
-  "l": 1.8
-}
-```
+  "w": 0.6
+}```
 
 A-Frame Component
 ```html
-<a-entity io3d-closet="w: 0.6; h: 2.4; l: 1.8;"></a-entity>
+<a-entity io3d-closet="l: 1.8; h: 2.4; w: 0.6;" position="0 0 0"></a-entity>
 ```
 
 
@@ -95,57 +125,77 @@ A-Frame Component
 
 | param | description | type | default | optional | min | values |
 |---|---|---|---|---|---|---|
-| `w` |  | `number` | `0.2` | `false` | `0.01` | `` |
-| `h` |  | `number` | `2.4` | `false` | `0.01` | `` |
-| `l` |  | `number` | `1.8` | `false` | `0.01` | `` |
-| `folds` |  | `number` | `14` | `true` | `0.01` | `` |
+| `type` |  | `string` | `"curtain"` | `false` |  | `curtain` |
+| `x` |  | `number` | `0` | `false` |  |  |
+| `y` |  | `number` | `0` | `false` |  |  |
+| `z` |  | `number` | `0` | `false` |  |  |
+| `ry` | rotation around y axis | `number` | `0` | `false` |  |  |
+| `l` | length | `number` | `1.8` | `false` | `0.01` |  |
+| `h` | height | `number` | `2.4` | `false` | `0.01` |  |
+| `w` | thickness | `number` | `0.2` | `false` | `0.01` |  |
+| `folds` | number of folds | `number` | `14` | `true` | `0.01` |  |
+| `id` | unique identifier | `string` |  | `true` |  |  |
+| `materials` |  | `object` |  | `true` |  |  |
 
 SceneStructure Json
 ```json
 {
   "type": "curtain",
-  "w": 0.2,
+  "x": 0,
+  "y": 0,
+  "z": 0,
+  "ry": 0,
+  "l": 1.8,
   "h": 2.4,
-  "l": 1.8
-}
-```
+  "w": 0.2
+}```
 
 ## door
 
 | param | description | type | default | optional | min | values |
 |---|---|---|---|---|---|---|
-| `v` |  | `number` | `3` | `false` | `` | `3` |
-| `w` |  | `number` | `0.05` | `false` | `0.01` | `` |
-| `h` |  | `number` | `2` | `false` | `0.01` | `` |
-| `l` |  | `number` | `0.9` | `false` | `0.01` | `` |
-| `frameLength` |  | `number` | `0.05` | `true` | `0.01` | `` |
-| `frameOffset` |  | `number` | `0` | `true` | `` | `` |
-| `leafWidth` |  | `number` | `0.03` | `true` | `` | `` |
-| `leafOffset` |  | `number` | `0.005` | `true` | `` | `` |
-| `doorType` |  | `string` | `"singleSwing"` | `false` | `` | `singleSwing,doubleSwing,swingFix,swingDoubleFix,doubleSwingDoubleFix,slidingDoor,opening` |
-| `fixLeafRatio` |  | `number` | `0.3` | `true` | `` | `` |
-| `doorAngle` |  | `number` | `92` | `true` | `` | `` |
-| `hinge` |  | `string` | `"right"` | `false` | `` | `right,left` |
-| `side` |  | `string` | `"back"` | `false` | `` | `front,back` |
-| `thresholdHeight` |  | `number` | `0.01` | `true` | `` | `` |
+| `type` |  | `string` | `"door"` | `false` |  | `door` |
+| `x` |  | `number` | `0` | `false` |  |  |
+| `y` |  | `number` | `0` | `false` |  |  |
+| `z` |  | `number` | `0` | `false` |  |  |
+| `ry` | rotation around y axis | `number` | `0` | `false` |  |  |
+| `l` | length | `number` | `0.9` | `false` | `0.01` |  |
+| `h` | height | `number` | `2` | `false` | `0.01` |  |
+| `w` | width | `number` | `0.05` | `false` | `0.01` |  |
+| `doorAngle` | door leaf opening anlge | `number` | `92` | `true` |  |  |
+| `hinge` | door leaf opening direction | `string` | `"right"` | `false` |  | `right,left` |
+| `side` | door leaf opening to the front or back of the wall | `string` | `"back"` | `false` |  | `front,back` |
+| `v` |  | `number` | `3` | `false` |  | `3` |
+| `fixLeafRatio` |  | `number` | `0.3` | `true` |  |  |
+| `thresholdHeight` |  | `number` | `0.01` | `true` |  |  |
+| `frameLength` | thickness of frame | `number` | `0.05` | `true` | `0.01` |  |
+| `frameOffset` | frame thicker than wall | `number` | `0` | `true` |  |  |
+| `leafWidth` | thickness of door leaf | `number` | `0.03` | `true` |  |  |
+| `leafOffset` | z offset of door leaf | `number` | `0.005` | `true` |  |  |
+| `doorType` | defines opening type | `string` | `"singleSwing"` | `false` |  | `singleSwing,doubleSwing,swingFix,swingDoubleFix,doubleSwingDoubleFix,slidingDoor,opening` |
+| `id` | unique identifier | `string` |  | `true` |  |  |
+| `materials` |  | `object` |  | `true` |  |  |
 
 SceneStructure Json
 ```json
 {
   "type": "door",
-  "v": 3,
-  "w": 0.05,
-  "h": 2,
+  "x": 0,
+  "y": 0,
+  "z": 0,
+  "ry": 0,
   "l": 0.9,
-  "doorType": "singleSwing",
+  "h": 2,
+  "w": 0.05,
   "hinge": "right",
-  "side": "back"
-}
-```
+  "side": "back",
+  "v": 3,
+  "doorType": "singleSwing"
+}```
 
 A-Frame Component
 ```html
-<a-entity io3d-door="v: 3; w: 0.05; h: 2; l: 0.9; doorType: "singleSwing"; hinge: "right"; side: "back";"></a-entity>
+<a-entity io3d-door="l: 0.9; h: 2; w: 0.05; hinge: "right"; side: "back"; v: 3; doorType: "singleSwing";" position="0 0 0"></a-entity>
 ```
 
 
@@ -153,27 +203,37 @@ A-Frame Component
 
 | param | description | type | default | optional | min | values |
 |---|---|---|---|---|---|---|
-| `w` | width | `number` | `4` | `false` | `0.01` | `` |
-| `h` | height | `number` | `0.2` | `false` | `0.01` | `` |
-| `l` | length | `number` | `4` | `false` | `0.01` | `` |
-| `hasCeiling` | toggle ceiling | `boolean` | `true` | `false` | `` | `` |
-| `hCeiling` | ceiling height | `number` | `2.4` | `false` | `` | `` |
+| `type` |  | `string` | `"floor"` | `false` |  | `floor` |
+| `x` |  | `number` | `0` | `false` |  |  |
+| `y` |  | `number` | `0` | `false` |  |  |
+| `z` |  | `number` | `0` | `false` |  |  |
+| `ry` | rotation around y axis | `number` | `0` | `false` |  |  |
+| `l` | length | `number` | `4` | `false` | `0.01` |  |
+| `h` | height | `number` | `0.2` | `false` | `0.01` |  |
+| `w` | width | `number` | `4` | `false` | `0.01` |  |
+| `hCeiling` | ceiling height | `number` | `2.4` | `false` |  |  |
+| `hasCeiling` | toggle ceiling | `boolean` | `true` | `false` |  |  |
+| `id` | unique identifier | `string` |  | `true` |  |  |
+| `materials` |  | `object` |  | `true` |  |  |
 
 SceneStructure Json
 ```json
 {
   "type": "floor",
-  "w": 4,
-  "h": 0.2,
+  "x": 0,
+  "y": 0,
+  "z": 0,
+  "ry": 0,
   "l": 4,
-  "hasCeiling": true,
-  "hCeiling": 2.4
-}
-```
+  "h": 0.2,
+  "w": 4,
+  "hCeiling": 2.4,
+  "hasCeiling": true
+}```
 
 A-Frame Component
 ```html
-<a-entity io3d-floor="w: 4; h: 0.2; l: 4; hasCeiling: true; hCeiling: 2.4;"></a-entity>
+<a-entity io3d-floor="l: 4; h: 0.2; w: 4; hCeiling: 2.4; hasCeiling: true;" position="0 0 0"></a-entity>
 ```
 
 
@@ -181,25 +241,43 @@ A-Frame Component
 
 | param | description | type | default | optional | min | values |
 |---|---|---|---|---|---|---|
-| `w` |  | `number` | `` | `false` | `0.01` | `` |
-| `l` |  | `number` | `` | `false` | `0.01` | `` |
-| `file` |  | `string` | `` | `false` | `` | `` |
+| `type` |  | `string` | `"floorplan"` | `false` |  | `floorplan` |
+| `x` |  | `number` | `0` | `false` |  |  |
+| `y` |  | `number` | `0` | `false` |  |  |
+| `z` |  | `number` | `0` | `false` |  |  |
+| `ry` | rotation around y axis | `number` | `0` | `false` |  |  |
+| `l` |  | `number` |  | `false` | `0.01` |  |
+| `w` |  | `number` |  | `false` | `0.01` |  |
+| `file` |  | `string` |  | `false` |  |  |
+| `id` | unique identifier | `string` |  | `true` |  |  |
+| `materials` |  | `object` |  | `true` |  |  |
 
 SceneStructure Json
 ```json
 {
   "type": "floorplan",
-  "w": undefined,
+  "x": 0,
+  "y": 0,
+  "z": 0,
+  "ry": 0,
   "l": undefined,
+  "w": undefined,
   "file": undefined
-}
-```
+}```
 
 ## group
 
 | param | description | type | default | optional | min | values |
 |---|---|---|---|---|---|---|
-| `src` |  | `string` | `` | `true` | `` | `` |
+| `type` |  | `string` | `"group"` | `false` |  | `group` |
+| `x` |  | `number` | `0` | `false` |  |  |
+| `y` |  | `number` | `0` | `false` |  |  |
+| `z` |  | `number` | `0` | `false` |  |  |
+| `ry` | rotation around y axis | `number` | `0` | `false` |  |  |
+| `src` |  | `string` |  | `true` |  |  |
+| `children` |  | `array` | `[]` | `true` |  |  |
+| `id` | unique identifier | `string` |  | `true` |  |  |
+| `materials` |  | `object` |  | `true` |  |  |
 
 Possible children types
 * [`interior`](#interior)
@@ -212,15 +290,26 @@ Possible children types
 SceneStructure Json
 ```json
 {
-  "type": "group"
-}
-```
+  "type": "group",
+  "x": 0,
+  "y": 0,
+  "z": 0,
+  "ry": 0
+}```
 
 ## interior
 
 | param | description | type | default | optional | min | values |
 |---|---|---|---|---|---|---|
-| `src` |  | `string` | `` | `false` | `` | `` |
+| `type` |  | `string` | `"interior"` | `false` |  | `interior` |
+| `x` |  | `number` | `0` | `false` |  |  |
+| `y` |  | `number` | `0` | `false` |  |  |
+| `z` |  | `number` | `0` | `false` |  |  |
+| `ry` | rotation around y axis | `number` | `0` | `false` |  |  |
+| `src` |  | `string` |  | `false` |  |  |
+| `children` |  | `array` | `[]` | `true` |  |  |
+| `id` | unique identifier | `string` |  | `true` |  |  |
+| `materials` |  | `object` |  | `true` |  |  |
 
 Possible children types
 * [`interior`](#interior)
@@ -231,13 +320,16 @@ SceneStructure Json
 ```json
 {
   "type": "interior",
+  "x": 0,
+  "y": 0,
+  "z": 0,
+  "ry": 0,
   "src": undefined
-}
-```
+}```
 
 A-Frame Component
 ```html
-<a-entity io3d-furniture="src: undefined;"></a-entity>
+<a-entity io3d-furniture="" position="0 0 0"></a-entity>
 ```
 
 
@@ -245,31 +337,41 @@ A-Frame Component
 
 | param | description | type | default | optional | min | values |
 |---|---|---|---|---|---|---|
-| `w` |  | `number` | `0.6` | `false` | `0.01` | `` |
-| `h` |  | `number` | `2.4` | `false` | `0.01` | `` |
-| `l` |  | `number` | `1.8` | `false` | `0.01` | `` |
-| `highCabinetLeft` |  | `int` | `2` | `true` | `` | `` |
-| `highCabinetRight` |  | `int` | `0` | `true` | `` | `` |
-| `wallCabinet` |  | `boolean` | `true` | `true` | `` | `` |
-| `cabinetType` |  | `string` | `"flat"` | `true` | `` | `flat,style1,style2` |
-| `sinkType` |  | `string` | `"none"` | `true` | `` | `single,double,none` |
-| `extractorType` |  | `string` | `"none"` | `true` | `` | `box,pyramid,integrated,none` |
-| `ovenType` |  | `string` | `"none"` | `true` | `` | `single,double,none` |
-| `cooktopType` |  | `string` | `"none"` | `true` | `` | `electro60,electro90,none` |
+| `type` |  | `string` | `"kitchen"` | `false` |  | `kitchen` |
+| `x` |  | `number` | `0` | `false` |  |  |
+| `y` |  | `number` | `0` | `false` |  |  |
+| `z` |  | `number` | `0` | `false` |  |  |
+| `ry` | rotation around y axis | `number` | `0` | `false` |  |  |
+| `l` |  | `number` | `1.8` | `false` | `0.01` |  |
+| `h` |  | `number` | `2.4` | `false` | `0.01` |  |
+| `w` |  | `number` | `0.6` | `false` | `0.01` |  |
+| `extractorType` |  | `string` | `"none"` | `true` |  | `box,pyramid,integrated,none` |
+| `materials` |  | `object` |  | `true` |  |  |
+| `cooktopType` |  | `string` | `"none"` | `true` |  | `electro60,electro90,none` |
+| `highCabinetLeft` |  | `int` | `2` | `true` |  |  |
+| `highCabinetRight` |  | `int` | `0` | `true` |  |  |
+| `wallCabinet` |  | `boolean` | `true` | `true` |  |  |
+| `cabinetType` |  | `string` | `"flat"` | `true` |  | `flat,style1,style2` |
+| `sinkType` |  | `string` | `"none"` | `true` |  | `single,double,none` |
+| `id` | unique identifier | `string` |  | `true` |  |  |
+| `ovenType` |  | `string` | `"none"` | `true` |  | `single,double,none` |
 
 SceneStructure Json
 ```json
 {
   "type": "kitchen",
-  "w": 0.6,
+  "x": 0,
+  "y": 0,
+  "z": 0,
+  "ry": 0,
+  "l": 1.8,
   "h": 2.4,
-  "l": 1.8
-}
-```
+  "w": 0.6
+}```
 
 A-Frame Component
 ```html
-<a-entity io3d-kitchen="w: 0.6; h: 2.4; l: 1.8;"></a-entity>
+<a-entity io3d-kitchen="l: 1.8; h: 2.4; w: 0.6;" position="0 0 0"></a-entity>
 ```
 
 
@@ -277,6 +379,14 @@ A-Frame Component
 
 | param | description | type | default | optional | min | values |
 |---|---|---|---|---|---|---|
+| `type` |  | `string` | `"level"` | `false` |  | `level` |
+| `x` |  | `number` | `0` | `false` |  |  |
+| `y` |  | `number` | `0` | `false` |  |  |
+| `z` |  | `number` | `0` | `false` |  |  |
+| `ry` | rotation around y axis | `number` | `0` | `false` |  |  |
+| `children` |  | `array` | `[]` | `true` |  |  |
+| `id` | unique identifier | `string` |  | `true` |  |  |
+| `materials` |  | `object` |  | `true` |  |  |
 
 Possible children types
 * [`box`](#box)
@@ -298,16 +408,27 @@ Possible children types
 SceneStructure Json
 ```json
 {
-  "type": "level"
-}
-```
+  "type": "level",
+  "x": 0,
+  "y": 0,
+  "z": 0,
+  "ry": 0
+}```
 
 ## object
 
 | param | description | type | default | optional | min | values |
 |---|---|---|---|---|---|---|
-| `object` |  | `string` | `` | `false` | `` | `` |
-| `sourceScale` |  | `number` | `` | `true` | `` | `` |
+| `type` |  | `string` | `"object"` | `false` |  | `object` |
+| `x` |  | `number` | `0` | `false` |  |  |
+| `y` |  | `number` | `0` | `false` |  |  |
+| `z` |  | `number` | `0` | `false` |  |  |
+| `ry` | rotation around y axis | `number` | `0` | `false` |  |  |
+| `object` |  | `string` |  | `false` |  |  |
+| `sourceScale` |  | `number` |  | `true` |  |  |
+| `children` |  | `array` | `[]` | `true` |  |  |
+| `id` | unique identifier | `string` |  | `true` |  |  |
+| `materials` |  | `object` |  | `true` |  |  |
 
 Possible children types
 * [`interior`](#interior)
@@ -316,13 +437,16 @@ SceneStructure Json
 ```json
 {
   "type": "object",
+  "x": 0,
+  "y": 0,
+  "z": 0,
+  "ry": 0,
   "object": undefined
-}
-```
+}```
 
 A-Frame Component
 ```html
-<a-entity io3d-data3d="object: undefined;"></a-entity>
+<a-entity io3d-data3d="" position="0 0 0"></a-entity>
 ```
 
 
@@ -330,8 +454,16 @@ A-Frame Component
 
 | param | description | type | default | optional | min | values |
 |---|---|---|---|---|---|---|
-| `modelDisplayName` |  | `string` | `` | `false` | `` | `` |
-| `v` |  | `number` | `` | `false` | `` | `1` |
+| `type` |  | `string` | `"plan"` | `false` |  | `plan` |
+| `x` |  | `number` | `0` | `false` |  |  |
+| `y` |  | `number` | `0` | `false` |  |  |
+| `z` |  | `number` | `0` | `false` |  |  |
+| `ry` | rotation around y axis | `number` | `0` | `false` |  |  |
+| `modelDisplayName` |  | `string` |  | `false` |  |  |
+| `v` |  | `number` |  | `false` |  | `1` |
+| `children` |  | `array` | `[]` | `true` |  |  |
+| `id` | unique identifier | `string` |  | `true` |  |  |
+| `materials` |  | `object` |  | `true` |  |  |
 
 Possible children types
 * [`level`](#level)
@@ -341,30 +473,43 @@ SceneStructure Json
 ```json
 {
   "type": "plan",
+  "x": 0,
+  "y": 0,
+  "z": 0,
+  "ry": 0,
   "modelDisplayName": undefined,
   "v": undefined
-}
-```
+}```
 
 ## polybox
 
 | param | description | type | default | optional | min | values |
 |---|---|---|---|---|---|---|
-| `h` |  | `number` | `1` | `false` | `0.01` | `` |
-| `polygon` |  | `array` | `` | `false` | `` | `` |
+| `type` |  | `string` | `"polybox"` | `false` |  | `polybox` |
+| `x` |  | `number` | `0` | `false` |  |  |
+| `y` |  | `number` | `0` | `false` |  |  |
+| `z` |  | `number` | `0` | `false` |  |  |
+| `ry` | rotation around y axis | `number` | `0` | `false` |  |  |
+| `h` |  | `number` | `1` | `false` | `0.01` |  |
+| `polygon` |  | `array` |  | `false` |  |  |
+| `id` | unique identifier | `string` |  | `true` |  |  |
+| `materials` |  | `object` |  | `true` |  |  |
 
 SceneStructure Json
 ```json
 {
   "type": "polybox",
+  "x": 0,
+  "y": 0,
+  "z": 0,
+  "ry": 0,
   "h": 1,
   "polygon": undefined
-}
-```
+}```
 
 A-Frame Component
 ```html
-<a-entity io3d-polybox="h: 1; polygon: undefined;"></a-entity>
+<a-entity io3d-polybox="h: 1; polygon: undefined;" position="0 0 0"></a-entity>
 ```
 
 
@@ -372,27 +517,37 @@ A-Frame Component
 
 | param | description | type | default | optional | min | values |
 |---|---|---|---|---|---|---|
-| `h` | height | `number` | `0.2` | `false` | `0.01` | `` |
-| `polygon` | outer polygon | `array` | `[1.5,1.5,1.5,-1.5,-1.5,-1.5,-1.5,1.5]` | `false` | `` | `` |
-| `polygonHoles` | polygon holes | `array` | `` | `true` | `` | `` |
-| `hasCeiling` | toggle ceiling | `boolean` | `true` | `false` | `` | `` |
-| `hCeiling` | ceiling height | `number` | `2.4` | `false` | `` | `` |
-| `usage` |  | `string` | `` | `true` | `` | `` |
+| `type` |  | `string` | `"polyfloor"` | `false` |  | `polyfloor` |
+| `x` |  | `number` | `0` | `false` |  |  |
+| `y` |  | `number` | `0` | `false` |  |  |
+| `z` |  | `number` | `0` | `false` |  |  |
+| `ry` | rotation around y axis | `number` | `0` | `false` |  |  |
+| `h` | height | `number` | `0.2` | `false` | `0.01` |  |
+| `usage` |  | `string` |  | `true` |  |  |
+| `polygon` | contour vertices - counter clock wise | `array` | `[[1.5,1.5],[1.5,-1.5],[-1.5,-1.5],[-1.5,1.5]]` | `false` |  |  |
+| `hCeiling` | ceiling height | `number` | `2.4` | `false` |  |  |
+| `hasCeiling` | toggle ceiling | `boolean` | `true` | `false` |  |  |
+| `polygonHoles` | polygon holes | `array` |  | `true` |  |  |
+| `id` | unique identifier | `string` |  | `true` |  |  |
+| `materials` |  | `object` |  | `true` |  |  |
 
 SceneStructure Json
 ```json
 {
   "type": "polyfloor",
+  "x": 0,
+  "y": 0,
+  "z": 0,
+  "ry": 0,
   "h": 0.2,
-  "polygon": [1.5,1.5,1.5,-1.5,-1.5,-1.5,-1.5,1.5],
-  "hasCeiling": true,
-  "hCeiling": 2.4
-}
-```
+  "polygon": [[1.5,1.5],[1.5,-1.5],[-1.5,-1.5],[-1.5,1.5]],
+  "hCeiling": 2.4,
+  "hasCeiling": true
+}```
 
 A-Frame Component
 ```html
-<a-entity io3d-polyfloor="h: 0.2; polygon: [1.5,1.5,1.5,-1.5,-1.5,-1.5,-1.5,1.5]; hasCeiling: true; hCeiling: 2.4;"></a-entity>
+<a-entity io3d-polyfloor="h: 0.2; polygon: [1.5,1.5,1.5,-1.5,-1.5,-1.5,-1.5,1.5]; hCeiling: 2.4; hasCeiling: true;" position="0 0 0"></a-entity>
 ```
 
 
@@ -400,23 +555,33 @@ A-Frame Component
 
 | param | description | type | default | optional | min | values |
 |---|---|---|---|---|---|---|
-| `w` |  | `number` | `` | `false` | `0.01` | `` |
-| `h` |  | `number` | `` | `false` | `0.01` | `` |
-| `l` |  | `number` | `` | `false` | `0.01` | `` |
+| `type` |  | `string` | `"railing"` | `false` |  | `railing` |
+| `x` |  | `number` | `0` | `false` |  |  |
+| `y` |  | `number` | `0` | `false` |  |  |
+| `z` |  | `number` | `0` | `false` |  |  |
+| `ry` | rotation around y axis | `number` | `0` | `false` |  |  |
+| `l` |  | `number` |  | `false` | `0.01` |  |
+| `h` |  | `number` |  | `false` | `0.01` |  |
+| `w` |  | `number` |  | `false` | `0.01` |  |
+| `id` | unique identifier | `string` |  | `true` |  |  |
+| `materials` |  | `object` |  | `true` |  |  |
 
 SceneStructure Json
 ```json
 {
   "type": "railing",
-  "w": undefined,
+  "x": 0,
+  "y": 0,
+  "z": 0,
+  "ry": 0,
+  "l": undefined,
   "h": undefined,
-  "l": undefined
-}
-```
+  "w": undefined
+}```
 
 A-Frame Component
 ```html
-<a-entity io3d-railing="w: undefined; h: undefined; l: undefined;"></a-entity>
+<a-entity io3d-railing="l: undefined; h: undefined; w: undefined;" position="0 0 0"></a-entity>
 ```
 
 
@@ -424,25 +589,35 @@ A-Frame Component
 
 | param | description | type | default | optional | min | values |
 |---|---|---|---|---|---|---|
-| `w` |  | `number` | `1.2` | `false` | `0.01` | `` |
-| `h` |  | `number` | `2.4` | `false` | `0.01` | `` |
-| `l` |  | `number` | `4` | `false` | `0.01` | `` |
-| `stepWidth` |  | `number` | `1.2` | `true` | `0.01` | `` |
-| `stairType` |  | `string` | `"straight"` | `true` | `0.01` | `` |
+| `type` |  | `string` | `"stairs"` | `false` |  | `stairs` |
+| `x` |  | `number` | `0` | `false` |  |  |
+| `y` |  | `number` | `0` | `false` |  |  |
+| `z` |  | `number` | `0` | `false` |  |  |
+| `ry` | rotation around y axis | `number` | `0` | `false` |  |  |
+| `l` |  | `number` | `4` | `false` | `0.01` |  |
+| `h` |  | `number` | `2.4` | `false` | `0.01` |  |
+| `w` |  | `number` | `1.2` | `false` | `0.01` |  |
+| `stairType` |  | `string` | `"straight"` | `true` | `0.01` |  |
+| `stepWidth` |  | `number` | `1.2` | `true` | `0.01` |  |
+| `id` | unique identifier | `string` |  | `true` |  |  |
+| `materials` |  | `object` |  | `true` |  |  |
 
 SceneStructure Json
 ```json
 {
   "type": "stairs",
-  "w": 1.2,
+  "x": 0,
+  "y": 0,
+  "z": 0,
+  "ry": 0,
+  "l": 4,
   "h": 2.4,
-  "l": 4
-}
-```
+  "w": 1.2
+}```
 
 A-Frame Component
 ```html
-<a-entity io3d-stairs="w: 1.2; h: 2.4; l: 4;"></a-entity>
+<a-entity io3d-stairs="l: 4; h: 2.4; w: 1.2;" position="0 0 0"></a-entity>
 ```
 
 
@@ -450,27 +625,45 @@ A-Frame Component
 
 | param | description | type | default | optional | min | values |
 |---|---|---|---|---|---|---|
-| `title` |  | `string` | `` | `false` | `` | `` |
-| `notes` |  | `string` | `` | `true` | `` | `` |
+| `type` |  | `string` | `"tag"` | `false` |  | `tag` |
+| `x` |  | `number` | `0` | `false` |  |  |
+| `y` |  | `number` | `0` | `false` |  |  |
+| `z` |  | `number` | `0` | `false` |  |  |
+| `ry` | rotation around y axis | `number` | `0` | `false` |  |  |
+| `title` |  | `string` |  | `false` |  |  |
+| `notes` |  | `string` |  | `true` |  |  |
+| `id` | unique identifier | `string` |  | `true` |  |  |
+| `materials` |  | `object` |  | `true` |  |  |
 
 SceneStructure Json
 ```json
 {
   "type": "tag",
+  "x": 0,
+  "y": 0,
+  "z": 0,
+  "ry": 0,
   "title": undefined
-}
-```
+}```
 
 ## wall
 
 | param | description | type | default | optional | min | values |
 |---|---|---|---|---|---|---|
-| `w` |  | `number` | `0.15` | `false` | `0.01` | `` |
-| `h` |  | `number` | `2.4` | `false` | `0.01` | `` |
-| `l` |  | `number` | `1` | `false` | `0.01` | `` |
-| `baseHeight` |  | `number` | `0` | `true` | `` | `` |
-| `frontHasBase` |  | `boolean` | `false` | `true` | `` | `` |
-| `backHasBase` |  | `boolean` | `false` | `true` | `` | `` |
+| `type` |  | `string` | `"wall"` | `false` |  | `wall` |
+| `x` |  | `number` | `0` | `false` |  |  |
+| `y` |  | `number` | `0` | `false` |  |  |
+| `z` |  | `number` | `0` | `false` |  |  |
+| `ry` | rotation around y axis | `number` | `0` | `false` |  |  |
+| `l` |  | `number` | `1` | `false` | `0.01` |  |
+| `h` |  | `number` | `2.4` | `false` | `0.01` |  |
+| `w` |  | `number` | `0.15` | `false` | `0.01` |  |
+| `backHasBase` |  | `boolean` | `false` | `true` |  |  |
+| `frontHasBase` |  | `boolean` | `false` | `true` |  |  |
+| `baseHeight` |  | `number` | `0` | `true` |  |  |
+| `children` |  | `array` | `[]` | `true` |  |  |
+| `id` | unique identifier | `string` |  | `true` |  |  |
+| `materials` |  | `object` |  | `true` |  |  |
 
 Possible children types
 * [`window`](#window)
@@ -480,15 +673,18 @@ SceneStructure Json
 ```json
 {
   "type": "wall",
-  "w": 0.15,
+  "x": 0,
+  "y": 0,
+  "z": 0,
+  "ry": 0,
+  "l": 1,
   "h": 2.4,
-  "l": 1
-}
-```
+  "w": 0.15
+}```
 
 A-Frame Component
 ```html
-<a-entity io3d-wall="w: 0.15; h: 2.4; l: 1;"></a-entity>
+<a-entity io3d-wall="l: 1; h: 2.4; w: 0.15;" position="0 0 0"></a-entity>
 ```
 
 
@@ -496,25 +692,33 @@ A-Frame Component
 
 | param | description | type | default | optional | min | values |
 |---|---|---|---|---|---|---|
-| `h` |  | `number` | `1.5` | `false` | `0.01` | `` |
-| `l` |  | `number` | `` | `false` | `0.01` | `` |
-| `rowRatios` |  | `array` | `` | `true` | `` | `` |
-| `columnRatios` |  | `array` | `` | `true` | `` | `` |
-| `frameLength` |  | `number` | `0.04` | `true` | `0.01` | `` |
-| `frameWidth` |  | `number` | `0.06` | `true` | `0.01` | `` |
-| `y` |  | `undefined` | `0.9` | `false` | `` | `` |
+| `type` |  | `string` | `"window"` | `false` |  | `window` |
+| `x` |  | `number` | `0` | `false` |  |  |
+| `y` |  | `number` | `0.8` | `false` |  |  |
+| `z` |  | `number` | `0` | `false` |  |  |
+| `ry` | rotation around y axis | `number` | `0` | `false` |  |  |
+| `l` |  | `number` | `1.6` | `false` | `0.01` |  |
+| `h` |  | `number` | `1.5` | `false` | `0.01` |  |
+| `rowRatios` |  | `array` |  | `true` |  |  |
+| `columnRatios` |  | `array` |  | `true` |  |  |
+| `frameLength` |  | `number` | `0.04` | `true` | `0.01` |  |
+| `frameWidth` |  | `number` | `0.06` | `true` | `0.01` |  |
+| `id` | unique identifier | `string` |  | `true` |  |  |
+| `materials` |  | `object` |  | `true` |  |  |
 
 SceneStructure Json
 ```json
 {
   "type": "window",
-  "h": 1.5,
-  "l": undefined,
-  "y": 0.9
-}
-```
+  "x": 0,
+  "y": 0.8,
+  "z": 0,
+  "ry": 0,
+  "l": 1.6,
+  "h": 1.5
+}```
 
 A-Frame Component
 ```html
-<a-entity io3d-window="h: 1.5; l: undefined; y: 0.9;"></a-entity>
+<a-entity io3d-window="l: 1.6; h: 1.5;" position="0 0.8 0"></a-entity>
 ```
