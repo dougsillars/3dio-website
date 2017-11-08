@@ -28,7 +28,7 @@ Types
 
 | param | description | type | default | optional | min | values |
 |---|---|---|---|---|---|---|
-| `type` |  | `string` | `"box"` | `false` |  | `box` |
+| `type` |  | `string` | `"box"` | `false` |  | `"box"` |
 | `x` |  | `number` | `0` | `false` |  |  |
 | `y` |  | `number` | `0` | `false` |  |  |
 | `z` |  | `number` | `0` | `false` |  |  |
@@ -38,6 +38,9 @@ Types
 | `w` | width | `number` | `1` | `false` | `0.01` |  |
 | `id` | unique identifier | `string` |  | `true` |  |  |
 | `materials` |  | `object` |  | `true` |  |  |
+
+Possible parent types
+* [`level`](#level)
 
 SceneStructure Json
 ```json
@@ -62,7 +65,7 @@ A-Frame Component
 
 | param | description | type | default | optional | min | values |
 |---|---|---|---|---|---|---|
-| `type` |  | `string` | `"camera-bookmark"` | `false` |  | `camera-bookmark` |
+| `type` |  | `string` | `"camera-bookmark"` | `false` |  | `"camera-bookmark"` |
 | `x` |  | `number` | `0` | `false` |  |  |
 | `y` |  | `number` | `0` | `false` |  |  |
 | `z` |  | `number` | `0` | `false` |  |  |
@@ -70,6 +73,9 @@ A-Frame Component
 | `distance` |  | `number` |  | `false` |  |  |
 | `id` | unique identifier | `string` |  | `true` |  |  |
 | `materials` |  | `object` |  | `true` |  |  |
+
+Possible parent types
+* [`plan`](#plan)
 
 SceneStructure Json
 ```json
@@ -86,7 +92,7 @@ SceneStructure Json
 
 | param | description | type | default | optional | min | values |
 |---|---|---|---|---|---|---|
-| `type` |  | `string` | `"closet"` | `false` |  | `closet` |
+| `type` |  | `string` | `"closet"` | `false` |  | `"closet"` |
 | `x` |  | `number` | `0` | `false` |  |  |
 | `y` |  | `number` | `0` | `false` |  |  |
 | `z` |  | `number` | `0` | `false` |  |  |
@@ -101,6 +107,9 @@ SceneStructure Json
 | `baseboard` | height of baseboard | `number` | `0.1` | `true` | `0.01` |  |
 | `id` | unique identifier | `string` |  | `true` |  |  |
 | `materials` |  | `object` |  | `true` |  |  |
+
+Possible parent types
+* [`level`](#level)
 
 SceneStructure Json
 ```json
@@ -125,7 +134,7 @@ A-Frame Component
 
 | param | description | type | default | optional | min | values |
 |---|---|---|---|---|---|---|
-| `type` |  | `string` | `"curtain"` | `false` |  | `curtain` |
+| `type` |  | `string` | `"curtain"` | `false` |  | `"curtain"` |
 | `x` |  | `number` | `0` | `false` |  |  |
 | `y` |  | `number` | `0` | `false` |  |  |
 | `z` |  | `number` | `0` | `false` |  |  |
@@ -136,6 +145,9 @@ A-Frame Component
 | `folds` | number of folds | `number` | `14` | `true` | `0.01` |  |
 | `id` | unique identifier | `string` |  | `true` |  |  |
 | `materials` |  | `object` |  | `true` |  |  |
+
+Possible parent types
+* [`level`](#level)
 
 SceneStructure Json
 ```json
@@ -154,7 +166,7 @@ SceneStructure Json
 
 | param | description | type | default | optional | min | values |
 |---|---|---|---|---|---|---|
-| `type` |  | `string` | `"door"` | `false` |  | `door` |
+| `type` |  | `string` | `"door"` | `false` |  | `"door"` |
 | `x` |  | `number` | `0` | `false` |  |  |
 | `y` |  | `number` | `0` | `false` |  |  |
 | `z` |  | `number` | `0` | `false` |  |  |
@@ -163,8 +175,8 @@ SceneStructure Json
 | `h` | height | `number` | `2` | `false` | `0.01` |  |
 | `w` | width | `number` | `0.05` | `false` | `0.01` |  |
 | `doorAngle` | door leaf opening anlge | `number` | `92` | `true` |  |  |
-| `hinge` | door leaf opening direction | `string` | `"right"` | `false` |  | `right,left` |
-| `side` | door leaf opening to the front or back of the wall | `string` | `"back"` | `false` |  | `front,back` |
+| `hinge` | door leaf opening direction | `string` | `"right"` | `false` |  | `"right"` `"left"` |
+| `side` | door leaf opening to the front or back of the wall | `string` | `"back"` | `false` |  | `"front"` `"back"` |
 | `v` |  | `number` | `3` | `false` |  | `3` |
 | `fixLeafRatio` |  | `number` | `0.3` | `true` |  |  |
 | `thresholdHeight` |  | `number` | `0.01` | `true` |  |  |
@@ -172,9 +184,12 @@ SceneStructure Json
 | `frameOffset` | frame thicker than wall | `number` | `0` | `true` |  |  |
 | `leafWidth` | thickness of door leaf | `number` | `0.03` | `true` |  |  |
 | `leafOffset` | z offset of door leaf | `number` | `0.005` | `true` |  |  |
-| `doorType` | defines opening type | `string` | `"singleSwing"` | `false` |  | `singleSwing,doubleSwing,swingFix,swingDoubleFix,doubleSwingDoubleFix,slidingDoor,opening` |
+| `doorType` | defines opening type | `string` | `"singleSwing"` | `false` |  | `"singleSwing"` `"doubleSwing"` `"swingFix"` `"swingDoubleFix"` `"doubleSwingDoubleFix"` `"slidingDoor"` `"opening"` |
 | `id` | unique identifier | `string` |  | `true` |  |  |
 | `materials` |  | `object` |  | `true` |  |  |
+
+Possible parent types
+* [`wall`](#wall)
 
 SceneStructure Json
 ```json
@@ -203,7 +218,7 @@ A-Frame Component
 
 | param | description | type | default | optional | min | values |
 |---|---|---|---|---|---|---|
-| `type` |  | `string` | `"floor"` | `false` |  | `floor` |
+| `type` |  | `string` | `"floor"` | `false` |  | `"floor"` |
 | `x` |  | `number` | `0` | `false` |  |  |
 | `y` |  | `number` | `0` | `false` |  |  |
 | `z` |  | `number` | `0` | `false` |  |  |
@@ -215,6 +230,9 @@ A-Frame Component
 | `hasCeiling` | toggle ceiling | `boolean` | `true` | `false` |  |  |
 | `id` | unique identifier | `string` |  | `true` |  |  |
 | `materials` |  | `object` |  | `true` |  |  |
+
+Possible parent types
+* [`level`](#level)
 
 SceneStructure Json
 ```json
@@ -241,7 +259,7 @@ A-Frame Component
 
 | param | description | type | default | optional | min | values |
 |---|---|---|---|---|---|---|
-| `type` |  | `string` | `"floorplan"` | `false` |  | `floorplan` |
+| `type` |  | `string` | `"floorplan"` | `false` |  | `"floorplan"` |
 | `x` |  | `number` | `0` | `false` |  |  |
 | `y` |  | `number` | `0` | `false` |  |  |
 | `z` |  | `number` | `0` | `false` |  |  |
@@ -251,6 +269,9 @@ A-Frame Component
 | `file` |  | `string` |  | `false` |  |  |
 | `id` | unique identifier | `string` |  | `true` |  |  |
 | `materials` |  | `object` |  | `true` |  |  |
+
+Possible parent types
+* [`level`](#level)
 
 SceneStructure Json
 ```json
@@ -269,7 +290,7 @@ SceneStructure Json
 
 | param | description | type | default | optional | min | values |
 |---|---|---|---|---|---|---|
-| `type` |  | `string` | `"group"` | `false` |  | `group` |
+| `type` |  | `string` | `"group"` | `false` |  | `"group"` |
 | `x` |  | `number` | `0` | `false` |  |  |
 | `y` |  | `number` | `0` | `false` |  |  |
 | `z` |  | `number` | `0` | `false` |  |  |
@@ -278,6 +299,10 @@ SceneStructure Json
 | `children` |  | `array` | `[]` | `true` |  |  |
 | `id` | unique identifier | `string` |  | `true` |  |  |
 | `materials` |  | `object` |  | `true` |  |  |
+
+Possible parent types
+* [`level`](#level)
+* [`group`](#group)
 
 Possible children types
 * [`interior`](#interior)
@@ -301,7 +326,7 @@ SceneStructure Json
 
 | param | description | type | default | optional | min | values |
 |---|---|---|---|---|---|---|
-| `type` |  | `string` | `"interior"` | `false` |  | `interior` |
+| `type` |  | `string` | `"interior"` | `false` |  | `"interior"` |
 | `x` |  | `number` | `0` | `false` |  |  |
 | `y` |  | `number` | `0` | `false` |  |  |
 | `z` |  | `number` | `0` | `false` |  |  |
@@ -310,6 +335,11 @@ SceneStructure Json
 | `children` |  | `array` | `[]` | `true` |  |  |
 | `id` | unique identifier | `string` |  | `true` |  |  |
 | `materials` |  | `object` |  | `true` |  |  |
+
+Possible parent types
+* [`level`](#level)
+* [`group`](#group)
+* [`interior`](#interior)
 
 Possible children types
 * [`interior`](#interior)
@@ -337,7 +367,7 @@ A-Frame Component
 
 | param | description | type | default | optional | min | values |
 |---|---|---|---|---|---|---|
-| `type` |  | `string` | `"kitchen"` | `false` |  | `kitchen` |
+| `type` |  | `string` | `"kitchen"` | `false` |  | `"kitchen"` |
 | `x` |  | `number` | `0` | `false` |  |  |
 | `y` |  | `number` | `0` | `false` |  |  |
 | `z` |  | `number` | `0` | `false` |  |  |
@@ -345,16 +375,19 @@ A-Frame Component
 | `l` |  | `number` | `1.8` | `false` | `0.01` |  |
 | `h` |  | `number` | `2.4` | `false` | `0.01` |  |
 | `w` |  | `number` | `0.6` | `false` | `0.01` |  |
-| `extractorType` |  | `string` | `"none"` | `true` |  | `box,pyramid,integrated,none` |
+| `extractorType` |  | `string` | `"none"` | `true` |  | `"box"` `"pyramid"` `"integrated"` `"none"` |
 | `materials` |  | `object` |  | `true` |  |  |
-| `cooktopType` |  | `string` | `"none"` | `true` |  | `electro60,electro90,none` |
+| `cooktopType` |  | `string` | `"none"` | `true` |  | `"electro60"` `"electro90"` `"none"` |
 | `highCabinetLeft` |  | `int` | `2` | `true` |  |  |
 | `highCabinetRight` |  | `int` | `0` | `true` |  |  |
 | `wallCabinet` |  | `boolean` | `true` | `true` |  |  |
-| `cabinetType` |  | `string` | `"flat"` | `true` |  | `flat,style1,style2` |
-| `sinkType` |  | `string` | `"none"` | `true` |  | `single,double,none` |
+| `cabinetType` |  | `string` | `"flat"` | `true` |  | `"flat"` `"style1"` `"style2"` |
+| `sinkType` |  | `string` | `"none"` | `true` |  | `"single"` `"double"` `"none"` |
 | `id` | unique identifier | `string` |  | `true` |  |  |
-| `ovenType` |  | `string` | `"none"` | `true` |  | `single,double,none` |
+| `ovenType` |  | `string` | `"none"` | `true` |  | `"single"` `"double"` `"none"` |
+
+Possible parent types
+* [`level`](#level)
 
 SceneStructure Json
 ```json
@@ -379,7 +412,7 @@ A-Frame Component
 
 | param | description | type | default | optional | min | values |
 |---|---|---|---|---|---|---|
-| `type` |  | `string` | `"level"` | `false` |  | `level` |
+| `type` |  | `string` | `"level"` | `false` |  | `"level"` |
 | `x` |  | `number` | `0` | `false` |  |  |
 | `y` |  | `number` | `0` | `false` |  |  |
 | `z` |  | `number` | `0` | `false` |  |  |
@@ -387,6 +420,9 @@ A-Frame Component
 | `children` |  | `array` | `[]` | `true` |  |  |
 | `id` | unique identifier | `string` |  | `true` |  |  |
 | `materials` |  | `object` |  | `true` |  |  |
+
+Possible parent types
+* [`plan`](#plan)
 
 Possible children types
 * [`box`](#box)
@@ -419,7 +455,7 @@ SceneStructure Json
 
 | param | description | type | default | optional | min | values |
 |---|---|---|---|---|---|---|
-| `type` |  | `string` | `"object"` | `false` |  | `object` |
+| `type` |  | `string` | `"object"` | `false` |  | `"object"` |
 | `x` |  | `number` | `0` | `false` |  |  |
 | `y` |  | `number` | `0` | `false` |  |  |
 | `z` |  | `number` | `0` | `false` |  |  |
@@ -429,6 +465,9 @@ SceneStructure Json
 | `children` |  | `array` | `[]` | `true` |  |  |
 | `id` | unique identifier | `string` |  | `true` |  |  |
 | `materials` |  | `object` |  | `true` |  |  |
+
+Possible parent types
+* [`level`](#level)
 
 Possible children types
 * [`interior`](#interior)
@@ -454,7 +493,7 @@ A-Frame Component
 
 | param | description | type | default | optional | min | values |
 |---|---|---|---|---|---|---|
-| `type` |  | `string` | `"plan"` | `false` |  | `plan` |
+| `type` |  | `string` | `"plan"` | `false` |  | `"plan"` |
 | `x` |  | `number` | `0` | `false` |  |  |
 | `y` |  | `number` | `0` | `false` |  |  |
 | `z` |  | `number` | `0` | `false` |  |  |
@@ -485,7 +524,7 @@ SceneStructure Json
 
 | param | description | type | default | optional | min | values |
 |---|---|---|---|---|---|---|
-| `type` |  | `string` | `"polybox"` | `false` |  | `polybox` |
+| `type` |  | `string` | `"polybox"` | `false` |  | `"polybox"` |
 | `x` |  | `number` | `0` | `false` |  |  |
 | `y` |  | `number` | `0` | `false` |  |  |
 | `z` |  | `number` | `0` | `false` |  |  |
@@ -494,6 +533,9 @@ SceneStructure Json
 | `polygon` |  | `array` |  | `false` |  |  |
 | `id` | unique identifier | `string` |  | `true` |  |  |
 | `materials` |  | `object` |  | `true` |  |  |
+
+Possible parent types
+* [`level`](#level)
 
 SceneStructure Json
 ```json
@@ -517,19 +559,22 @@ A-Frame Component
 
 | param | description | type | default | optional | min | values |
 |---|---|---|---|---|---|---|
-| `type` |  | `string` | `"polyfloor"` | `false` |  | `polyfloor` |
+| `type` |  | `string` | `"polyfloor"` | `false` |  | `"polyfloor"` |
 | `x` |  | `number` | `0` | `false` |  |  |
 | `y` |  | `number` | `0` | `false` |  |  |
 | `z` |  | `number` | `0` | `false` |  |  |
 | `ry` | rotation around y axis | `number` | `0` | `false` |  |  |
 | `h` | height | `number` | `0.2` | `false` | `0.01` |  |
 | `usage` |  | `string` |  | `true` |  |  |
-| `polygon` | contour vertices - counter clock wise | `array` | `[[1.5,1.5],[1.5,-1.5],[-1.5,-1.5],[-1.5,1.5]]` | `false` |  |  |
+| `polygon` | outer polygon | `array` | `[[1.5,1.5],[1.5,-1.5],[-1.5,-1.5],[-1.5,1.5]]` | `false` |  |  |
 | `hCeiling` | ceiling height | `number` | `2.4` | `false` |  |  |
 | `hasCeiling` | toggle ceiling | `boolean` | `true` | `false` |  |  |
 | `polygonHoles` | polygon holes | `array` |  | `true` |  |  |
 | `id` | unique identifier | `string` |  | `true` |  |  |
 | `materials` |  | `object` |  | `true` |  |  |
+
+Possible parent types
+* [`level`](#level)
 
 SceneStructure Json
 ```json
@@ -555,7 +600,7 @@ A-Frame Component
 
 | param | description | type | default | optional | min | values |
 |---|---|---|---|---|---|---|
-| `type` |  | `string` | `"railing"` | `false` |  | `railing` |
+| `type` |  | `string` | `"railing"` | `false` |  | `"railing"` |
 | `x` |  | `number` | `0` | `false` |  |  |
 | `y` |  | `number` | `0` | `false` |  |  |
 | `z` |  | `number` | `0` | `false` |  |  |
@@ -565,6 +610,9 @@ A-Frame Component
 | `w` |  | `number` |  | `false` | `0.01` |  |
 | `id` | unique identifier | `string` |  | `true` |  |  |
 | `materials` |  | `object` |  | `true` |  |  |
+
+Possible parent types
+* [`level`](#level)
 
 SceneStructure Json
 ```json
@@ -589,7 +637,7 @@ A-Frame Component
 
 | param | description | type | default | optional | min | values |
 |---|---|---|---|---|---|---|
-| `type` |  | `string` | `"stairs"` | `false` |  | `stairs` |
+| `type` |  | `string` | `"stairs"` | `false` |  | `"stairs"` |
 | `x` |  | `number` | `0` | `false` |  |  |
 | `y` |  | `number` | `0` | `false` |  |  |
 | `z` |  | `number` | `0` | `false` |  |  |
@@ -601,6 +649,9 @@ A-Frame Component
 | `stepWidth` |  | `number` | `1.2` | `true` | `0.01` |  |
 | `id` | unique identifier | `string` |  | `true` |  |  |
 | `materials` |  | `object` |  | `true` |  |  |
+
+Possible parent types
+* [`level`](#level)
 
 SceneStructure Json
 ```json
@@ -625,7 +676,7 @@ A-Frame Component
 
 | param | description | type | default | optional | min | values |
 |---|---|---|---|---|---|---|
-| `type` |  | `string` | `"tag"` | `false` |  | `tag` |
+| `type` |  | `string` | `"tag"` | `false` |  | `"tag"` |
 | `x` |  | `number` | `0` | `false` |  |  |
 | `y` |  | `number` | `0` | `false` |  |  |
 | `z` |  | `number` | `0` | `false` |  |  |
@@ -634,6 +685,10 @@ A-Frame Component
 | `notes` |  | `string` |  | `true` |  |  |
 | `id` | unique identifier | `string` |  | `true` |  |  |
 | `materials` |  | `object` |  | `true` |  |  |
+
+Possible parent types
+* [`level`](#level)
+* [`interior`](#interior)
 
 SceneStructure Json
 ```json
@@ -650,7 +705,7 @@ SceneStructure Json
 
 | param | description | type | default | optional | min | values |
 |---|---|---|---|---|---|---|
-| `type` |  | `string` | `"wall"` | `false` |  | `wall` |
+| `type` |  | `string` | `"wall"` | `false` |  | `"wall"` |
 | `x` |  | `number` | `0` | `false` |  |  |
 | `y` |  | `number` | `0` | `false` |  |  |
 | `z` |  | `number` | `0` | `false` |  |  |
@@ -664,6 +719,10 @@ SceneStructure Json
 | `children` |  | `array` | `[]` | `true` |  |  |
 | `id` | unique identifier | `string` |  | `true` |  |  |
 | `materials` |  | `object` |  | `true` |  |  |
+
+Possible parent types
+* [`level`](#level)
+* [`group`](#group)
 
 Possible children types
 * [`window`](#window)
@@ -692,7 +751,7 @@ A-Frame Component
 
 | param | description | type | default | optional | min | values |
 |---|---|---|---|---|---|---|
-| `type` |  | `string` | `"window"` | `false` |  | `window` |
+| `type` |  | `string` | `"window"` | `false` |  | `"window"` |
 | `x` |  | `number` | `0` | `false` |  |  |
 | `y` |  | `number` | `0.8` | `false` |  |  |
 | `z` |  | `number` | `0` | `false` |  |  |
@@ -705,6 +764,9 @@ A-Frame Component
 | `frameWidth` |  | `number` | `0.06` | `true` | `0.01` |  |
 | `id` | unique identifier | `string` |  | `true` |  |  |
 | `materials` |  | `object` |  | `true` |  |  |
+
+Possible parent types
+* [`wall`](#wall)
 
 SceneStructure Json
 ```json
