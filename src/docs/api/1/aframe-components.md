@@ -209,10 +209,10 @@ The following example shows a tour of the different rooms in an apartment:
     <!-- define the camera with a tour (it will start automatically and loop infinitely) -->
     <a-entity camera tour>
       <!-- each of these waypoints will be visited in the given order -->
-      <a-entity tour-waypoint="Living Room" position="-2.9 1.6 3.5"></a-entity>
-      <a-entity tour-waypoint="Office" position="-3.6 1.6 -2.6" rotation="0 -140 0"></a-entity>
-      <a-entity tour-waypoint="Kitchen" position="-1.9 1.6 -1.4" rotation="0 -100 0"></a-entity>
-      <a-entity tour-waypoint="Bedroom" position="3.1 1.6 -2.6" rotation="0 -140 0"></a-entity>
+      <a-entity tour-waypoint="Living Room" io3d-uuid="living-room" position="-2.9 1.6 3.5"></a-entity>
+      <a-entity tour-waypoint="Office" io3d-uuid="living-room" position="-3.6 1.6 -2.6" rotation="0 -140 0"></a-entity>
+      <a-entity tour-waypoint="Kitchen" io3d-uuid="kitchen" position="-1.9 1.6 -1.4" rotation="0 -100 0"></a-entity>
+      <a-entity tour-waypoint="Bedroom" io3d-uuid="bedroom" position="3.1 1.6 -2.6" rotation="0 -140 0"></a-entity>
     </a-entity>
   </a-scene>
 </body>
@@ -228,8 +228,8 @@ Here is an example with a play / pause button:
   <a-box color="red"></a-box>
   <a-entity id="camera" camera tour="autoStart: false" position="0 2 5" rotation="-22.5 0 0">
     <!-- each of these waypoints will be visited in the given order -->
-    <a-entity tour-waypoint="Front" position="0 2 5" rotation="-22.5 0 0"></a-entity>
-    <a-entity tour-waypoint="Back" position="0 2 -5" rotation="-22.5 180 0"></a-entity>
+    <a-entity tour-waypoint="Front" io3d-uuid="front" position="0 2 5" rotation="-22.5 0 0"></a-entity>
+    <a-entity tour-waypoint="Back" io3d-uuid="back" position="0 2 -5" rotation="-22.5 180 0"></a-entity>
   </a-entity>
 </a-scene>
 
@@ -259,15 +259,15 @@ If you need to offer a way to make the camera fly from the current position to a
 
 ```html
 <!-- Buttons to move to each waypoint -->
-<button onclick="document.getElementById('camera').components.tour.goTo('front')">Front</button>
-<button onclick="document.getElementById('camera').components.tour.goTo('back')">Back</button>
+<button onclick="document.getElementById('camera').components.tour.goTo('bedroom1')">Bedroom 1</button>
+<button onclick="document.getElementById('camera').components.tour.goTo('bedroom2')">Bedroom 2</button>
 
 <a-scene>
   <a-box color="red"></a-box>
   <a-entity id="camera" camera tour="autoStart: false" position="0 2 5" rotation="-22.5 0 0">
     <!-- each of these waypoints will be visited in the given order -->
-    <a-entity tour-waypoint="front" position="0 2 5" rotation="-22.5 0 0"></a-entity>
-    <a-entity tour-waypoint="back" position="0 2 -5" rotation="-22.5 180 0"></a-entity>
+    <a-entity tour-waypoint="Bedroom" io3d-uuid="bedroom1" position="0 2 5" rotation="-22.5 0 0"></a-entity>
+    <a-entity tour-waypoint="Bedroom" io3d-uuid="bedroom2" position="0 2 -5" rotation="-22.5 180 0"></a-entity>
   </a-entity>
 </a-scene>
 ```
@@ -283,8 +283,8 @@ If the transition should be immediate, you can set `move: 0` to make the movemen
   <a-box color="red"></a-box>
   <a-entity id="camera" camera tour="autoStart: false; move: 0" position="0 2 5" rotation="-22.5 0 0">
     <!-- each of these waypoints will be visited in the given order -->
-    <a-entity tour-waypoint="front" position="0 2 5" rotation="-22.5 0 0"></a-entity>
-    <a-entity tour-waypoint="back" position="0 2 -5" rotation="-22.5 180 0"></a-entity>
+    <a-entity tour-waypoint="front" io3d-uuid="front" position="0 2 5" rotation="-22.5 0 0"></a-entity>
+    <a-entity tour-waypoint="back" io3d-uuid="back" position="0 2 -5" rotation="-22.5 180 0"></a-entity>
   </a-entity>
 </a-scene>
 ```
