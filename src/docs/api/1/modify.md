@@ -70,9 +70,11 @@ The resulting storageId url of the transformed model gets logged upon task compl
 This API calculates more accurate collision mesh for complex models then a commonly used primitive such as a collision box, sphere or capsule.
 A collision mesh is a low-polygonal, convex model used for physics calculation. It is invisible and extremely low-detail compared to the visible model. Compared to using the high-polygonal model, the physics performance is improved greatly in the simulation and the lack of precision will not be noticed.
 
-| Parameter | Type | Required? | Description |
-| --- | --- | --- | --- |
-| `storageId` | String | Yes | The storageId of the model to modify. |
+| Parameter | Type | Required? | Default | Description |
+| --- | --- | --- | --- | --- |
+| `storageId` | String | Yes | | The storageId of the model to modify. |
+| `options`   | Object | No  | | |
+| `options.subdivisions` | Int | No | 2 | The resolution of the collision object. Triangles: `12 * 4 ^ count` |
 
 [coming soon] collisionObject settings
 
@@ -85,7 +87,7 @@ The resulting storageId url of the transformed model gets logged upon task compl
 ```javascript
   var storageId = '/535e624259ee6b0200000484/170223-2130-wbapug/archilogic_2017-02-23_21-30-44_1X3O1Q.gz.data3d.buffer'
   
-  io3d.modify.collisionObject(storageId)
+  io3d.modify.collisionObject(storageId, { subdivisions: 1 })
     .then(io3d.utils.processing.whenDone)
     .then(io3d.storage.getUrlFromStorageId)
     .then(console.log)
