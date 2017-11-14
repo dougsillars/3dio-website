@@ -24,6 +24,7 @@ In order to become a trusted developer, you'll have to demonstrate experience wi
 * implementing customer projects to specification
 * integrating with customer systems and processes
 
+
 <!--[if lte IE 8]>
 <script charset="utf-8" type="text/javascript" src="//js.hsforms.net/forms/v2-legacy.js"></script>
 <![endif]-->
@@ -35,5 +36,7 @@ In order to become a trusted developer, you'll have to demonstrate experience wi
   });
 </script>
 
+
 **Any questions?**
+
 Feel free to [ask us any questions about the Trusted Developers program here](mailto:partner@3d.io?subject=Trusted Partners Program)
