@@ -11,7 +11,7 @@
 
 ## Using Publishable API Keys
 
-For some extended functionality with subscription based quotas a <a class="open-publishable-api-keys-menu">publishable API key</a> is required. The [authetication docs](authentication.md) provide a detailed overview of what exactly you can do with publishable API keys. 
+For some extended functionality with subscription based quotas a <a class="open-publishable-api-keys-menu">publishable API key</a> is required. The [authentication docs](authentication.md) provide a detailed overview of what exactly you can do with publishable API keys. 
 
 Set a publishable API key using the config method:
  
