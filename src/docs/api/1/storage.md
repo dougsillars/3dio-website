@@ -56,7 +56,7 @@ io3d.storage.put(file).then(function (key) {
 
 ### Permanent uploads
 
-You can upload files to be permanently stored by using your [publishable key]().
+You can upload files to be permanently stored by using your <a class="open-publishable-api-keys-menu">publishable key</a>.
 
 ```javascript
 var file = new Blob(['Hello World'])
@@ -69,7 +69,7 @@ io3d.storage.put(file).then(function (key) {
 
 ### Permanent uploads with a custom key
 
-You can upload files with a custom key of your choice under your userId using your [secret key]() for the upload or use `io3d.auth.login`.
+You can upload files with a custom key of your choice under your userId using your <a class="open-secret-api-keys-menu">secret key</a> for the upload or use `io3d.auth.login`.
 
 
 ## File Upload
