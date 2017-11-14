@@ -76,9 +76,6 @@ A collision mesh is a low-polygonal, convex model used for physics calculation. 
 | `options`   | Object | No  | | |
 | `options.subdivisions` | Int | No | 2 | The resolution of the collision object. Triangles: `12 * 4 ^ count` |
 
-[coming soon] collisionObject settings
-
-
 ### Example
 
 The following snippet sends a modify API request to get an optimal collision object for a model.
@@ -92,3 +89,6 @@ The resulting storageId url of the transformed model gets logged upon task compl
     .then(io3d.storage.getUrlFromStorageId)
     .then(console.log)
 ```
+
+[coming soon] collisionObject usage in physics engine example
+
