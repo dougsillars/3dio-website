@@ -33,11 +33,15 @@ const src = {
   markdown: [
     // the first ** are necessary to mark 'src' as base dir for output paths
     'src/**/*.md',
-    '!src/**/partner/*.md'
+    '!src/**/partner/*.md',
+    '!src/**/trusted-developer/*.md'
   ],
   partnerProfiles: [
     // the first ** are necessary to mark 'src' as base dir for output paths
     'src/**/partner/*.md'
+  ],
+  trustedDeveloperProfiles: [
+    'src/**/trusted-developer/*.md'
   ],
   less: [
     // the first ** are necessary to mark 'src' as base dir for output paths
@@ -87,6 +91,7 @@ const build = gulp.series(
   cleanBuildDir,
   gulp.parallel(
     generatePartnerProfilePages,
+    generateTrustedDeveloperProfilePages,
     copyStaticContent,
     renderPug,
     renderMarkdown,
@@ -116,6 +121,7 @@ function renderPug () {
       // generic template helper functions
       require: require,
       getAllPartnerInfo: getAllPartnerInfo,
+      getAllTrustedDeveloperInfo: getAllTrustedDeveloperInfo,
       // generic template variables
       urlPathRoot: urlPathRoot,
       githubLink: getGithubEditLink(inputFile)
@@ -163,6 +169,8 @@ function generatePartnerProfilePages () {
         // content
         partner: partner,
         content: content,
+        role: 'Certified Partner',
+        readMoreLink: '/floor-plan-to-3d-conversion.md',
         // generic template variable
         urlPathRoot: urlPathRoot,
         githubLink: getGithubEditLink(inputFile)
@@ -182,6 +190,58 @@ function generatePartnerProfilePages () {
     })
   })).pipe(gulp.dest(dest))
 }
+
+function generateTrustedDeveloperProfilePages() {
+  return gulp.src(src.trustedDeveloperProfiles).pipe(through2.obj((inputFile, enc, cb) => {
+    // process files only
+    if (!inputFile.isBuffer()) return
+    // decode text from vinyl object
+    let markdownText = inputFile.contents.toString(enc)
+    const urlPath = urlPathRoot + '/' + inputFile.path.substr(inputFile.base.length)
+    const urlPathDir = path.dirname(urlPath) + '/'
+    const partnerProfileTemplate = path.resolve(process.cwd(), 'src/pug-common/partner-profile-page.pug')
+    getAllTrustedDeveloperInfo()
+    // get partner info
+    const partner = parsePartnerInfo(markdownText, inputFile.path)
+    // exit if file is not meant to be published
+    if (!partner.PUBLISH) return cb()
+    // remove partner-info tag from markdown
+    markdownText = removePartnerInfo(markdownText)
+    // convert markdown to html
+    marked(markdownText, (err, content) => {
+      if (err) return cb(err)
+      // render pug to html
+      html = pug.renderFile(partnerProfileTemplate, {
+        // pug options
+        filename: partnerProfileTemplate,
+        cache: false,
+        pretty: debug,
+        // content
+        partner: partner,
+        content: content,
+        role: 'Trusted Developer',
+        readMoreLink: '/trusted-developer-program.md',
+        // generic template variable
+        urlPathRoot: urlPathRoot,
+        githubLink: getGithubEditLink(inputFile)
+      })
+      // add anchor links to titles
+      html = addAnchorLinksToTitles(html, inputFile)
+      // remap relative links and markdown links
+      html = remapLinks(html, inputFile)
+      // create vinyl object for output
+
+      const outputFile = new Vinyl({
+        cwd: inputFile.cwd, base: inputFile.base,
+        path: inputFile.path.replace('.md', '.html'),
+        contents: new Buffer(html)
+      })
+      // return
+      cb(null, outputFile)
+    })
+  })).pipe(gulp.dest(dest))
+}
+
 
 function renderMarkdown () {
   return gulp.src(src.markdown).pipe(through2.obj((inputFile, enc, cb) => {
@@ -301,6 +361,19 @@ function getAllPartnerInfo () {
   files.forEach(function (file) {
     if (file === 'apply.md') return
     const info = parsePartnerInfo(fs.readFileSync(dir+'/'+file), file)
+    info.filename = file
+    if (info.PUBLISH) partners.push(info)
+  })
+  return partners
+}
+
+function getAllTrustedDeveloperInfo() {
+  const dir = process.cwd() + '/src/trusted-developer'
+  const files = fs.readdirSync(dir)
+  const partners = []
+  files.forEach(function (file) {
+    if (file === 'apply.md') return
+    const info = parsePartnerInfo(fs.readFileSync(dir + '/' + file), file)
     info.filename = file
     if (info.PUBLISH) partners.push(info)
   })
