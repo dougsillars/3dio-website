@@ -30,9 +30,42 @@ io3d.floorPlan.convertToBasic3dModel({
  })
 ```
 
-The function returns a `conversionId`
+On success the function returns a `conversionId`:
 
-Once the status of your conversion changes, a callback is send to the provided url.
+```js
+{
+  "jsonrpc": "2.0",
+  "result": {
+    "conversionId": "910f5115-d1ef-4bbc-8f67-b062b4a54905"
+  },
+  "id": 36084808219123544000
+}
+```
+
+On error it returns an error message:
+
+```js
+{
+  "jsonrpc": "2.0",
+  "error": {
+    "code": -32600,
+    "message": "Error in calling 3d.io API. RPC ID: 33314151167058960000"
+  },
+  "id": 33314151167058960000
+}
+```
+
+Once the status of your conversion changes, a callback is send to the provided url:
+
+```js
+{
+  "jsonrpc": "2.0",
+  "method": "Floorplan.onConversionStatusUpdate",
+  "params": {
+    "conversionId": "910f5115-d1ef-4bbc-8f67-b062b4a54905"
+  }
+}
+```
 
 ## Get conversion status
 
