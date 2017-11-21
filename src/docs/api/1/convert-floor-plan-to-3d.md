@@ -24,7 +24,7 @@ io3d.floorPlan.convertToBasic3dModel({
    // callback url to reveive that callback when the conversion status changes
    callback: configs.url 
  }).then(conversionId => {
-   // store conversionId plus customer email in a database for later use
+   console.log('Floor plan conversion has been accepted. Conversion ID is: ' + conversionId)
  }).catch(error => {
    console.error('Error in calling 3d.io API.', error)
  })
