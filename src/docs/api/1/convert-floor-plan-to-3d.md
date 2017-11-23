@@ -6,7 +6,7 @@ If your prefer to not set up your own server you can order models via: [https://
 In both cases the `Explore` license allows for 10 free conversions per month the `Professional` license for 50. For further details take a look at the [pricing info](https://3d.io/#pricing).
 
 
-## Convert to basic 3d model
+## Conversion Request
 
 `io3d.floorPlan.convertToBasic3dModel()` allows you to send a request to our conversion API from a custom node server.
 
@@ -30,8 +30,9 @@ io3d.floorPlan.convertToBasic3dModel({
  })
 ```
 
-On success the function returns a `conversionId`:
+## Callback Notification
 
+On conversion status update the 3dio server will send a message to the callback url:
 ```js
 {
   "jsonrpc": "2.0",
@@ -42,57 +43,40 @@ On success the function returns a `conversionId`:
 }
 ```
 
-On error it returns an error message:
+## Status Request
 
+Once you receive the callback you can request a conversion status:
+```
+io3d.floorPlan
+  .getConversionStatus({ conversionId: "910f5115-d1ef-4bbc-8f67-b062b4a54905" })
+  .then(console.log)
+```
+
+In case of success you get the [sceneId](scene.md#scene-id) which you can send to your customer [as a url](scene.html#get-viewer-url) or use it to further process the scene.
 ```js
 {
-  "jsonrpc": "2.0",
-  "error": {
-    "code": -32600,
-    "message": "Error in calling 3d.io API. RPC ID: 33314151167058960000"
-  },
-  "id": 33314151167058960000
+  "status": "COMPLETED",
+  "sceneId": "44ec1f6f-e0d1-4837-9a2f-4c66424eee81",
+  "conversionId": "910f5115-d1ef-4bbc-8f67-b062b4a54905"
 }
 ```
 
-Once the status of your conversion changes, a callback is send to the provided url:
-
+In case of an error the status message will look like this:
 ```js
 {
-  "jsonrpc": "2.0",
-  "method": "Floorplan.onConversionStatusUpdate",
-  "params": {
-    "conversionId": "910f5115-d1ef-4bbc-8f67-b062b4a54905"
-  }
+  "status": "REJECTED",
+  "conversionId": "910f5115-d1ef-4bbc-8f67-b062b4a54905"
 }
 ```
 
-## Get conversion status
-
-Use `io3d.floorPlan.getConversionStatus({ conversionId })` to get the status of your conversion. In case of success you get the [sceneId](scene.md#scene-id) which you can send to your customer [as a url](scene.html#get-viewer-url) or use it to further process the scene.
-
-Possible values:
-* `'IN_PROGRESS'` no action needed 
-* `'REJECTED'` 
-conversion has unfortunately been rejected, most likely due to one of the following reasons:
-NO_FLOORPLAN, UNCLEAR_FLOORPLAN, MULTIPLE_LEVELS, INCLINED_CEILING`
-* `'COMPLETED'`
-
+You can also request a conversion status before receiving a callback in which case the status message will look like:
 ```js
-io3d.floorPlan.getConversionStatus({ conversionId: conversionId })
-  .then(conversionData => {
-    const status = conversionData.status
-    const email = conversionData.customer.email
-    
-    if (status === 'COMPLETED') {
-      const sceneId = conversionData.sceneId
-      /* do something with the id - for instance send the url to your customers */
-      const sceneUrl = io3d.scene.getViewerUrl(sceneId)
-    }
-  }).catch(error => {
-    console.error('Error in calling 3d.io API.', error)
-  })
+{
+  "status": "IN_PROGRESS",
+  "conversionId": "910f5115-d1ef-4bbc-8f67-b062b4a54905"
+}
 ```
+
 
 ## Reference implementation
 
@@ -111,41 +95,3 @@ A deployed app is running here:<br>
 https://io3d-floor-plan-app.herokuapp.com/
 
 ![](https://storage.3d.io/97fa0bf7-1405-4fe3-a2be-49d2101d4121/2017-10-02_21-31-15_okw9Ax/3d_io_Floor_Plan_App.png)
-
-
-## Recognize
-
-With `io3d.floorPlan.recognize()` you can convert a color coded pixel image into scene structure.
-
-<table>
- <thead>
-  <tr>
-   <th>Image:</th>
-   <th>Color Codes:</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td><img title="floor-plan" src="https://storage.3d.io/132f8fd0-f7e0-432a-ad21-732f3307e77e/170912-1650-8w2re2/floorplan.jpg" style="width:250px;"></td>
-   <td style="vertical-align:middle">walls #000<br>windows #00f<br>doors #f00</td>
-  </tr>
- </tbody>
-</table>
-
-The image has to have the correct metric dimensions.
-In this example we provide a square image within an A-Frame scene with an edge length of 15m.
-The image is extracted then send to the API. The response arrives within a few seconds.
-
-```html
-<a-scene>
-  <a-image id="floor-plan" width="15.00" height="15.00" src="https://storage.3d.io/132f8fd0-f7e0-432a-ad21-732f3307e77e/170912-1650-8w2re2/floorplan.jpg" rotation="-90 0 0"></a-image>
-</a-scene>
-<script>
-io3d.floorPlan.recognize('#floor-plan')
-  .then(sceneStructure => { 
-    // do for instance a homeStaging call
-  })
-</script>
-```
-
-[example on github](https://github.com/archilogic-com/3dio-js/blob/master/examples-browser/staging/stage-floor-plan/index.html)
