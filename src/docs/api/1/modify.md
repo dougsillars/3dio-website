@@ -90,5 +90,7 @@ The resulting storageId url of the transformed model gets logged upon task compl
     .then(console.log)
 ```
 
+![collisionObject Modifier](https://storage.3d.io/535e624259ee6b0200000484/2017-11-24_12-51_VstemF/collisionObject.png)
+
 [coming soon] collisionObject usage in physics engine example
 
