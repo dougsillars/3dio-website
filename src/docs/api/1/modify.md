@@ -10,6 +10,7 @@ Namespace: `io3d.modify`
 The modify API is a part of the 3d.io Freemium API. Learn here about [Quotas](https://3d.io/docs/api/1/authentication.html)
 and how to authenticate in order to use this API.
 
+
 ## origami
 
 Applies a low poly, paper crafted style to the model.
@@ -63,3 +64,33 @@ The resulting storageId url of the transformed model gets logged upon task compl
 ```
 
 ![consolidateFaceSides Modifier](https://storage.3d.io/535e624259ee6b0200000484/2017-10-18_23-4_1Dg9G4/consolidate.png)
+
+## collisionObject
+
+This API calculates more accurate collision mesh for complex models then a commonly used primitive such as a collision box, sphere or capsule.
+A collision mesh is a low-polygonal, convex model used for physics calculation. It is invisible and extremely low-detail compared to the visible model. Compared to using the high-polygonal model, the physics performance is improved greatly in the simulation and the lack of precision will not be noticed.
+
+| Parameter | Type | Required? | Default | Description |
+| --- | --- | --- | --- | --- |
+| `storageId` | String | Yes | | The storageId of the model to modify. |
+| `options`   | Object | No  | | |
+| `options.subdivisions` | Int | No | 2 | The resolution of the collision object. Triangles: `12 * 4 ^ count` |
+
+### Example
+
+The following snippet sends a modify API request to get an optimal collision object for a model.
+The resulting storageId url of the transformed model gets logged upon task completion:
+
+```javascript
+  var storageId = '/535e624259ee6b0200000484/170223-2130-wbapug/archilogic_2017-02-23_21-30-44_1X3O1Q.gz.data3d.buffer'
+  
+  io3d.modify.collisionObject(storageId, { subdivisions: 1 })
+    .then(io3d.utils.processing.whenDone)
+    .then(io3d.storage.getUrlFromStorageId)
+    .then(console.log)
+```
+
+![collisionObject Modifier](https://storage.3d.io/535e624259ee6b0200000484/2017-11-24_12-51_VstemF/collisionObject.png)
+
+[coming soon] collisionObject usage in physics engine example
+
