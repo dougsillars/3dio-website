@@ -6,7 +6,7 @@ Home Staging API calls require an API key. You can find out how to get one [here
 
 ![Home Staging AI](../../../img/docs/homestaging-3dio.gif)
 
-[Live Example](https://app.3d.io/j0IYPW)
+[Live Example](https://app.3d.io/j0IYPW) | [Example Source Code](https://appcreator.3d.io/j0IYPW?m=e)
 
 
 ## Get Furnishings
