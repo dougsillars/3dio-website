@@ -58,7 +58,7 @@ Try it live [here](https://appcreator.3d.io/xHFYjg?m=ne) in the App Creator.
 io3d.config({
   // Replace this with your own publishable key for use on your own domain
   // More info: https://3d.io/docs/api/1/get-started-browser.html#using-publishable-api-keys
-  publishableApiKey: '38f4d19c-68d2-4bac-bb51-61d8bee4921b'
+  publishableApiKey: 'YOUR_PUBLISHABLE_API_KEY'
 })
 
 const sceneId = '27fbe564-6cf4-48aa-8a19-6f0fb6cca7c4'
@@ -108,7 +108,7 @@ function getSpaces(sceneStructure) {
 io3d.config({
   // Replace this with your own publishable key for use on your own domain
   // More info: https://3d.io/docs/api/1/get-started-browser.html#using-publishable-api-keys
-  publishableApiKey: '38f4d19c-68d2-4bac-bb51-61d8bee4921b'
+  publishableApiKey: 'YOUR_PUBLISHABLE_API_KEY'
 })
 
 const sceneId = '62aa2e6a-b72d-46cb-989b-d55c96c9cb43'
