@@ -14,6 +14,7 @@ help us to support you and others even more in creating interior spaces on the w
 * Opportunities to present your projects and work on our blog and social media channels
 * Insider knowledge, exchange with experts and support for community events
 * Expedited support & remote tutorial sessions and webinars
+* Support for travel & accomodation when presenting or teaching 3d.io & A-Frame
 
 ### Apply to be an Ambassador
 
