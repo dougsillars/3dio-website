@@ -23,6 +23,7 @@
     },
     "api": {
       "name": "appCreator",
+      "url": "https://github.com/archilogic-com/3dio-app-creator",
       "methods": {}
     }
   },{
