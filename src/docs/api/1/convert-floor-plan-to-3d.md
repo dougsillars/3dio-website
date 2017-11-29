@@ -36,7 +36,7 @@ On conversion status update the 3dio server will send a message to the callback 
 ```js
 {
   "jsonrpc": "2.0",
-  "result": {
+  "params": {
     "conversionId": "910f5115-d1ef-4bbc-8f67-b062b4a54905"
   },
   "id": 36084808219123544000
