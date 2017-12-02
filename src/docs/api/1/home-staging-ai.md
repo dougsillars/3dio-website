@@ -61,19 +61,33 @@ io3d.config({
   publishableApiKey: 'YOUR_PUBLISHABLE_API_KEY'
 })
 
+// sceneId: reference to an Archilogic scene
+// get your own via https://spaces.archilogic.com/order or https://spaces.archilogic.com/3d
 const sceneId = '27fbe564-6cf4-48aa-8a19-6f0fb6cca7c4'
-// this is the root node in the 3dio structure. furnishing results have to be
-// added to this for correct positioning.
-const levelEl = document.querySelector('.io3d-scene').firstElementChild
+// reference to the A-Frame root node
+const sceneEl = document.querySelector('a-scene')
+// reference to the level ( parent node of furnishings )
+let levelEl
 
+// let's start from zero and load the scene via the sceneId
 io3d.scene.getStructure(sceneId)
-  // first floor and is selected and dining_living label is added by default
-  .then(io3d.staging.getFurnishings)
+  .then(sceneStructure => {
+    // convert the sceneStructure to A-Frame elements
+    let elements = io3d.scene.getAframeElementsFromSceneStructure(sceneStructure)
+    elements.forEach(el => {
+      // add them to the A-Frame scene
+      sceneEl.appendChild(el)
+    })
+    // request furnishings: first floor is selected and dining_living label is added by default
+    return io3d.staging.getFurnishings(sceneStructure)
+  })
   // the furnish call outputs sceneStructure of the furnishing proposal
   .then(sceneStructure => {
-    // to get these into A-Frame we can use
+    // to get these into A-Frame we can use again
     // the getAframeElementsFromSceneStructure method
-    var elements = io3d.scene.getAframeElementsFromSceneStructure(sceneStructure)
+    let elements = io3d.scene.getAframeElementsFromSceneStructure(sceneStructure)
+    // furnishings are always relative to their parent node which is the level
+    levelEl = document.querySelector('.io3d-level')
     // add elements to the scene
     elements.forEach(el => {
       levelEl.appendChild(el)
@@ -112,25 +126,36 @@ io3d.config({
 })
 
 const sceneId = '62aa2e6a-b72d-46cb-989b-d55c96c9cb43'
-// this is the root node in the 3dio structure. furnishing results have to be
-// added to this for correct positioning.
-const levelEl = document.querySelector('.io3d-scene').firstElementChild
+// reference to the A-Frame root node
+const sceneEl = document.querySelector('a-scene')
+// reference to the level ( parent node of furnishings )
+let levelEl
 
-// get scene structure
+// let's start from zero and load the scene via the sceneId
 io3d.scene.getStructure(sceneId)
   .then(sceneStructure => {
+    // convert the sceneStructure to A-Frame elements
+    let elements = io3d.scene.getAframeElementsFromSceneStructure(sceneStructure)
+    elements.forEach(el => {
+      // add them to the A-Frame scene
+      sceneEl.appendChild(el)
+    })
     // find all spaces in the model
     const spaces = getSpaces([sceneStructure])
     // select a space directly
     // or create a ui to allow the user to select
     const spaceId = spaces[1].id
     const label = 'bedroom'
-    return io3d.staging.getFurnishings(sceneStructure, {spaceId: spaceId, label: label})
+    // request furnishings: first floor is selected and dining_living label is added by default
+    return io3d.staging.getFurnishings(sceneStructure, {spaceId, label})
   })
+  // the furnish call outputs sceneStructure of the furnishing proposal
   .then(sceneStructure => {
-    // to get these into A-Frame we can use
+    // to get these into A-Frame we can use again
     // the getAframeElementsFromSceneStructure method
-    var elements = io3d.scene.getAframeElementsFromSceneStructure(sceneStructure)
+    let elements = io3d.scene.getAframeElementsFromSceneStructure(sceneStructure)
+    // furnishings are always relative to their parent node which is the level
+    levelEl = document.querySelector('.io3d-level')
     // add elements to the scene
     elements.forEach(el => {
       levelEl.appendChild(el)
@@ -138,7 +163,7 @@ io3d.scene.getStructure(sceneId)
   })
   .catch(error => {
     console.log(error)
-  })
+  })  
 ```
 
 ### Further examples

@@ -85,7 +85,6 @@ io3d.scene.getAframeElements(sceneId)
       // add elements to the scene
       sceneEl.appendChild(el)
     })
-    sceneEl.appendChild(element)
   })
 ```
 
