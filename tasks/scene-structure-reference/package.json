@@ -1,0 +1,19 @@
+{
+  "name": "3dio",
+  "version": "1.0.5",
+  "description": "toolkit for interior apps",
+  "homepage": "https://3d.io",
+  "repository": "archilogic-com/3dio-js",
+  "license": "MIT",
+  "scripts": {
+    "create-docs": "rollup main.js --o bundle.js --f cjs && node bundle.js"
+  },
+  "author": {
+    "name": "archilogic",
+    "email": "dev.rocks@archilogic.com",
+    "url": "https://archilogic.com"
+  },
+  "dependencies": {
+    "lodash": "^4.17.4"
+  }
+}
