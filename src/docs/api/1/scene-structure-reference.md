@@ -3,7 +3,24 @@
 <!-- check ./tasks/scene-structure-reference/README.md -->
 # Scene Structure Reference
 
-Types
+Main data format of every Archilogic 3D scene.<br>
+Describes all elements of a scene including their relations to each other (location, orientation, hierarchy) and their specific characteristics (attributes).
+
+SceneStructure can be converted from and to A-Frame components on the fly
+
+[sceneStructure to A-Frame Elements](scene.md#get-a-frame-elements-from-scene-structure)
+
+[A-Frame Elements to sceneStructure](scene.md#get-scene-structure-from-a-frame-elements)
+
+## Coordinate System
+
+<img src="${IMG_PATH.replace('src','..')}coordinate-system.png" alt="Coordinate system" style="max-width: 200px; max-height: 200px; width: initial;"/>
+
+Type: right-handed cartesian coordinate system<br>
+Units: meters, degree angles<br>
+Origin: always relative to parent element<br>
+Y orientation: E=0° N=90° W=180° S=270°
+## Types
 * [`box`](#box)
 * [`camera-bookmark`](#camera-bookmark)
 * [`closet`](#closet)
@@ -29,6 +46,9 @@ Types
 
 
 ## box
+simple box object
+
+<img src="../../../img/docs/scene-structure-reference/icon-box.png" alt="box icon" style="max-width: 200px; max-height: 200px; width: initial;"/>
 
 | param | description | type | default | optional | min | values |
 |---|---|---|---|---|---|---|
@@ -66,6 +86,7 @@ A-Frame Component
 
 
 ## camera-bookmark
+preset camera positions for animations and navigation
 
 | param | description | type | default | optional | min | values |
 |---|---|---|---|---|---|---|
@@ -75,6 +96,7 @@ A-Frame Component
 | `z` |  | `number` | `0` | `false` |  |  |
 | `ry` | rotation around y axis | `number` | `0` | `false` |  |  |
 | `distance` |  | `number` |  | `false` |  |  |
+| `fov` |  | `number` | `71` | `false` |  |  |
 | `id` | unique identifier: UUID v4 | `string` |  | `true` |  |  |
 | `materials` |  | `object` |  | `true` |  |  |
 
@@ -89,10 +111,20 @@ SceneStructure Json
   "y": 0,
   "z": 0,
   "ry": 0,
-  "distance": undefined
+  "distance": undefined,
+  "fov": 71
 }```
 
+A-Frame Component
+```html
+<a-entity tour-waypoint="" position="0 0 0"></a-entity>
+```
+
+
 ## closet
+parametric closet with segmentation targeting 0.6m
+
+<img src="../../../img/docs/scene-structure-reference/icon-closet.png" alt="closet icon" style="max-width: 200px; max-height: 200px; width: initial;"/>
 
 | param | description | type | default | optional | min | values |
 |---|---|---|---|---|---|---|
@@ -135,6 +167,9 @@ A-Frame Component
 
 
 ## column
+simple structural column object, round or square
+
+<img src="../../../img/docs/scene-structure-reference/icon-column.png" alt="column icon" style="max-width: 200px; max-height: 200px; width: initial;"/>
 
 | param | description | type | default | optional | min | values |
 |---|---|---|---|---|---|---|
@@ -173,6 +208,9 @@ A-Frame Component
 
 
 ## curtain
+curtain with random folds
+
+<img src="../../../img/docs/scene-structure-reference/icon-curtain.png" alt="curtain icon" style="max-width: 200px; max-height: 200px; width: initial;"/>
 
 | param | description | type | default | optional | min | values |
 |---|---|---|---|---|---|---|
@@ -205,6 +243,9 @@ SceneStructure Json
 }```
 
 ## door
+door within a wall
+
+<img src="../../../img/docs/scene-structure-reference/icon-door.png" alt="door icon" style="max-width: 200px; max-height: 200px; width: initial;"/>
 
 | param | description | type | default | optional | min | values |
 |---|---|---|---|---|---|---|
@@ -257,6 +298,9 @@ A-Frame Component
 
 
 ## floor
+rectangular floor with optional ceiling
+
+<img src="../../../img/docs/scene-structure-reference/icon-floor.png" alt="floor icon" style="max-width: 200px; max-height: 200px; width: initial;"/>
 
 | param | description | type | default | optional | min | values |
 |---|---|---|---|---|---|---|
@@ -298,6 +342,7 @@ A-Frame Component
 
 
 ## floorplan
+reference to a floor plan image
 
 | param | description | type | default | optional | min | values |
 |---|---|---|---|---|---|---|
@@ -329,6 +374,7 @@ SceneStructure Json
 }```
 
 ## group
+group node, for relative positioning
 
 | param | description | type | default | optional | min | values |
 |---|---|---|---|---|---|---|
@@ -367,6 +413,9 @@ SceneStructure Json
 
 ## interior
 
+
+<img src="../../../img/docs/scene-structure-reference/icon-interior.png" alt="interior icon" style="max-width: 200px; max-height: 200px; width: initial;"/>
+
 | param | description | type | default | optional | min | values |
 |---|---|---|---|---|---|---|
 | `type` |  | `string` | `"interior"` | `false` |  | `"interior"` |
@@ -374,7 +423,7 @@ SceneStructure Json
 | `y` |  | `number` | `0` | `false` |  |  |
 | `z` |  | `number` | `0` | `false` |  |  |
 | `ry` | rotation around y axis | `number` | `0` | `false` |  |  |
-| `src` |  | `string` |  | `false` |  |  |
+| `src` | furniture id prefixed with '!', check https://furniture.3d.io | `string` |  | `false` |  |  |
 | `children` |  | `array` | `[]` | `true` |  |  |
 | `id` | unique identifier: UUID v4 | `string` |  | `true` |  |  |
 | `materials` |  | `object` |  | `true` |  |  |
@@ -402,11 +451,14 @@ SceneStructure Json
 
 A-Frame Component
 ```html
-<a-entity io3d-furniture="" position="0 0 0"></a-entity>
+<a-entity io3d-furniture="id: 10344b13-d981-47a0-90ac-f048ee2780a6" position="0 0 0"></a-entity>
 ```
 
 
 ## kitchen
+parametric kitchen with vast configuration options
+
+<img src="../../../img/docs/scene-structure-reference/icon-kitchen.png" alt="kitchen icon" style="max-width: 200px; max-height: 200px; width: initial;"/>
 
 | param | description | type | default | optional | min | values |
 |---|---|---|---|---|---|---|
@@ -468,6 +520,7 @@ A-Frame Component
 
 
 ## level
+node equivalent to a building storey
 
 | param | description | type | default | optional | min | values |
 |---|---|---|---|---|---|---|
@@ -512,6 +565,7 @@ SceneStructure Json
 }```
 
 ## object
+referenced 3d object in data3d.buffer format, for conversion drop a .obj into the editor spaces.archilogic.com/3d
 
 | param | description | type | default | optional | min | values |
 |---|---|---|---|---|---|---|
@@ -520,8 +574,9 @@ SceneStructure Json
 | `y` |  | `number` | `0` | `false` |  |  |
 | `z` |  | `number` | `0` | `false` |  |  |
 | `ry` | rotation around y axis | `number` | `0` | `false` |  |  |
-| `object` |  | `string` |  | `false` |  |  |
-| `sourceScale` |  | `number` |  | `true` |  |  |
+| `sourceScale` | relative scale of source file to 1 meter | `number` |  | `true` |  |  |
+| `object` | reference to data3d.buffer file | `string` |  | `false` |  |  |
+| `flipYZ` | flip Y and Z Axis | `boolean` |  | `true` |  |  |
 | `children` |  | `array` | `[]` | `true` |  |  |
 | `id` | unique identifier: UUID v4 | `string` |  | `true` |  |  |
 | `materials` |  | `object` |  | `true` |  |  |
@@ -545,11 +600,12 @@ SceneStructure Json
 
 A-Frame Component
 ```html
-<a-entity io3d-data3d="" position="0 0 0"></a-entity>
+<a-entity io3d-data3d="key: /3f995099-d624-4c8e-ab6b-1fd5e3799173/170515-0913-4p3ktf/1e588a3b-90ac-4a32-b5b8-ff2fda7f87c4.gz.data3d.buffer" position="0 0 0"></a-entity>
 ```
 
 
 ## plan
+highest node in hierarchy, contains levels
 
 | param | description | type | default | optional | min | values |
 |---|---|---|---|---|---|---|
@@ -581,6 +637,9 @@ SceneStructure Json
 }```
 
 ## polybox
+polygonal extrusion object
+
+<img src="../../../img/docs/scene-structure-reference/icon-polybox.png" alt="polybox icon" style="max-width: 200px; max-height: 200px; width: initial;"/>
 
 | param | description | type | default | optional | min | values |
 |---|---|---|---|---|---|---|
@@ -616,6 +675,9 @@ A-Frame Component
 
 
 ## polyfloor
+polygonal floor with optional ceiling
+
+<img src="../../../img/docs/scene-structure-reference/icon-polyfloor.png" alt="polyfloor icon" style="max-width: 200px; max-height: 200px; width: initial;"/>
 
 | param | description | type | default | optional | min | values |
 |---|---|---|---|---|---|---|
@@ -657,6 +719,9 @@ A-Frame Component
 
 
 ## railing
+segmented or solid railing
+
+<img src="../../../img/docs/scene-structure-reference/icon-railing.png" alt="railing icon" style="max-width: 200px; max-height: 200px; width: initial;"/>
 
 | param | description | type | default | optional | min | values |
 |---|---|---|---|---|---|---|
@@ -701,6 +766,9 @@ A-Frame Component
 
 
 ## stairs
+all kinds of stairs types
+
+<img src="../../../img/docs/scene-structure-reference/icon-stairs.png" alt="stairs icon" style="max-width: 200px; max-height: 200px; width: initial;"/>
 
 | param | description | type | default | optional | min | values |
 |---|---|---|---|---|---|---|
@@ -750,6 +818,9 @@ A-Frame Component
 
 
 ## tag
+all kinds of stairs types
+
+<img src="../../../img/docs/scene-structure-reference/icon-tag.png" alt="tag icon" style="max-width: 200px; max-height: 200px; width: initial;"/>
 
 | param | description | type | default | optional | min | values |
 |---|---|---|---|---|---|---|
@@ -779,6 +850,9 @@ SceneStructure Json
 }```
 
 ## wall
+structural wall, can contains doors and windows
+
+<img src="../../../img/docs/scene-structure-reference/icon-wall.png" alt="wall icon" style="max-width: 200px; max-height: 200px; width: initial;"/>
 
 | param | description | type | default | optional | min | values |
 |---|---|---|---|---|---|---|
@@ -826,6 +900,9 @@ A-Frame Component
 
 
 ## window
+window with optional segmentation
+
+<img src="../../../img/docs/scene-structure-reference/icon-window.png" alt="window icon" style="max-width: 200px; max-height: 200px; width: initial;"/>
 
 | param | description | type | default | optional | min | values |
 |---|---|---|---|---|---|---|

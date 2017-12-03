@@ -64,7 +64,8 @@ export default function getDefaultsByType (type) {
       typeSpecificValidations[key] = {
         params: defaultsDeep({}, types[key].params, _generic.params),
         childrenTypes: types[key].childrenTypes,
-        parentTypes: types[key].parentTypes
+        parentTypes: types[key].parentTypes,
+        description: types[key].description
       }
       if (types[key].aframeComponent) typeSpecificValidations[key].aframeComponent = types[key].aframeComponent
       typeSpecificValidations[key].params = sortObject(typeSpecificValidations[key].params)

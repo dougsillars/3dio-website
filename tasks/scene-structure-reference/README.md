@@ -11,6 +11,7 @@ git clone https://github.com/archilogic-com/3dio-js.git
 npm install rollup -g
 npm install
 ```
+* adapt `intro.md` if needed
 * run script
 ```bash
 npm run create-docs
