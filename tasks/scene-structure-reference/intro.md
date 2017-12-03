@@ -14,7 +14,7 @@ SceneStructure can be converted from and to A-Frame components on the fly
 
 ## Coordinate System
 
-<img src="${IMG_PATH.replace('src','..')}coordinate-system.png" alt="Coordinate system" style="max-width: 200px; max-height: 200px; width: initial;"/>
+<img src="../../../img/docs/scene-structure-reference/coordinate-system.png" alt="Coordinate system" style="max-width: 200px; max-height: 200px; width: initial;"/>
 
 Type: right-handed cartesian coordinate system<br>
 Units: meters, degree angles<br>
