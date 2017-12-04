@@ -9,12 +9,11 @@ git clone https://github.com/archilogic-com/3dio-js.git
 * install dependencies
 ```bash
 npm install rollup -g
-npm install
 ```
-* adapt `intro.md` if needed
-* run script
+* adapt `./tasks/scene-structure-specs/intro.md` if needed
+* run script from 3dio-website root dir
 ```bash
-npm run create-docs
+npm run build-scene-structure-specs
 ```
 * result is saved to
 `./src/docs/api/1/scene-structure-reference.md`

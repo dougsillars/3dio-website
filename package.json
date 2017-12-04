@@ -12,7 +12,8 @@
   "scripts": {
     "dev": "npm install || true \n killall node || true \n gulp dev",
     "build": "gulp build",
-    "release": "gulp release"
+    "release": "gulp release",
+    "build-scene-structure-specs": "rollup ./tasks/scene-structure-specs/main.js --o ./tasks/scene-structure-specs/bundle.js --f cjs && node ./tasks/scene-structure-specs/bundle.js"
   },
   "dependencies": {},
   "devDependencies": {
@@ -26,6 +27,7 @@
     "gulp-watch": "^4.3.11",
     "js-yaml": "^3.9.0",
     "lite-server": "^2.3.0",
+    "lodash": "^4.17.4",
     "marked": "^0.3.6",
     "pug": "^2.0.0-rc.2",
     "pygmentize-bundled": "^2.3.0",

@@ -170,7 +170,7 @@ Temporary Items
 .apdisk
 
 # build files
-tasks/scene-structure-reference/bundle.js
+tasks/scene-structure-specs/bundle.js
 
 build
 ___RESOURCES

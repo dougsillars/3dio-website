@@ -40,7 +40,7 @@ example of a simple scene structure snippet describing a furniture item:
   "src": "!3aff54e2-fdff-44a3-9646-f2db1ea3bbfc"
 }
 ```
-Take a look at the [Scene Structure Reference](scene-structure-reference.md)
+Take a look at the [Scene Structure Specifications](scene-structure-specifications.md)
 
 
 ### Get Structure

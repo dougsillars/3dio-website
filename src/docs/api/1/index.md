@@ -14,7 +14,7 @@ Questions? [Ask us on Stack Overflow.](https://stackoverflow.com/questions/tagge
 * [Storage](storage.md)
 * [Furniture](furniture.md)
 * [Scene](scene.md)
-* [SceneStructure Reference](scene-structure-reference.md)
+* [SceneStructure Specifications](scene-structure-specifications.md)
 * [Home staging AI](home-staging-ai.md)
 * [Convert floor plan to 3D](convert-floor-plan-to-3d.md)
 * Import 3D model
