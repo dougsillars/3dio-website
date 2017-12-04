@@ -1,7 +1,7 @@
 <!-- sceneStructure reference created automatically -->
 <!-- do not edit manually -->
 <!-- check ./tasks/scene-structure-reference/README.md -->
-# Scene Structure Reference
+# Scene Structure Specifications
 
 Main data format of every Archilogic 3D scene.<br>
 Describes all elements of a scene including their relations to each other (location, orientation, hierarchy) and their specific characteristics (attributes).
@@ -14,7 +14,7 @@ SceneStructure can be converted from and to A-Frame components on the fly
 
 ## Coordinate System
 
-<img src="../../../img/docs/scene-structure-reference/coordinate-system.png" alt="Coordinate system" style="max-width: 200px; max-height: 200px; width: initial;"/>
+<img src="../../../img/docs/scene-structure-specs/coordinate-system.png" alt="Coordinate system" style="max-width: 200px; max-height: 200px; width: initial;"/>
 
 Type: right-handed cartesian coordinate system<br>
 Units: meters, degree angles<br>

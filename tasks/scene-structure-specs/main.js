@@ -2,9 +2,9 @@ import getDefaults from './get-types-for-docs'
 
 const fs = require('fs')
 const types = getDefaults()
-const REF_PATH = '../../src/docs/api/1/scene-structure-reference.md'
-const IMG_PATH = '../../src/img/docs/scene-structure-reference/'
-const INTRO_PATH = './intro.md'
+const REF_PATH = './src/docs/api/1/scene-structure-specifications.md'
+const IMG_PATH = './src/img/docs/scene-structure-specs/'
+const INTRO_PATH = './tasks/scene-structure-specs/intro.md'
 
 function generateReference() {
   // global md string kickoff
@@ -103,7 +103,7 @@ function getImage(type) {
   let path = `${IMG_PATH}icon-${type}.png`
   let imgStr = ''
   if (fs.existsSync(path)) {
-    imgStr = `\n\n<img src="${path.replace('src','..')}" alt="${type} icon" style="max-width: 200px; max-height: 200px; width: initial;"/>`
+    imgStr = `\n\n<img src="${path.replace('./src','../../..')}" alt="${type} icon" style="max-width: 200px; max-height: 200px; width: initial;"/>`
     // imgStr = `\n\n![${type} icon](${path.replace('src','..  ')} =250x)`
   }
   return imgStr
