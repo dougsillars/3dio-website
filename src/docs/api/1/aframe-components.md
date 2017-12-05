@@ -4,6 +4,7 @@
 
 The following components are available:
 
+* [Architectural Toolkit](architectural-toolkit.md) to display building data.
 * [`io3d-data3d`](#io3d-data3d) to display 3D models.
 * [`io3d-furniture`](#io3d-furniture) to display furniture.
 * [`io3d-lighting`](#io3d-lighting) change the default light setup.
