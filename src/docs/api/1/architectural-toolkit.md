@@ -9,7 +9,7 @@
 
 ### params
 
-[stair type](scene-structure-reference.md#kitchen)
+[kitchen type](scene-structure-reference.md#kitchen)
 
 ### interactive sample
 
@@ -25,7 +25,7 @@
 
 ### params
 
-[kitchen type](scene-structure-reference.md#kitchen)
+[stairs type](scene-structure-reference.md#stairs)
 
 ### interactive sample
 
