@@ -60,7 +60,8 @@ simple box object
 | `l` | length | `number` | `1` | `false` | `0.01` |  |
 | `h` | height | `number` | `1` | `false` | `0.01` |  |
 | `w` | width | `number` | `1` | `false` | `0.01` |  |
-| `id` | unique identifier: UUID v4 | `string` |  | `true` |  |  |
+| `v` | version | `number` | `0` | `true` |  |  |
+| `id` | unique identifier: UUID v4 | `string` |  | `false` |  |  |
 | `materials` |  | `object` |  | `true` |  |  |
 
 Possible parent types
@@ -76,7 +77,8 @@ SceneStructure Json
   "ry": 0,
   "l": 1,
   "h": 1,
-  "w": 1
+  "w": 1,
+  "id": ""
 }```
 
 A-Frame Component
@@ -95,9 +97,12 @@ preset camera positions for animations and navigation
 | `y` |  | `number` | `0` | `false` |  |  |
 | `z` |  | `number` | `0` | `false` |  |  |
 | `ry` | rotation around y axis | `number` | `0` | `false` |  |  |
+| `v` | version | `number` | `0` | `true` |  |  |
+| `rx` | pitch | `number` | `0` | `false` |  |  |
 | `distance` |  | `number` |  | `false` |  |  |
 | `fov` |  | `number` | `71` | `false` |  |  |
-| `id` | unique identifier: UUID v4 | `string` |  | `true` |  |  |
+| `name` |  | `string` | `"Camera Bookmark"` | `false` |  |  |
+| `id` | unique identifier: UUID v4 | `string` |  | `false` |  |  |
 | `materials` |  | `object` |  | `true` |  |  |
 
 Possible parent types
@@ -111,13 +116,16 @@ SceneStructure Json
   "y": 0,
   "z": 0,
   "ry": 0,
-  "distance": undefined,
-  "fov": 71
+  "rx": 0,
+  "distance": "",
+  "fov": 71,
+  "name": "Camera Bookmark",
+  "id": ""
 }```
 
 A-Frame Component
 ```html
-<a-entity tour-waypoint="" position="0 0 0"></a-entity>
+<a-entity tour-waypoint="name: Camera Bookmark;" position="0 0 0"></a-entity>
 ```
 
 
@@ -136,12 +144,13 @@ parametric closet with segmentation targeting 0.6m
 | `l` | length | `number` | `1.8` | `false` | `0.01` |  |
 | `h` | height | `number` | `2.4` | `false` | `0.01` |  |
 | `w` | width | `number` | `0.6` | `false` | `0.01` |  |
-| `handleWidth` | thickness of closet door handle | `number` | `0.02` | `true` | `0.01` |  |
 | `handleHeight` | height of closet door handle | `number` | `0.3` | `true` | `0.01` |  |
-| `handleLength` | length of closet door handle | `number` | `0.02` | `true` | `0.01` |  |
-| `doorWidth` | thickness of closet door | `number` | `0.02` | `true` | `0.01` |  |
 | `baseboard` | height of baseboard | `number` | `0.1` | `true` | `0.01` |  |
-| `id` | unique identifier: UUID v4 | `string` |  | `true` |  |  |
+| `doorWidth` | thickness of closet door | `number` | `0.02` | `true` | `0.01` |  |
+| `handleLength` | length of closet door handle | `number` | `0.02` | `true` | `0.01` |  |
+| `handleWidth` | thickness of closet door handle | `number` | `0.02` | `true` | `0.01` |  |
+| `v` | version | `number` | `1` | `true` |  |  |
+| `id` | unique identifier: UUID v4 | `string` |  | `false` |  |  |
 | `materials` |  | `object` |  | `true` |  |  |
 
 Possible parent types
@@ -157,7 +166,8 @@ SceneStructure Json
   "ry": 0,
   "l": 1.8,
   "h": 2.4,
-  "w": 0.6
+  "w": 0.6,
+  "id": ""
 }```
 
 A-Frame Component
@@ -181,7 +191,8 @@ simple structural column object, round or square
 | `l` | length for square / diameter for circle | `number` | `0.2` | `false` | `0.01` |  |
 | `h` | height | `number` | `2.4` | `false` | `0.01` |  |
 | `shape` | column contour | `string` | `"square"` | `false` | `0.01` | `"square"` `"circle"` |
-| `id` | unique identifier: UUID v4 | `string` |  | `true` |  |  |
+| `v` | version | `number` | `1` | `true` |  |  |
+| `id` | unique identifier: UUID v4 | `string` |  | `false` |  |  |
 | `materials` |  | `object` |  | `true` |  |  |
 
 Possible parent types
@@ -198,7 +209,8 @@ SceneStructure Json
   "ry": 0,
   "l": 0.2,
   "h": 2.4,
-  "shape": "square"
+  "shape": "square",
+  "id": ""
 }```
 
 A-Frame Component
@@ -223,7 +235,8 @@ curtain with random folds
 | `h` | height | `number` | `2.4` | `false` | `0.01` |  |
 | `w` | thickness | `number` | `0.2` | `false` | `0.01` |  |
 | `folds` | number of folds | `number` | `14` | `true` | `0.01` |  |
-| `id` | unique identifier: UUID v4 | `string` |  | `true` |  |  |
+| `v` | version | `number` | `1` | `true` |  |  |
+| `id` | unique identifier: UUID v4 | `string` |  | `false` |  |  |
 | `materials` |  | `object` |  | `true` |  |  |
 
 Possible parent types
@@ -239,7 +252,8 @@ SceneStructure Json
   "ry": 0,
   "l": 1.8,
   "h": 2.4,
-  "w": 0.2
+  "w": 0.2,
+  "id": ""
 }```
 
 ## door
@@ -260,15 +274,16 @@ door within a wall
 | `doorAngle` | door leaf opening anlge | `number` | `92` | `true` |  |  |
 | `hinge` | door leaf opening direction | `string` | `"right"` | `false` |  | `"right"` `"left"` |
 | `side` | door leaf opening to the front or back of the wall | `string` | `"back"` | `false` |  | `"front"` `"back"` |
-| `v` | version | `number` | `3` | `false` |  | `3` |
+| `v` | version | `number` | `3` | `false` |  |  |
 | `fixLeafRatio` |  | `number` | `0.3` | `true` |  |  |
+| `threshold` |  | `boolean` | `true` | `false` |  |  |
 | `thresholdHeight` |  | `number` | `0.01` | `true` |  |  |
 | `frameLength` | thickness of frame | `number` | `0.05` | `true` | `0.01` |  |
 | `frameOffset` | frame thicker than wall | `number` | `0` | `true` |  |  |
 | `leafWidth` | thickness of door leaf | `number` | `0.03` | `true` |  |  |
 | `leafOffset` | z offset of door leaf | `number` | `0.005` | `true` |  |  |
 | `doorType` | defines opening type | `string` | `"singleSwing"` | `false` |  | `"singleSwing"` `"doubleSwing"` `"swingFix"` `"swingDoubleFix"` `"doubleSwingDoubleFix"` `"slidingDoor"` `"opening"` |
-| `id` | unique identifier: UUID v4 | `string` |  | `true` |  |  |
+| `id` | unique identifier: UUID v4 | `string` |  | `false` |  |  |
 | `materials` |  | `object` |  | `true` |  |  |
 
 Possible parent types
@@ -288,12 +303,14 @@ SceneStructure Json
   "hinge": "right",
   "side": "back",
   "v": 3,
-  "doorType": "singleSwing"
+  "threshold": true,
+  "doorType": "singleSwing",
+  "id": ""
 }```
 
 A-Frame Component
 ```html
-<a-entity io3d-door="l: 0.9; h: 2; w: 0.05; hinge: right; side: back; v: 3; doorType: singleSwing;" position="0 0 0"></a-entity>
+<a-entity io3d-door="l: 0.9; h: 2; w: 0.05; hinge: right; side: back; v: 3; threshold: true; doorType: singleSwing;" position="0 0 0"></a-entity>
 ```
 
 
@@ -313,8 +330,9 @@ rectangular floor with optional ceiling
 | `h` | height | `number` | `0.2` | `false` | `0.01` |  |
 | `w` | width | `number` | `4` | `false` | `0.01` |  |
 | `hCeiling` | ceiling height | `number` | `2.4` | `false` |  |  |
+| `v` | version | `number` | `0` | `true` |  |  |
 | `hasCeiling` | toggle ceiling | `boolean` | `true` | `false` |  |  |
-| `id` | unique identifier: UUID v4 | `string` |  | `true` |  |  |
+| `id` | unique identifier: UUID v4 | `string` |  | `false` |  |  |
 | `materials` |  | `object` |  | `true` |  |  |
 
 Possible parent types
@@ -332,7 +350,8 @@ SceneStructure Json
   "h": 0.2,
   "w": 4,
   "hCeiling": 2.4,
-  "hasCeiling": true
+  "hasCeiling": true,
+  "id": ""
 }```
 
 A-Frame Component
@@ -354,7 +373,8 @@ reference to a floor plan image
 | `l` |  | `number` |  | `false` | `0.01` |  |
 | `w` |  | `number` |  | `false` | `0.01` |  |
 | `file` |  | `string` |  | `false` |  |  |
-| `id` | unique identifier: UUID v4 | `string` |  | `true` |  |  |
+| `v` | version | `number` | `0` | `true` |  |  |
+| `id` | unique identifier: UUID v4 | `string` |  | `false` |  |  |
 | `materials` |  | `object` |  | `true` |  |  |
 
 Possible parent types
@@ -368,9 +388,10 @@ SceneStructure Json
   "y": 0,
   "z": 0,
   "ry": 0,
-  "l": undefined,
-  "w": undefined,
-  "file": undefined
+  "l": "",
+  "w": "",
+  "file": "",
+  "id": ""
 }```
 
 ## group
@@ -385,7 +406,7 @@ group node, for relative positioning
 | `ry` | rotation around y axis | `number` | `0` | `false` |  |  |
 | `src` |  | `string` |  | `true` |  |  |
 | `children` |  | `array` | `[]` | `true` |  |  |
-| `id` | unique identifier: UUID v4 | `string` |  | `true` |  |  |
+| `id` | unique identifier: UUID v4 | `string` |  | `false` |  |  |
 | `materials` |  | `object` |  | `true` |  |  |
 
 Possible parent types
@@ -408,7 +429,8 @@ SceneStructure Json
   "x": 0,
   "y": 0,
   "z": 0,
-  "ry": 0
+  "ry": 0,
+  "id": ""
 }```
 
 ## interior
@@ -425,7 +447,7 @@ SceneStructure Json
 | `ry` | rotation around y axis | `number` | `0` | `false` |  |  |
 | `src` | furniture id prefixed with '!', check https://furniture.3d.io | `string` |  | `false` |  |  |
 | `children` |  | `array` | `[]` | `true` |  |  |
-| `id` | unique identifier: UUID v4 | `string` |  | `true` |  |  |
+| `id` | unique identifier: UUID v4 | `string` |  | `false` |  |  |
 | `materials` |  | `object` |  | `true` |  |  |
 
 Possible parent types
@@ -446,7 +468,8 @@ SceneStructure Json
   "y": 0,
   "z": 0,
   "ry": 0,
-  "src": undefined
+  "src": "",
+  "id": ""
 }```
 
 A-Frame Component
@@ -470,6 +493,7 @@ parametric kitchen with vast configuration options
 | `l` |  | `number` | `4.2` | `false` | `0.01` |  |
 | `h` |  | `number` | `2.4` | `false` | `0.01` |  |
 | `w` |  | `number` | `0.6` | `false` | `0.01` |  |
+| `sinkPos` |  | `int` | `4` | `true` |  |  |
 | `doorWidth` |  | `number` | `0.02` | `true` | `0.01` |  |
 | `highCabinetLeft` |  | `int` | `2` | `true` |  |  |
 | `highCabinetRight` |  | `int` | `0` | `true` |  |  |
@@ -478,8 +502,8 @@ parametric kitchen with vast configuration options
 | `wallCabinetWidth` |  | `number` | `0.45` | `true` | `0.01` |  |
 | `cabinetType` |  | `string` | `"flat"` | `true` |  | `"flat"` `"style1"` `"style2"` |
 | `sinkType` |  | `string` | `"single"` | `true` |  | `"single"` `"double"` `"none"` |
-| `sinkPos` |  | `int` | `4` | `true` |  |  |
-| `materials` |  | `object` |  | `true` |  |  |
+| `v` | version | `number` | `2` | `true` |  |  |
+| `extractorType` |  | `string` | `"integrated"` | `true` |  | `"box"` `"pyramid"` `"integrated"` `"none"` |
 | `ovenType` |  | `string` | `"single"` | `true` |  | `"single"` `"double"` `"none"` |
 | `ovenPos` |  | `int` | `6` | `true` |  |  |
 | `cooktopType` |  | `string` | `"electro60"` | `true` |  | `"electro60"` `"electro90"` `"gas60"` `"gas90"` `"none"` |
@@ -493,8 +517,8 @@ parametric kitchen with vast configuration options
 | `counterHeight` |  | `number` | `0.9` | `true` | `0.01` |  |
 | `counterThickness` |  | `number` | `0.03` | `true` | `0.01` |  |
 | `barCounter` |  | `boolean` | `false` | `true` |  |  |
-| `id` | unique identifier: UUID v4 | `string` |  | `true` |  |  |
-| `extractorType` |  | `string` | `"integrated"` | `true` |  | `"box"` `"pyramid"` `"integrated"` `"none"` |
+| `id` | unique identifier: UUID v4 | `string` |  | `false` |  |  |
+| `materials` |  | `object` |  | `true` |  |  |
 
 Possible parent types
 * [`level`](#level)
@@ -510,7 +534,8 @@ SceneStructure Json
   "l": 4.2,
   "h": 2.4,
   "w": 0.6,
-  "elementLength": 0.6
+  "elementLength": 0.6,
+  "id": ""
 }```
 
 A-Frame Component
@@ -530,7 +555,7 @@ node equivalent to a building storey
 | `z` |  | `number` | `0` | `false` |  |  |
 | `ry` | rotation around y axis | `number` | `0` | `false` |  |  |
 | `children` |  | `array` | `[]` | `true` |  |  |
-| `id` | unique identifier: UUID v4 | `string` |  | `true` |  |  |
+| `id` | unique identifier: UUID v4 | `string` |  | `false` |  |  |
 | `materials` |  | `object` |  | `true` |  |  |
 
 Possible parent types
@@ -561,7 +586,8 @@ SceneStructure Json
   "x": 0,
   "y": 0,
   "z": 0,
-  "ry": 0
+  "ry": 0,
+  "id": ""
 }```
 
 ## object
@@ -578,7 +604,7 @@ referenced 3d object in data3d.buffer format, for conversion drop a .obj into th
 | `object` | reference to data3d.buffer file | `string` |  | `false` |  |  |
 | `flipYZ` | flip Y and Z Axis | `boolean` |  | `true` |  |  |
 | `children` |  | `array` | `[]` | `true` |  |  |
-| `id` | unique identifier: UUID v4 | `string` |  | `true` |  |  |
+| `id` | unique identifier: UUID v4 | `string` |  | `false` |  |  |
 | `materials` |  | `object` |  | `true` |  |  |
 
 Possible parent types
@@ -595,7 +621,8 @@ SceneStructure Json
   "y": 0,
   "z": 0,
   "ry": 0,
-  "object": undefined
+  "object": "",
+  "id": ""
 }```
 
 A-Frame Component
@@ -614,10 +641,10 @@ highest node in hierarchy, contains levels
 | `y` |  | `number` | `0` | `false` |  |  |
 | `z` |  | `number` | `0` | `false` |  |  |
 | `ry` | rotation around y axis | `number` | `0` | `false` |  |  |
-| `modelDisplayName` | name of the scene | `string` |  | `false` |  |  |
-| `v` | version | `number` |  | `false` |  | `1` |
+| `modelDisplayName` | name of the scene | `string` |  | `true` |  |  |
+| `v` | version | `number` | `1` | `true` |  |  |
 | `children` |  | `array` | `[]` | `true` |  |  |
-| `id` | unique identifier: UUID v4 | `string` |  | `true` |  |  |
+| `id` | unique identifier: UUID v4 | `string` |  | `false` |  |  |
 | `materials` |  | `object` |  | `true` |  |  |
 
 Possible children types
@@ -632,8 +659,7 @@ SceneStructure Json
   "y": 0,
   "z": 0,
   "ry": 0,
-  "modelDisplayName": undefined,
-  "v": undefined
+  "id": ""
 }```
 
 ## polybox
@@ -650,7 +676,8 @@ polygonal extrusion object
 | `ry` | rotation around y axis | `number` | `0` | `false` |  |  |
 | `h` |  | `number` | `1` | `false` | `0.01` |  |
 | `polygon` |  | `array` |  | `false` |  |  |
-| `id` | unique identifier: UUID v4 | `string` |  | `true` |  |  |
+| `v` | version | `number` | `1` | `true` |  |  |
+| `id` | unique identifier: UUID v4 | `string` |  | `false` |  |  |
 | `materials` |  | `object` |  | `true` |  |  |
 
 Possible parent types
@@ -665,7 +692,8 @@ SceneStructure Json
   "z": 0,
   "ry": 0,
   "h": 1,
-  "polygon": undefined
+  "polygon": "",
+  "id": ""
 }```
 
 A-Frame Component
@@ -688,11 +716,12 @@ polygonal floor with optional ceiling
 | `ry` | rotation around y axis | `number` | `0` | `false` |  |  |
 | `h` | height | `number` | `0.2` | `false` | `0.01` |  |
 | `usage` |  | `string` |  | `true` |  |  |
+| `v` | version | `number` | `0` | `true` |  |  |
 | `polygon` | outer polygon | `array` | `[[1.5,1.5],[1.5,-1.5],[-1.5,-1.5],[-1.5,1.5]]` | `false` |  |  |
-| `hCeiling` | ceiling height | `number` | `2.4` | `false` |  |  |
-| `hasCeiling` | toggle ceiling | `boolean` | `true` | `false` |  |  |
 | `polygonHoles` | polygon holes | `array` |  | `true` |  |  |
-| `id` | unique identifier: UUID v4 | `string` |  | `true` |  |  |
+| `hasCeiling` | toggle ceiling | `boolean` | `true` | `false` |  |  |
+| `hCeiling` | ceiling height | `number` | `2.4` | `false` |  |  |
+| `id` | unique identifier: UUID v4 | `string` |  | `false` |  |  |
 | `materials` |  | `object` |  | `true` |  |  |
 
 Possible parent types
@@ -708,13 +737,14 @@ SceneStructure Json
   "ry": 0,
   "h": 0.2,
   "polygon": [[1.5,1.5],[1.5,-1.5],[-1.5,-1.5],[-1.5,1.5]],
+  "hasCeiling": true,
   "hCeiling": 2.4,
-  "hasCeiling": true
+  "id": ""
 }```
 
 A-Frame Component
 ```html
-<a-entity io3d-polyfloor="h: 0.2; polygon: [1.5,1.5,1.5,-1.5,-1.5,-1.5,-1.5,1.5]; hCeiling: 2.4; hasCeiling: true;" position="0 0 0"></a-entity>
+<a-entity io3d-polyfloor="h: 0.2; polygon: [[1.5,1.5], [1.5,-1.5], [-1.5,-1.5], [-1.5,1.5]]; hasCeiling: true; hCeiling: 2.4;" position="0 0 0"></a-entity>
 ```
 
 
@@ -734,11 +764,12 @@ segmented or solid railing
 | `h` | height | `number` | `1` | `false` | `0.01` |  |
 | `w` | width | `number` | `0.05` | `false` | `0.01` |  |
 | `segmentDistance` | distance between vertical segments, for segmentation = 'distance' | `number` | `0.14` | `true` |  |  |
-| `segments` | number of vertical segments, for segmentation = 'number' | `int` | `5` | `true` |  |  |
-| `segmentation` | vertical segmentation type | `string` | `"distance"` | `false` |  | `"distance"` `"number"` `"none"` |
-| `railCount` | horizontal rail count | `int` | `2` | `true` |  |  |
 | `pailing` | strength of the posts | `number` | `0.01` | `false` |  |  |
-| `id` | unique identifier: UUID v4 | `string` |  | `true` |  |  |
+| `railCount` | horizontal rail count | `int` | `2` | `true` |  |  |
+| `segmentation` | vertical segmentation type | `string` | `"distance"` | `false` |  | `"distance"` `"number"` `"none"` |
+| `segments` | number of vertical segments, for segmentation = 'number' | `int` | `5` | `true` |  |  |
+| `v` | version | `number` | `0` | `true` |  |  |
+| `id` | unique identifier: UUID v4 | `string` |  | `false` |  |  |
 | `materials` |  | `object` |  | `true` |  |  |
 
 Possible parent types
@@ -755,13 +786,14 @@ SceneStructure Json
   "l": 1,
   "h": 1,
   "w": 0.05,
+  "pailing": 0.01,
   "segmentation": "distance",
-  "pailing": 0.01
+  "id": ""
 }```
 
 A-Frame Component
 ```html
-<a-entity io3d-railing="l: 1; h: 1; w: 0.05; segmentation: distance; pailing: 0.01;" position="0 0 0"></a-entity>
+<a-entity io3d-railing="l: 1; h: 1; w: 0.05; pailing: 0.01; segmentation: distance;" position="0 0 0"></a-entity>
 ```
 
 
@@ -780,14 +812,15 @@ all kinds of stairs types
 | `l` |  | `number` | `4` | `false` | `0.01` |  |
 | `h` |  | `number` | `2.4` | `false` | `0.01` |  |
 | `w` |  | `number` | `1.2` | `false` | `0.01` |  |
-| `materials` |  | `object` |  | `true` |  |  |
+| `railingType` |  | `string` | `"verticalBars"` | `false` |  | `"verticalBars"` |
+| `v` | version | `number` | `1` | `true` |  |  |
 | `stepWidth` |  | `number` | `1.2` | `false` | `0.01` |  |
 | `stairType` |  | `string` | `"straight"` | `false` |  | `"straight"` `"straightLanding"` `"lShaped"` `"halfLanding"` `"2QuarterLanding"` `"winder"` `"doubleWinder"` `"spiral"` |
 | `treadHeight` |  | `number` | `0.02` | `false` |  |  |
 | `stepThickness` |  | `number` | `0.17` | `false` |  |  |
 | `railing` |  | `string` | `"right"` | `false` |  | `"none"` `"left"` `"right"` `"both"` |
-| `id` | unique identifier: UUID v4 | `string` |  | `true` |  |  |
-| `railingType` |  | `string` | `"verticalBars"` | `false` |  | `"verticalBars"` |
+| `id` | unique identifier: UUID v4 | `string` |  | `false` |  |  |
+| `materials` |  | `object` |  | `true` |  |  |
 
 Possible parent types
 * [`level`](#level)
@@ -803,17 +836,18 @@ SceneStructure Json
   "l": 4,
   "h": 2.4,
   "w": 1.2,
+  "railingType": "verticalBars",
   "stepWidth": 1.2,
   "stairType": "straight",
   "treadHeight": 0.02,
   "stepThickness": 0.17,
   "railing": "right",
-  "railingType": "verticalBars"
+  "id": ""
 }```
 
 A-Frame Component
 ```html
-<a-entity io3d-stairs="l: 4; h: 2.4; w: 1.2; stepWidth: 1.2; stairType: straight; treadHeight: 0.02; stepThickness: 0.17; railing: right; railingType: verticalBars;" position="0 0 0"></a-entity>
+<a-entity io3d-stairs="l: 4; h: 2.4; w: 1.2; railingType: verticalBars; stepWidth: 1.2; stairType: straight; treadHeight: 0.02; stepThickness: 0.17; railing: right;" position="0 0 0"></a-entity>
 ```
 
 
@@ -830,8 +864,9 @@ all kinds of stairs types
 | `z` |  | `number` | `0` | `false` |  |  |
 | `ry` | rotation around y axis | `number` | `0` | `false` |  |  |
 | `title` |  | `string` |  | `false` |  |  |
+| `v` | version | `number` | `0` | `true` |  |  |
 | `notes` |  | `string` |  | `true` |  |  |
-| `id` | unique identifier: UUID v4 | `string` |  | `true` |  |  |
+| `id` | unique identifier: UUID v4 | `string` |  | `false` |  |  |
 | `materials` |  | `object` |  | `true` |  |  |
 
 Possible parent types
@@ -846,7 +881,8 @@ SceneStructure Json
   "y": 0,
   "z": 0,
   "ry": 0,
-  "title": undefined
+  "title": "",
+  "id": ""
 }```
 
 ## wall
@@ -864,12 +900,13 @@ structural wall, can contains doors and windows
 | `l` | length | `number` | `1` | `false` | `0.01` |  |
 | `h` | height | `number` | `2.4` | `false` | `0.01` |  |
 | `w` | width | `number` | `0.15` | `false` | `0.01` |  |
-| `backHasBase` | show baseboard on the back | `boolean` | `false` | `true` |  |  |
-| `frontHasBase` | show baseboard on the front | `boolean` | `false` | `true` |  |  |
-| `baseHeight` | height of the baseboard | `number` | `0` | `true` |  |  |
+| `v` | version | `number` | `0` | `true` |  |  |
 | `controlLine` | relative position of the control line to the wall | `string` | `"back"` | `true` |  | `"back"` `"center"` `"front"` |
+| `baseHeight` | height of the baseboard | `number` | `0` | `true` |  |  |
+| `frontHasBase` | show baseboard on the front | `boolean` | `false` | `true` |  |  |
+| `backHasBase` | show baseboard on the back | `boolean` | `false` | `true` |  |  |
 | `children` |  | `array` | `[]` | `true` |  |  |
-| `id` | unique identifier: UUID v4 | `string` |  | `true` |  |  |
+| `id` | unique identifier: UUID v4 | `string` |  | `false` |  |  |
 | `materials` |  | `object` |  | `true` |  |  |
 
 Possible parent types
@@ -890,7 +927,8 @@ SceneStructure Json
   "ry": 0,
   "l": 1,
   "h": 2.4,
-  "w": 0.15
+  "w": 0.15,
+  "id": ""
 }```
 
 A-Frame Component
@@ -913,13 +951,15 @@ window with optional segmentation
 | `ry` | rotation around y axis | `number` | `0` | `false` |  |  |
 | `l` | length | `number` | `1.6` | `false` | `0.01` |  |
 | `h` | height | `number` | `1.5` | `false` | `0.01` |  |
-| `materials` |  | `object` |  | `true` |  |  |
-| `side` | relative position of the window inside the wall opening | `string` | `"back"` | `false` |  | `"back"` `"center"` `"front"` |
+| `frameWidth` | width of the frame | `number` | `0.06` | `true` | `0.01` |  |
+| `v` | version | `number` | `0` | `true` |  |  |
+| `hideGlass` | Hides glass mesh | `boolean` | `false` | `true` |  |  |
+| `side` | relative position of the window inside the wall opening | `string` | `"back"` | `true` |  | `"back"` `"center"` `"front"` |
 | `rowRatios` | relative height of horizontal segmentation | `array` | `[1]` | `true` |  |  |
 | `columnRatios` | relative width of vertical segmentation per row | `array` | `[[1]]` | `true` |  |  |
 | `frameLength` | thickness of the frame | `number` | `0.04` | `true` | `0.01` |  |
-| `id` | unique identifier: UUID v4 | `string` |  | `true` |  |  |
-| `frameWidth` | Wwidth of the frame | `number` | `0.06` | `true` | `0.01` |  |
+| `id` | unique identifier: UUID v4 | `string` |  | `false` |  |  |
+| `materials` |  | `object` |  | `true` |  |  |
 
 Possible parent types
 * [`wall`](#wall)
@@ -934,10 +974,10 @@ SceneStructure Json
   "ry": 0,
   "l": 1.6,
   "h": 1.5,
-  "side": "back"
+  "id": ""
 }```
 
 A-Frame Component
 ```html
-<a-entity io3d-window="l: 1.6; h: 1.5; side: back;" position="0 0.8 0"></a-entity>
+<a-entity io3d-window="l: 1.6; h: 1.5;" position="0 0.8 0"></a-entity>
 ```

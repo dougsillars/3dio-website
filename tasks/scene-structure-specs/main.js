@@ -57,7 +57,7 @@ function generateReference() {
       if (!params[p].optional) {
         let quot = params[p].type === 'string'
         // json sample
-        sampleParamStr += `,\n  "${p}": ${JSON.stringify(params[p].defaultValue)}`
+        sampleParamStr += `,\n  "${p}": ${(params[p].defaultValue !== undefined ? JSON.stringify(params[p].defaultValue) : '""')}`
         // A-Frame sample
         if (!params[p].skipInAframe) sampleAframeStr += (`${p}: ${JSON.stringify(params[p].aframeDefault || params[p].defaultValue)}; `).replace(/"/gm, '')
       }
