@@ -11,7 +11,7 @@ Questions? [Ask us on Stack Overflow.](https://stackoverflow.com/questions/tagge
 
 ## Products
 * [A-Frame components](aframe-components.md)
-* [Architectural toolkit](architectural-toolkit.md)
+* [Architecture toolkit](architecture-toolkit.md)
 * [Storage](storage.md)
 * [Furniture](furniture.md)
 * [Scene](scene.md)
