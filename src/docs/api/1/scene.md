@@ -11,6 +11,7 @@ Content:
 * [`normalizeSceneStructure(sceneStructure)`](#normalize-scene-structure)
 * [`validateSceneStructure(sceneStructure)`](#validate-scene-structure)
 * [`getViewerUrl(sceneId)`](#get-viewer-url)
+* [`exportSvg(sceneStructure)`](#export-svg)
 
 ## Scene Id
 
@@ -39,6 +40,8 @@ example of a simple scene structure snippet describing a furniture item:
   "src": "!3aff54e2-fdff-44a3-9646-f2db1ea3bbfc"
 }
 ```
+Take a look at the [Scene Structure Specifications](scene-structure-specifications.md)
+
 
 ### Get Structure
 
@@ -185,6 +188,29 @@ Error codes:
 returns Archilogic Viewer Url from a scene Id
 ```js
 io3d.scene.getViewerUrl('5dc58829-ecd3-4b33-bdaf-f798b7edecd4')
+```
+returns
+
+https://spaces.archilogic.com/3d/!5dc58829-ecd3-4b33-bdaf-f798b7edecd4
+
+### Export svg
+
+converts sceneStructure into a 2D svg floor plan
+```javascript
+io3d.config({
+  // Replace this with your own publishable key for use on your own domain
+  // More info: https://3d.io/docs/api/1/get-started-browser.html#using-publishable-api-keys
+  publishableApiKey: 'YOUR_PUBLISHABLE_API_KEY'
+})
+
+// sceneId: reference to an Archilogic scene
+// get your own via https://spaces.archilogic.com/order or https://spaces.archilogic.com/3d
+const sceneId = '27fbe564-6cf4-48aa-8a19-6f0fb6cca7c4'
+
+io3d.scene.exportSvg(sceneStructure)
+.then(svg => {
+  document.body.appendChild(svg)
+})
 ```
 returns
 

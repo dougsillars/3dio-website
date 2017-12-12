@@ -10,6 +10,7 @@ All content resides in `src` folder. Beside html and css the following file type
 * `.pug` templates https://www.npmjs.com/package/pug
 * `.md` markdown files https://help.github.com/categories/writing-on-github/
 * `.less` files http://lesscss.org/
+* `./src/docs/api/1/scene-structure-reference.md` is created automatically check `./tasks/scene-structure-reference/README.md`
 
 Non-native browser file types will get precompiled during build process in order to serve the entire site as static data.
 

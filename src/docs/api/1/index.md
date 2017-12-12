@@ -11,9 +11,12 @@ Questions? [Ask us on Stack Overflow.](https://stackoverflow.com/questions/tagge
 
 ## Products
 * [A-Frame components](aframe-components.md)
+* [Architectural toolkit](architectural-toolkit.md)
 * [Storage](storage.md)
 * [Furniture](furniture.md)
 * [Scene](scene.md)
+* [SceneStructure Specifications](scene-structure-specifications.md)
+* [SceneStructure Validation](scene-structure-validation.md)
 * [Home staging AI](home-staging-ai.md)
 * [Convert floor plan to 3D](convert-floor-plan-to-3d.md)
 * Import 3D model

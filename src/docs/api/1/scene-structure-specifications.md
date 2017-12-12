@@ -1,9 +1,30 @@
-# Scene Structure Reference
+<!-- sceneStructure reference created automatically -->
+<!-- do not edit manually -->
+<!-- check ./tasks/scene-structure-reference/README.md -->
+# Scene Structure Specifications
 
-Types
+Main data format of every Archilogic 3D scene.<br>
+Describes all elements of a scene including their relations to each other (location, orientation, hierarchy) and their specific characteristics (attributes).
+
+SceneStructure can be converted from and to A-Frame components on the fly
+
+[sceneStructure to A-Frame Elements](scene.md#get-a-frame-elements-from-scene-structure)
+
+[A-Frame Elements to sceneStructure](scene.md#get-scene-structure-from-a-frame-elements)
+
+## Coordinate System
+
+<img src="../../../img/docs/scene-structure-specs/coordinate-system.png" alt="Coordinate system" style="max-width: 200px; max-height: 200px; width: initial;"/>
+
+Type: right-handed cartesian coordinate system<br>
+Units: meters, degree angles<br>
+Origin: always relative to parent element<br>
+Y orientation: E=0° N=90° W=180° S=270°
+## Types
 * [`box`](#box)
 * [`camera-bookmark`](#camera-bookmark)
 * [`closet`](#closet)
+* [`column`](#column)
 * [`curtain`](#curtain)
 * [`door`](#door)
 * [`floor`](#floor)
@@ -25,6 +46,9 @@ Types
 
 
 ## box
+simple box object
+
+<img src="../../../img/docs/scene-structure-specs/icon-box.png" alt="box icon" style="max-width: 200px; max-height: 200px; width: initial;"/>
 
 | param | description | type | default | optional | min | values |
 |---|---|---|---|---|---|---|
@@ -36,7 +60,8 @@ Types
 | `l` | length | `number` | `1` | `false` | `0.01` |  |
 | `h` | height | `number` | `1` | `false` | `0.01` |  |
 | `w` | width | `number` | `1` | `false` | `0.01` |  |
-| `id` | unique identifier | `string` |  | `true` |  |  |
+| `v` | version | `number` | `0` | `true` |  |  |
+| `id` | unique identifier: UUID v4 | `string` |  | `false` |  |  |
 | `materials` |  | `object` |  | `true` |  |  |
 
 Possible parent types
@@ -52,7 +77,8 @@ SceneStructure Json
   "ry": 0,
   "l": 1,
   "h": 1,
-  "w": 1
+  "w": 1,
+  "id": ""
 }```
 
 A-Frame Component
@@ -62,6 +88,7 @@ A-Frame Component
 
 
 ## camera-bookmark
+preset camera positions for animations and navigation
 
 | param | description | type | default | optional | min | values |
 |---|---|---|---|---|---|---|
@@ -70,8 +97,12 @@ A-Frame Component
 | `y` |  | `number` | `0` | `false` |  |  |
 | `z` |  | `number` | `0` | `false` |  |  |
 | `ry` | rotation around y axis | `number` | `0` | `false` |  |  |
+| `v` | version | `number` | `0` | `true` |  |  |
+| `rx` | pitch | `number` | `0` | `false` |  |  |
 | `distance` |  | `number` |  | `false` |  |  |
-| `id` | unique identifier | `string` |  | `true` |  |  |
+| `fov` |  | `number` | `71` | `false` |  |  |
+| `name` |  | `string` | `"Camera Bookmark"` | `false` |  |  |
+| `id` | unique identifier: UUID v4 | `string` |  | `false` |  |  |
 | `materials` |  | `object` |  | `true` |  |  |
 
 Possible parent types
@@ -85,10 +116,23 @@ SceneStructure Json
   "y": 0,
   "z": 0,
   "ry": 0,
-  "distance": undefined
+  "rx": 0,
+  "distance": "",
+  "fov": 71,
+  "name": "Camera Bookmark",
+  "id": ""
 }```
 
+A-Frame Component
+```html
+<a-entity tour-waypoint="name: Camera Bookmark;" position="0 0 0"></a-entity>
+```
+
+
 ## closet
+parametric closet with segmentation targeting 0.6m
+
+<img src="../../../img/docs/scene-structure-specs/icon-closet.png" alt="closet icon" style="max-width: 200px; max-height: 200px; width: initial;"/>
 
 | param | description | type | default | optional | min | values |
 |---|---|---|---|---|---|---|
@@ -100,12 +144,13 @@ SceneStructure Json
 | `l` | length | `number` | `1.8` | `false` | `0.01` |  |
 | `h` | height | `number` | `2.4` | `false` | `0.01` |  |
 | `w` | width | `number` | `0.6` | `false` | `0.01` |  |
-| `handleWidth` | thickness of closet door handle | `number` | `0.02` | `true` | `0.01` |  |
 | `handleHeight` | height of closet door handle | `number` | `0.3` | `true` | `0.01` |  |
-| `handleLength` | length of closet door handle | `number` | `0.02` | `true` | `0.01` |  |
-| `doorWidth` | thickness of closet door | `number` | `0.02` | `true` | `0.01` |  |
 | `baseboard` | height of baseboard | `number` | `0.1` | `true` | `0.01` |  |
-| `id` | unique identifier | `string` |  | `true` |  |  |
+| `doorWidth` | thickness of closet door | `number` | `0.02` | `true` | `0.01` |  |
+| `handleLength` | length of closet door handle | `number` | `0.02` | `true` | `0.01` |  |
+| `handleWidth` | thickness of closet door handle | `number` | `0.02` | `true` | `0.01` |  |
+| `v` | version | `number` | `1` | `true` |  |  |
+| `id` | unique identifier: UUID v4 | `string` |  | `false` |  |  |
 | `materials` |  | `object` |  | `true` |  |  |
 
 Possible parent types
@@ -121,7 +166,8 @@ SceneStructure Json
   "ry": 0,
   "l": 1.8,
   "h": 2.4,
-  "w": 0.6
+  "w": 0.6,
+  "id": ""
 }```
 
 A-Frame Component
@@ -130,7 +176,53 @@ A-Frame Component
 ```
 
 
+## column
+simple structural column object, round or square
+
+<img src="../../../img/docs/scene-structure-specs/icon-column.png" alt="column icon" style="max-width: 200px; max-height: 200px; width: initial;"/>
+
+| param | description | type | default | optional | min | values |
+|---|---|---|---|---|---|---|
+| `type` |  | `string` | `"column"` | `false` |  | `"column"` |
+| `x` |  | `number` | `0` | `false` |  |  |
+| `y` |  | `number` | `0` | `false` |  |  |
+| `z` |  | `number` | `0` | `false` |  |  |
+| `ry` | rotation around y axis | `number` | `0` | `false` |  |  |
+| `l` | length for square / diameter for circle | `number` | `0.2` | `false` | `0.01` |  |
+| `h` | height | `number` | `2.4` | `false` | `0.01` |  |
+| `shape` | column contour | `string` | `"square"` | `false` | `0.01` | `"square"` `"circle"` |
+| `v` | version | `number` | `1` | `true` |  |  |
+| `id` | unique identifier: UUID v4 | `string` |  | `false` |  |  |
+| `materials` |  | `object` |  | `true` |  |  |
+
+Possible parent types
+* [`level`](#level)
+* [`group`](#group)
+
+SceneStructure Json
+```json
+{
+  "type": "column",
+  "x": 0,
+  "y": 0,
+  "z": 0,
+  "ry": 0,
+  "l": 0.2,
+  "h": 2.4,
+  "shape": "square",
+  "id": ""
+}```
+
+A-Frame Component
+```html
+<a-entity io3d-column="l: 0.2; h: 2.4; shape: square;" position="0 0 0"></a-entity>
+```
+
+
 ## curtain
+curtain with random folds
+
+<img src="../../../img/docs/scene-structure-specs/icon-curtain.png" alt="curtain icon" style="max-width: 200px; max-height: 200px; width: initial;"/>
 
 | param | description | type | default | optional | min | values |
 |---|---|---|---|---|---|---|
@@ -143,7 +235,8 @@ A-Frame Component
 | `h` | height | `number` | `2.4` | `false` | `0.01` |  |
 | `w` | thickness | `number` | `0.2` | `false` | `0.01` |  |
 | `folds` | number of folds | `number` | `14` | `true` | `0.01` |  |
-| `id` | unique identifier | `string` |  | `true` |  |  |
+| `v` | version | `number` | `1` | `true` |  |  |
+| `id` | unique identifier: UUID v4 | `string` |  | `false` |  |  |
 | `materials` |  | `object` |  | `true` |  |  |
 
 Possible parent types
@@ -159,10 +252,14 @@ SceneStructure Json
   "ry": 0,
   "l": 1.8,
   "h": 2.4,
-  "w": 0.2
+  "w": 0.2,
+  "id": ""
 }```
 
 ## door
+door within a wall
+
+<img src="../../../img/docs/scene-structure-specs/icon-door.png" alt="door icon" style="max-width: 200px; max-height: 200px; width: initial;"/>
 
 | param | description | type | default | optional | min | values |
 |---|---|---|---|---|---|---|
@@ -177,15 +274,16 @@ SceneStructure Json
 | `doorAngle` | door leaf opening anlge | `number` | `92` | `true` |  |  |
 | `hinge` | door leaf opening direction | `string` | `"right"` | `false` |  | `"right"` `"left"` |
 | `side` | door leaf opening to the front or back of the wall | `string` | `"back"` | `false` |  | `"front"` `"back"` |
-| `v` |  | `number` | `3` | `false` |  | `3` |
+| `v` | version | `number` | `3` | `false` |  |  |
 | `fixLeafRatio` |  | `number` | `0.3` | `true` |  |  |
+| `threshold` |  | `boolean` | `true` | `false` |  |  |
 | `thresholdHeight` |  | `number` | `0.01` | `true` |  |  |
 | `frameLength` | thickness of frame | `number` | `0.05` | `true` | `0.01` |  |
 | `frameOffset` | frame thicker than wall | `number` | `0` | `true` |  |  |
 | `leafWidth` | thickness of door leaf | `number` | `0.03` | `true` |  |  |
 | `leafOffset` | z offset of door leaf | `number` | `0.005` | `true` |  |  |
 | `doorType` | defines opening type | `string` | `"singleSwing"` | `false` |  | `"singleSwing"` `"doubleSwing"` `"swingFix"` `"swingDoubleFix"` `"doubleSwingDoubleFix"` `"slidingDoor"` `"opening"` |
-| `id` | unique identifier | `string` |  | `true` |  |  |
+| `id` | unique identifier: UUID v4 | `string` |  | `false` |  |  |
 | `materials` |  | `object` |  | `true` |  |  |
 
 Possible parent types
@@ -205,16 +303,21 @@ SceneStructure Json
   "hinge": "right",
   "side": "back",
   "v": 3,
-  "doorType": "singleSwing"
+  "threshold": true,
+  "doorType": "singleSwing",
+  "id": ""
 }```
 
 A-Frame Component
 ```html
-<a-entity io3d-door="l: 0.9; h: 2; w: 0.05; hinge: right; side: back; v: 3; doorType: singleSwing;" position="0 0 0"></a-entity>
+<a-entity io3d-door="l: 0.9; h: 2; w: 0.05; hinge: right; side: back; v: 3; threshold: true; doorType: singleSwing;" position="0 0 0"></a-entity>
 ```
 
 
 ## floor
+rectangular floor with optional ceiling
+
+<img src="../../../img/docs/scene-structure-specs/icon-floor.png" alt="floor icon" style="max-width: 200px; max-height: 200px; width: initial;"/>
 
 | param | description | type | default | optional | min | values |
 |---|---|---|---|---|---|---|
@@ -227,8 +330,9 @@ A-Frame Component
 | `h` | height | `number` | `0.2` | `false` | `0.01` |  |
 | `w` | width | `number` | `4` | `false` | `0.01` |  |
 | `hCeiling` | ceiling height | `number` | `2.4` | `false` |  |  |
+| `v` | version | `number` | `0` | `true` |  |  |
 | `hasCeiling` | toggle ceiling | `boolean` | `true` | `false` |  |  |
-| `id` | unique identifier | `string` |  | `true` |  |  |
+| `id` | unique identifier: UUID v4 | `string` |  | `false` |  |  |
 | `materials` |  | `object` |  | `true` |  |  |
 
 Possible parent types
@@ -246,7 +350,8 @@ SceneStructure Json
   "h": 0.2,
   "w": 4,
   "hCeiling": 2.4,
-  "hasCeiling": true
+  "hasCeiling": true,
+  "id": ""
 }```
 
 A-Frame Component
@@ -256,6 +361,7 @@ A-Frame Component
 
 
 ## floorplan
+reference to a floor plan image
 
 | param | description | type | default | optional | min | values |
 |---|---|---|---|---|---|---|
@@ -267,7 +373,8 @@ A-Frame Component
 | `l` |  | `number` |  | `false` | `0.01` |  |
 | `w` |  | `number` |  | `false` | `0.01` |  |
 | `file` |  | `string` |  | `false` |  |  |
-| `id` | unique identifier | `string` |  | `true` |  |  |
+| `v` | version | `number` | `0` | `true` |  |  |
+| `id` | unique identifier: UUID v4 | `string` |  | `false` |  |  |
 | `materials` |  | `object` |  | `true` |  |  |
 
 Possible parent types
@@ -281,12 +388,14 @@ SceneStructure Json
   "y": 0,
   "z": 0,
   "ry": 0,
-  "l": undefined,
-  "w": undefined,
-  "file": undefined
+  "l": "",
+  "w": "",
+  "file": "",
+  "id": ""
 }```
 
 ## group
+group node, for relative positioning
 
 | param | description | type | default | optional | min | values |
 |---|---|---|---|---|---|---|
@@ -297,7 +406,7 @@ SceneStructure Json
 | `ry` | rotation around y axis | `number` | `0` | `false` |  |  |
 | `src` |  | `string` |  | `true` |  |  |
 | `children` |  | `array` | `[]` | `true` |  |  |
-| `id` | unique identifier | `string` |  | `true` |  |  |
+| `id` | unique identifier: UUID v4 | `string` |  | `false` |  |  |
 | `materials` |  | `object` |  | `true` |  |  |
 
 Possible parent types
@@ -305,12 +414,13 @@ Possible parent types
 * [`group`](#group)
 
 Possible children types
+* [`box`](#box)
+* [`column`](#column)
+* [`group`](#group)
 * [`interior`](#interior)
 * [`object`](#object)
-* [`wall`](#wall)
-* [`box`](#box)
-* [`group`](#group)
 * [`polybox`](#polybox)
+* [`wall`](#wall)
 
 SceneStructure Json
 ```json
@@ -319,10 +429,14 @@ SceneStructure Json
   "x": 0,
   "y": 0,
   "z": 0,
-  "ry": 0
+  "ry": 0,
+  "id": ""
 }```
 
 ## interior
+
+
+<img src="../../../img/docs/scene-structure-specs/icon-interior.png" alt="interior icon" style="max-width: 200px; max-height: 200px; width: initial;"/>
 
 | param | description | type | default | optional | min | values |
 |---|---|---|---|---|---|---|
@@ -331,9 +445,9 @@ SceneStructure Json
 | `y` |  | `number` | `0` | `false` |  |  |
 | `z` |  | `number` | `0` | `false` |  |  |
 | `ry` | rotation around y axis | `number` | `0` | `false` |  |  |
-| `src` |  | `string` |  | `false` |  |  |
+| `src` | furniture id prefixed with '!', check https://furniture.3d.io | `string` |  | `false` |  |  |
 | `children` |  | `array` | `[]` | `true` |  |  |
-| `id` | unique identifier | `string` |  | `true` |  |  |
+| `id` | unique identifier: UUID v4 | `string` |  | `false` |  |  |
 | `materials` |  | `object` |  | `true` |  |  |
 
 Possible parent types
@@ -354,16 +468,20 @@ SceneStructure Json
   "y": 0,
   "z": 0,
   "ry": 0,
-  "src": undefined
+  "src": "",
+  "id": ""
 }```
 
 A-Frame Component
 ```html
-<a-entity io3d-furniture="" position="0 0 0"></a-entity>
+<a-entity io3d-furniture="id: 10344b13-d981-47a0-90ac-f048ee2780a6" position="0 0 0"></a-entity>
 ```
 
 
 ## kitchen
+parametric kitchen with vast configuration options
+
+<img src="../../../img/docs/scene-structure-specs/icon-kitchen.png" alt="kitchen icon" style="max-width: 200px; max-height: 200px; width: initial;"/>
 
 | param | description | type | default | optional | min | values |
 |---|---|---|---|---|---|---|
@@ -372,19 +490,35 @@ A-Frame Component
 | `y` |  | `number` | `0` | `false` |  |  |
 | `z` |  | `number` | `0` | `false` |  |  |
 | `ry` | rotation around y axis | `number` | `0` | `false` |  |  |
-| `l` |  | `number` | `1.8` | `false` | `0.01` |  |
+| `l` |  | `number` | `4.2` | `false` | `0.01` |  |
 | `h` |  | `number` | `2.4` | `false` | `0.01` |  |
 | `w` |  | `number` | `0.6` | `false` | `0.01` |  |
-| `extractorType` |  | `string` | `"none"` | `true` |  | `"box"` `"pyramid"` `"integrated"` `"none"` |
-| `materials` |  | `object` |  | `true` |  |  |
-| `cooktopType` |  | `string` | `"none"` | `true` |  | `"electro60"` `"electro90"` `"none"` |
+| `sinkPos` |  | `int` | `4` | `true` |  |  |
+| `doorWidth` |  | `number` | `0.02` | `true` | `0.01` |  |
 | `highCabinetLeft` |  | `int` | `2` | `true` |  |  |
 | `highCabinetRight` |  | `int` | `0` | `true` |  |  |
 | `wallCabinet` |  | `boolean` | `true` | `true` |  |  |
+| `wallCabinetHeight` |  | `number` | `1.5` | `true` | `0.01` |  |
+| `wallCabinetWidth` |  | `number` | `0.45` | `true` | `0.01` |  |
 | `cabinetType` |  | `string` | `"flat"` | `true` |  | `"flat"` `"style1"` `"style2"` |
-| `sinkType` |  | `string` | `"none"` | `true` |  | `"single"` `"double"` `"none"` |
-| `id` | unique identifier | `string` |  | `true` |  |  |
-| `ovenType` |  | `string` | `"none"` | `true` |  | `"single"` `"double"` `"none"` |
+| `sinkType` |  | `string` | `"single"` | `true` |  | `"single"` `"double"` `"none"` |
+| `v` | version | `number` | `2` | `true` |  |  |
+| `extractorType` |  | `string` | `"integrated"` | `true` |  | `"box"` `"pyramid"` `"integrated"` `"none"` |
+| `ovenType` |  | `string` | `"single"` | `true` |  | `"single"` `"double"` `"none"` |
+| `ovenPos` |  | `int` | `6` | `true` |  |  |
+| `cooktopType` |  | `string` | `"electro60"` | `true` |  | `"electro60"` `"electro90"` `"gas60"` `"gas90"` `"none"` |
+| `cooktopPos` |  | `int` | `6` | `true` |  |  |
+| `microwave` |  | `boolean` | `false` | `true` |  |  |
+| `microwavePos` |  | `int` | `1` | `true` |  |  |
+| `fridge` |  | `boolean` | `false` | `true` |  |  |
+| `fridgePos` |  | `int` | `1` | `true` |  |  |
+| `elementLength` |  | `number` | `0.6` | `false` | `0.01` |  |
+| `baseBoard` |  | `number` | `0.1` | `true` | `0.01` |  |
+| `counterHeight` |  | `number` | `0.9` | `true` | `0.01` |  |
+| `counterThickness` |  | `number` | `0.03` | `true` | `0.01` |  |
+| `barCounter` |  | `boolean` | `false` | `true` |  |  |
+| `id` | unique identifier: UUID v4 | `string` |  | `false` |  |  |
+| `materials` |  | `object` |  | `true` |  |  |
 
 Possible parent types
 * [`level`](#level)
@@ -397,18 +531,21 @@ SceneStructure Json
   "y": 0,
   "z": 0,
   "ry": 0,
-  "l": 1.8,
+  "l": 4.2,
   "h": 2.4,
-  "w": 0.6
+  "w": 0.6,
+  "elementLength": 0.6,
+  "id": ""
 }```
 
 A-Frame Component
 ```html
-<a-entity io3d-kitchen="l: 1.8; h: 2.4; w: 0.6;" position="0 0 0"></a-entity>
+<a-entity io3d-kitchen="l: 4.2; h: 2.4; w: 0.6; elementLength: 0.6;" position="0 0 0"></a-entity>
 ```
 
 
 ## level
+node equivalent to a building storey
 
 | param | description | type | default | optional | min | values |
 |---|---|---|---|---|---|---|
@@ -418,7 +555,7 @@ A-Frame Component
 | `z` |  | `number` | `0` | `false` |  |  |
 | `ry` | rotation around y axis | `number` | `0` | `false` |  |  |
 | `children` |  | `array` | `[]` | `true` |  |  |
-| `id` | unique identifier | `string` |  | `true` |  |  |
+| `id` | unique identifier: UUID v4 | `string` |  | `false` |  |  |
 | `materials` |  | `object` |  | `true` |  |  |
 
 Possible parent types
@@ -427,6 +564,7 @@ Possible parent types
 Possible children types
 * [`box`](#box)
 * [`closet`](#closet)
+* [`column`](#column)
 * [`curtain`](#curtain)
 * [`floor`](#floor)
 * [`floorplan`](#floorplan)
@@ -448,10 +586,12 @@ SceneStructure Json
   "x": 0,
   "y": 0,
   "z": 0,
-  "ry": 0
+  "ry": 0,
+  "id": ""
 }```
 
 ## object
+referenced 3d object in data3d.buffer format, for conversion drop a .obj into the editor spaces.archilogic.com/3d
 
 | param | description | type | default | optional | min | values |
 |---|---|---|---|---|---|---|
@@ -460,10 +600,11 @@ SceneStructure Json
 | `y` |  | `number` | `0` | `false` |  |  |
 | `z` |  | `number` | `0` | `false` |  |  |
 | `ry` | rotation around y axis | `number` | `0` | `false` |  |  |
-| `object` |  | `string` |  | `false` |  |  |
-| `sourceScale` |  | `number` |  | `true` |  |  |
+| `sourceScale` | relative scale of source file to 1 meter | `number` |  | `true` |  |  |
+| `object` | reference to data3d.buffer file | `string` |  | `false` |  |  |
+| `flipYZ` | flip Y and Z Axis | `boolean` |  | `true` |  |  |
 | `children` |  | `array` | `[]` | `true` |  |  |
-| `id` | unique identifier | `string` |  | `true` |  |  |
+| `id` | unique identifier: UUID v4 | `string` |  | `false` |  |  |
 | `materials` |  | `object` |  | `true` |  |  |
 
 Possible parent types
@@ -480,16 +621,18 @@ SceneStructure Json
   "y": 0,
   "z": 0,
   "ry": 0,
-  "object": undefined
+  "object": "",
+  "id": ""
 }```
 
 A-Frame Component
 ```html
-<a-entity io3d-data3d="" position="0 0 0"></a-entity>
+<a-entity io3d-data3d="key: /3f995099-d624-4c8e-ab6b-1fd5e3799173/170515-0913-4p3ktf/1e588a3b-90ac-4a32-b5b8-ff2fda7f87c4.gz.data3d.buffer" position="0 0 0"></a-entity>
 ```
 
 
 ## plan
+highest node in hierarchy, contains levels
 
 | param | description | type | default | optional | min | values |
 |---|---|---|---|---|---|---|
@@ -498,10 +641,10 @@ A-Frame Component
 | `y` |  | `number` | `0` | `false` |  |  |
 | `z` |  | `number` | `0` | `false` |  |  |
 | `ry` | rotation around y axis | `number` | `0` | `false` |  |  |
-| `modelDisplayName` |  | `string` |  | `false` |  |  |
-| `v` |  | `number` |  | `false` |  | `1` |
+| `modelDisplayName` | name of the scene | `string` |  | `true` |  |  |
+| `v` | version | `number` | `1` | `true` |  |  |
 | `children` |  | `array` | `[]` | `true` |  |  |
-| `id` | unique identifier | `string` |  | `true` |  |  |
+| `id` | unique identifier: UUID v4 | `string` |  | `false` |  |  |
 | `materials` |  | `object` |  | `true` |  |  |
 
 Possible children types
@@ -516,11 +659,13 @@ SceneStructure Json
   "y": 0,
   "z": 0,
   "ry": 0,
-  "modelDisplayName": undefined,
-  "v": undefined
+  "id": ""
 }```
 
 ## polybox
+polygonal extrusion object
+
+<img src="../../../img/docs/scene-structure-specs/icon-polybox.png" alt="polybox icon" style="max-width: 200px; max-height: 200px; width: initial;"/>
 
 | param | description | type | default | optional | min | values |
 |---|---|---|---|---|---|---|
@@ -531,7 +676,8 @@ SceneStructure Json
 | `ry` | rotation around y axis | `number` | `0` | `false` |  |  |
 | `h` |  | `number` | `1` | `false` | `0.01` |  |
 | `polygon` |  | `array` |  | `false` |  |  |
-| `id` | unique identifier | `string` |  | `true` |  |  |
+| `v` | version | `number` | `1` | `true` |  |  |
+| `id` | unique identifier: UUID v4 | `string` |  | `false` |  |  |
 | `materials` |  | `object` |  | `true` |  |  |
 
 Possible parent types
@@ -546,7 +692,8 @@ SceneStructure Json
   "z": 0,
   "ry": 0,
   "h": 1,
-  "polygon": undefined
+  "polygon": "",
+  "id": ""
 }```
 
 A-Frame Component
@@ -556,6 +703,9 @@ A-Frame Component
 
 
 ## polyfloor
+polygonal floor with optional ceiling
+
+<img src="../../../img/docs/scene-structure-specs/icon-polyfloor.png" alt="polyfloor icon" style="max-width: 200px; max-height: 200px; width: initial;"/>
 
 | param | description | type | default | optional | min | values |
 |---|---|---|---|---|---|---|
@@ -566,11 +716,12 @@ A-Frame Component
 | `ry` | rotation around y axis | `number` | `0` | `false` |  |  |
 | `h` | height | `number` | `0.2` | `false` | `0.01` |  |
 | `usage` |  | `string` |  | `true` |  |  |
+| `v` | version | `number` | `0` | `true` |  |  |
 | `polygon` | outer polygon | `array` | `[[1.5,1.5],[1.5,-1.5],[-1.5,-1.5],[-1.5,1.5]]` | `false` |  |  |
-| `hCeiling` | ceiling height | `number` | `2.4` | `false` |  |  |
-| `hasCeiling` | toggle ceiling | `boolean` | `true` | `false` |  |  |
 | `polygonHoles` | polygon holes | `array` |  | `true` |  |  |
-| `id` | unique identifier | `string` |  | `true` |  |  |
+| `hasCeiling` | toggle ceiling | `boolean` | `true` | `false` |  |  |
+| `hCeiling` | ceiling height | `number` | `2.4` | `false` |  |  |
+| `id` | unique identifier: UUID v4 | `string` |  | `false` |  |  |
 | `materials` |  | `object` |  | `true` |  |  |
 
 Possible parent types
@@ -586,17 +737,21 @@ SceneStructure Json
   "ry": 0,
   "h": 0.2,
   "polygon": [[1.5,1.5],[1.5,-1.5],[-1.5,-1.5],[-1.5,1.5]],
+  "hasCeiling": true,
   "hCeiling": 2.4,
-  "hasCeiling": true
+  "id": ""
 }```
 
 A-Frame Component
 ```html
-<a-entity io3d-polyfloor="h: 0.2; polygon: [1.5,1.5,1.5,-1.5,-1.5,-1.5,-1.5,1.5]; hCeiling: 2.4; hasCeiling: true;" position="0 0 0"></a-entity>
+<a-entity io3d-polyfloor="h: 0.2; polygon: [[1.5,1.5], [1.5,-1.5], [-1.5,-1.5], [-1.5,1.5]]; hasCeiling: true; hCeiling: 2.4;" position="0 0 0"></a-entity>
 ```
 
 
 ## railing
+segmented or solid railing
+
+<img src="../../../img/docs/scene-structure-specs/icon-railing.png" alt="railing icon" style="max-width: 200px; max-height: 200px; width: initial;"/>
 
 | param | description | type | default | optional | min | values |
 |---|---|---|---|---|---|---|
@@ -605,10 +760,16 @@ A-Frame Component
 | `y` |  | `number` | `0` | `false` |  |  |
 | `z` |  | `number` | `0` | `false` |  |  |
 | `ry` | rotation around y axis | `number` | `0` | `false` |  |  |
-| `l` |  | `number` |  | `false` | `0.01` |  |
-| `h` |  | `number` |  | `false` | `0.01` |  |
-| `w` |  | `number` |  | `false` | `0.01` |  |
-| `id` | unique identifier | `string` |  | `true` |  |  |
+| `l` | length | `number` | `1` | `false` | `0.01` |  |
+| `h` | height | `number` | `1` | `false` | `0.01` |  |
+| `w` | width | `number` | `0.05` | `false` | `0.01` |  |
+| `segmentDistance` | distance between vertical segments, for segmentation = 'distance' | `number` | `0.14` | `true` |  |  |
+| `pailing` | strength of the posts | `number` | `0.01` | `false` |  |  |
+| `railCount` | horizontal rail count | `int` | `2` | `true` |  |  |
+| `segmentation` | vertical segmentation type | `string` | `"distance"` | `false` |  | `"distance"` `"number"` `"none"` |
+| `segments` | number of vertical segments, for segmentation = 'number' | `int` | `5` | `true` |  |  |
+| `v` | version | `number` | `0` | `true` |  |  |
+| `id` | unique identifier: UUID v4 | `string` |  | `false` |  |  |
 | `materials` |  | `object` |  | `true` |  |  |
 
 Possible parent types
@@ -622,18 +783,24 @@ SceneStructure Json
   "y": 0,
   "z": 0,
   "ry": 0,
-  "l": undefined,
-  "h": undefined,
-  "w": undefined
+  "l": 1,
+  "h": 1,
+  "w": 0.05,
+  "pailing": 0.01,
+  "segmentation": "distance",
+  "id": ""
 }```
 
 A-Frame Component
 ```html
-<a-entity io3d-railing="l: undefined; h: undefined; w: undefined;" position="0 0 0"></a-entity>
+<a-entity io3d-railing="l: 1; h: 1; w: 0.05; pailing: 0.01; segmentation: distance;" position="0 0 0"></a-entity>
 ```
 
 
 ## stairs
+all kinds of stairs types
+
+<img src="../../../img/docs/scene-structure-specs/icon-stairs.png" alt="stairs icon" style="max-width: 200px; max-height: 200px; width: initial;"/>
 
 | param | description | type | default | optional | min | values |
 |---|---|---|---|---|---|---|
@@ -645,9 +812,14 @@ A-Frame Component
 | `l` |  | `number` | `4` | `false` | `0.01` |  |
 | `h` |  | `number` | `2.4` | `false` | `0.01` |  |
 | `w` |  | `number` | `1.2` | `false` | `0.01` |  |
-| `stairType` |  | `string` | `"straight"` | `true` | `0.01` |  |
-| `stepWidth` |  | `number` | `1.2` | `true` | `0.01` |  |
-| `id` | unique identifier | `string` |  | `true` |  |  |
+| `railingType` |  | `string` | `"verticalBars"` | `false` |  | `"verticalBars"` |
+| `v` | version | `number` | `1` | `true` |  |  |
+| `stepWidth` |  | `number` | `1.2` | `false` | `0.01` |  |
+| `stairType` |  | `string` | `"straight"` | `false` |  | `"straight"` `"straightLanding"` `"lShaped"` `"halfLanding"` `"2QuarterLanding"` `"winder"` `"doubleWinder"` `"spiral"` |
+| `treadHeight` |  | `number` | `0.02` | `false` |  |  |
+| `stepThickness` |  | `number` | `0.17` | `false` |  |  |
+| `railing` |  | `string` | `"right"` | `false` |  | `"none"` `"left"` `"right"` `"both"` |
+| `id` | unique identifier: UUID v4 | `string` |  | `false` |  |  |
 | `materials` |  | `object` |  | `true` |  |  |
 
 Possible parent types
@@ -663,16 +835,26 @@ SceneStructure Json
   "ry": 0,
   "l": 4,
   "h": 2.4,
-  "w": 1.2
+  "w": 1.2,
+  "railingType": "verticalBars",
+  "stepWidth": 1.2,
+  "stairType": "straight",
+  "treadHeight": 0.02,
+  "stepThickness": 0.17,
+  "railing": "right",
+  "id": ""
 }```
 
 A-Frame Component
 ```html
-<a-entity io3d-stairs="l: 4; h: 2.4; w: 1.2;" position="0 0 0"></a-entity>
+<a-entity io3d-stairs="l: 4; h: 2.4; w: 1.2; railingType: verticalBars; stepWidth: 1.2; stairType: straight; treadHeight: 0.02; stepThickness: 0.17; railing: right;" position="0 0 0"></a-entity>
 ```
 
 
 ## tag
+all kinds of stairs types
+
+<img src="../../../img/docs/scene-structure-specs/icon-tag.png" alt="tag icon" style="max-width: 200px; max-height: 200px; width: initial;"/>
 
 | param | description | type | default | optional | min | values |
 |---|---|---|---|---|---|---|
@@ -682,8 +864,9 @@ A-Frame Component
 | `z` |  | `number` | `0` | `false` |  |  |
 | `ry` | rotation around y axis | `number` | `0` | `false` |  |  |
 | `title` |  | `string` |  | `false` |  |  |
+| `v` | version | `number` | `0` | `true` |  |  |
 | `notes` |  | `string` |  | `true` |  |  |
-| `id` | unique identifier | `string` |  | `true` |  |  |
+| `id` | unique identifier: UUID v4 | `string` |  | `false` |  |  |
 | `materials` |  | `object` |  | `true` |  |  |
 
 Possible parent types
@@ -698,10 +881,14 @@ SceneStructure Json
   "y": 0,
   "z": 0,
   "ry": 0,
-  "title": undefined
+  "title": "",
+  "id": ""
 }```
 
 ## wall
+structural wall, can contains doors and windows
+
+<img src="../../../img/docs/scene-structure-specs/icon-wall.png" alt="wall icon" style="max-width: 200px; max-height: 200px; width: initial;"/>
 
 | param | description | type | default | optional | min | values |
 |---|---|---|---|---|---|---|
@@ -710,14 +897,16 @@ SceneStructure Json
 | `y` |  | `number` | `0` | `false` |  |  |
 | `z` |  | `number` | `0` | `false` |  |  |
 | `ry` | rotation around y axis | `number` | `0` | `false` |  |  |
-| `l` |  | `number` | `1` | `false` | `0.01` |  |
-| `h` |  | `number` | `2.4` | `false` | `0.01` |  |
-| `w` |  | `number` | `0.15` | `false` | `0.01` |  |
-| `backHasBase` |  | `boolean` | `false` | `true` |  |  |
-| `frontHasBase` |  | `boolean` | `false` | `true` |  |  |
-| `baseHeight` |  | `number` | `0` | `true` |  |  |
+| `l` | length | `number` | `1` | `false` | `0.01` |  |
+| `h` | height | `number` | `2.4` | `false` | `0.01` |  |
+| `w` | width | `number` | `0.15` | `false` | `0.01` |  |
+| `v` | version | `number` | `0` | `true` |  |  |
+| `controlLine` | relative position of the control line to the wall | `string` | `"back"` | `true` |  | `"back"` `"center"` `"front"` |
+| `baseHeight` | height of the baseboard | `number` | `0` | `true` |  |  |
+| `frontHasBase` | show baseboard on the front | `boolean` | `false` | `true` |  |  |
+| `backHasBase` | show baseboard on the back | `boolean` | `false` | `true` |  |  |
 | `children` |  | `array` | `[]` | `true` |  |  |
-| `id` | unique identifier | `string` |  | `true` |  |  |
+| `id` | unique identifier: UUID v4 | `string` |  | `false` |  |  |
 | `materials` |  | `object` |  | `true` |  |  |
 
 Possible parent types
@@ -738,7 +927,8 @@ SceneStructure Json
   "ry": 0,
   "l": 1,
   "h": 2.4,
-  "w": 0.15
+  "w": 0.15,
+  "id": ""
 }```
 
 A-Frame Component
@@ -748,6 +938,9 @@ A-Frame Component
 
 
 ## window
+window with optional segmentation
+
+<img src="../../../img/docs/scene-structure-specs/icon-window.png" alt="window icon" style="max-width: 200px; max-height: 200px; width: initial;"/>
 
 | param | description | type | default | optional | min | values |
 |---|---|---|---|---|---|---|
@@ -756,13 +949,16 @@ A-Frame Component
 | `y` |  | `number` | `0.8` | `false` |  |  |
 | `z` |  | `number` | `0` | `false` |  |  |
 | `ry` | rotation around y axis | `number` | `0` | `false` |  |  |
-| `l` |  | `number` | `1.6` | `false` | `0.01` |  |
-| `h` |  | `number` | `1.5` | `false` | `0.01` |  |
-| `rowRatios` |  | `array` |  | `true` |  |  |
-| `columnRatios` |  | `array` |  | `true` |  |  |
-| `frameLength` |  | `number` | `0.04` | `true` | `0.01` |  |
-| `frameWidth` |  | `number` | `0.06` | `true` | `0.01` |  |
-| `id` | unique identifier | `string` |  | `true` |  |  |
+| `l` | length | `number` | `1.6` | `false` | `0.01` |  |
+| `h` | height | `number` | `1.5` | `false` | `0.01` |  |
+| `frameWidth` | width of the frame | `number` | `0.06` | `true` | `0.01` |  |
+| `v` | version | `number` | `0` | `true` |  |  |
+| `hideGlass` | Hides glass mesh | `boolean` | `false` | `true` |  |  |
+| `side` | relative position of the window inside the wall opening | `string` | `"back"` | `true` |  | `"back"` `"center"` `"front"` |
+| `rowRatios` | relative height of horizontal segmentation | `array` | `[1]` | `true` |  |  |
+| `columnRatios` | relative width of vertical segmentation per row | `array` | `[[1]]` | `true` |  |  |
+| `frameLength` | thickness of the frame | `number` | `0.04` | `true` | `0.01` |  |
+| `id` | unique identifier: UUID v4 | `string` |  | `false` |  |  |
 | `materials` |  | `object` |  | `true` |  |  |
 
 Possible parent types
@@ -777,7 +973,8 @@ SceneStructure Json
   "z": 0,
   "ry": 0,
   "l": 1.6,
-  "h": 1.5
+  "h": 1.5,
+  "id": ""
 }```
 
 A-Frame Component

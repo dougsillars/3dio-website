@@ -169,5 +169,8 @@ Network Trash Folder
 Temporary Items
 .apdisk
 
+# build files
+tasks/scene-structure-specs/bundle.js
+
 build
 ___RESOURCES
