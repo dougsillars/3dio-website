@@ -39,22 +39,27 @@ This can be done with these components:
 
 ## io3d-data3d
 
-| Parameter | Description |
-| --- | --- |
-| `key` | Specifies a 3d.io [storage key](storage.md) to identify 3d data to display, e.g. `/3f995099-d624-4c8e-ab6b-1fd5e3799173/170515-0913-4p3ktf/1e588a3b-90ac-4a32-b5b8-ff2fda7f87c4.gz.data3d.buffer` |
-| `url` | Specifies a URL of a `.data3d.json` or `.data3d.buffer` file, e.g. `https://storage.3d.io/3f995099-d624-4c8e-ab6b-1fd5e3799173/170515-0913-4p3ktf/1e588a3b-90ac-4a32-b5b8-ff2fda7f87c4.gz.data3d.buffer` |
-| `lightMapIntensity` | Intensity (default 1.2) of the lightmap being applied |
-| `lightMapExposure` | Exposure (default 0.6) of the lightmap being applied |
+| Parameter | Description | Default |
+| --- | --- | --- |
+| `key` | Specifies a 3d.io [storage key](storage.md) to identify 3d data to display, e.g. `/3f995099-d624-4c8e-ab6b-1fd5e3799173/170515-0913-4p3ktf/1e588a3b-90ac-4a32-b5b8-ff2fda7f87c4.gz.data3d.buffer` | None |
+| `url` | Specifies a URL of a `.data3d.json` or `.data3d.buffer` file, e.g. `https://storage.3d.io/3f995099-d624-4c8e-ab6b-1fd5e3799173/170515-0913-4p3ktf/1e588a3b-90ac-4a32-b5b8-ff2fda7f87c4.gz.data3d.buffer` | None |
+| `lightMapIntensity` | Applied intensity to the lightmap | 1.2 |
+| `lightMapExposure` | Applied exposure to the lightmap | 0.6 |
+| `lightMapSaturation` | Applied saturation to the lightmap (0.0: lightmap is grayscale, > 1.0: lightmap is oversaturated) | 1.0 |
 
 ### Changing the lighting
 
-Lighting can be configured using two properties: `lightMapIntensity` and `lightMapExposure`.
+Precalculated lighting can be configured using two properties: `lightMapIntensity` and `lightMapExposure`.
 
 Both influence how the [precalculated lights](https://spaces.archilogic.com/blog/3d-models-light-baking) are affecting the loaded scene.
 The exposure can be used to over- or underexpose the scene while the intensity allows to adjust how much the light blends with the materials.
 
 The relation of the two settings is visualised below:
 ![Intensity and exposure of the lightmap visualised](../../../img/docs/aframe-io3d-data3d-lightmap-settings.png)
+
+The property `lightMapSaturation` controls the amount of color bleeding applied to your model. Color bleeding is a phenomenon in which objects are colored by reflection of colored light from nearby surfaces.
+Scenes look vivid and realistic with values around 1.0. Values below 1.0 result in a desaturated look and 0.0 is completely grayscale.
+
 
 ## io3d-furniture
 
