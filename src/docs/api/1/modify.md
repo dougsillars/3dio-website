@@ -15,9 +15,11 @@ and how to authenticate in order to use this API.
 
 Applies a low poly, paper crafted style to the model.
 
-| Parameter | Type | Required? | Description |
-| --- | --- | --- | --- |
-| `storageId` | String | Yes | The storageId of the model. Valid formats: `data3d.buffer`, `obj` |
+| Parameter | Type | Required? | Default | Description |
+| --- | --- | --- | --- | --- |
+| `storageId` | String | Yes | | The storageId of the model. Valid formats: `data3d.buffer`, `obj` |
+| `options`   | Object | No  | | | |
+| `options.ratio` | Float | No | optimal | The ratio [0.0 to 1.0] how strong the model gets collapsed. |
 
 [coming soon] modify settings
 
@@ -29,7 +31,7 @@ The resulting storageId url of the transformed model gets logged upon task compl
 ```javascript
   var storageId = '/535e624259ee6b0200000484/170511-1605-ti05qg/archilogic_2017-05-11_16-05-27_vNIa8r.gz.data3d.buffer'
 
-  io3d.modify.origami(storageId)
+  io3d.modify.origami(storageId, { ratio: 0.1 })
     .then(io3d.utils.processing.whenDone)
     .then(io3d.storage.getUrlFromStorageId)
     .then(console.log)
@@ -72,7 +74,7 @@ A collision mesh is a low-polygonal, convex model used for physics calculation. 
 
 | Parameter | Type | Required? | Default | Description |
 | --- | --- | --- | --- | --- |
-| `storageId` | String | Yes | | The storageId of the model to modify. |
+| `storageId` | String | Yes | | The storageId of the model to modify. Valid formats: `data3d.buffer`, `obj`|
 | `options`   | Object | No  | | |
 | `options.subdivisions` | Int | No | 2 | The resolution of the collision object. Triangles: `12 * 4 ^ count` |
 
