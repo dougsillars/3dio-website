@@ -6,8 +6,8 @@
 
 ```html
 <head>
-  <script src="https://aframe.io/releases/0.6.0/aframe.min.js"></script>
-  <script src="https://dist.3d.io/3dio-js/1.x.x/3dio.min.js"></script>
+  <script src="https://aframe.io/releases/0.7.1/aframe.min.js"></script>
+  <script src="https://dist.3d.io/3dio-js/1.1.x/3dio.min.js"></script>
 </head>
 <body>
   <script>
@@ -16,17 +16,17 @@
 </body>
 ```
 
-Using 3dio without A-Frame is also possible. This is particulary useful if you don't need to render a 3D view: 
+Using 3dio without A-Frame is also possible. This is particulary useful if you don't need to render a 3D view:
 
 ```html
-<script src="https://dist.3d.io/3dio-js/1.x.x/3dio.min.js"></script>
+<script src="https://dist.3d.io/3dio-js/1.1.x/3dio.min.js"></script>
 <script>
   io3d.utils.ui.message.success('Hello World')
 </script>
 ```
 
 ## Package Manager Support
- 
+
 We support Bower, Webpack, Require.js and similar. 3dio is packaged in UMD (Universal Module Definition) format so that it can be used as CommonJS or AMD module.
 
 1. Install library from npm `npm install 3dio --save`
@@ -38,18 +38,18 @@ We support Bower, Webpack, Require.js and similar. 3dio is packaged in UMD (Univ
 
 ## Using Publishable API Keys
 
-For some extended functionality with subscription based quotas a <a class="open-publishable-api-keys-menu">publishable API key</a> is required. The [authentication docs](authentication.md) provide a detailed overview of what exactly you can do with publishable API keys. 
+For some extended functionality with subscription based quotas a <a class="open-publishable-api-keys-menu">publishable API key</a> is required. The [authentication docs](authentication.md) provide a detailed overview of what exactly you can do with publishable API keys.
 
 Specify your publishable API key in the 3dio script URL:
 
 ```html
-<script src="https://dist.3d.io/3dio-js/1.x.x/3dio.min.js?pk=YOUR_PUBLISHABLE_API_KEY"></script>
+<script src="https://dist.3d.io/3dio-js/1.1.x/3dio.min.js?pk=YOUR_PUBLISHABLE_API_KEY"></script>
 ```
 
 Alternatively you can set a publishable API key dynamically using the config method:
- 
+
 ```html
-<script src="https://dist.3d.io/3dio-js/1.x.x/3dio.min.js"></script>
+<script src="https://dist.3d.io/3dio-js/1.1.x/3dio.min.js"></script>
 <script>
   io3d.config({
     publishableApiKey:'YOUR_PUBLISHABLE_API_KEY'
@@ -57,7 +57,7 @@ Alternatively you can set a publishable API key dynamically using the config met
 </script>
 ```
 
-Config is also the recommended method when using a package manager like Bower, Webpack, Require.js or similar: 
+Config is also the recommended method when using a package manager like Bower, Webpack, Require.js or similar:
 
 ```javascript
 var io3d = require('3dio')

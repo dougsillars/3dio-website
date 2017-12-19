@@ -21,8 +21,8 @@ This can be done with these components:
 
 ```html
 <head>
-  <script src="https://aframe.io/releases/0.6.1/aframe.min.js"></script>
-  <script src="https://dist.3d.io/3dio-js/1.x.x/3dio.min.js"></script>
+  <script src="https://aframe.io/releases/0.7.1/aframe.min.js"></script>
+  <script src="https://dist.3d.io/3dio-js/1.1.x/3dio.min.js"></script>
 </head>
 <body>
   <a-scene>
@@ -185,6 +185,10 @@ Using `io3d-lighting` component replaces the default A-Frame lighting scene and 
 
 Create a camera flythrough tour of your A-Frame scene.
 
+**Note:** This feature requires a third-party component, [aframe-animation-component](https://github.com/ngokevin/kframe/tree/master/components/animation/).
+
+Right now, you should use version **3.2.5** of that component with the `tour` component.
+
 | Parameter | Description | Default value |
 | --- | --- | --- |
 | `autoStart` | Determines if the camera tour starts automatically | `true` |
@@ -198,10 +202,10 @@ The following example shows a tour of the different rooms in an apartment:
 
 ```html
 <head>
-  <script src="https://aframe.io/releases/0.6.1/aframe.min.js"></script>
-  <script src="https://dist.3d.io/3dio-js/1.x.x/3dio.min.js"></script>
+  <script src="https://aframe.io/releases/0.7.1/aframe.min.js"></script>
+  <script src="https://dist.3d.io/3dio-js/1.1.x/3dio.min.js"></script>
   <!-- This component requires the animation component from kframe! -->
-  <script src="https://unpkg.com/aframe-animation-component/dist/aframe-animation-component.min.js"></script>
+  <script src="https://unpkg.com/aframe-animation-component@3.2.5/dist/aframe-animation-component.min.js"></script>
 </head>
 <body>
   <a-scene>
