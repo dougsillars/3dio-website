@@ -28,7 +28,7 @@ https://spaces.archilogic.com/3d/archilogic/zgkeizhc?modelResourceId=5dc58829-ec
 ```
 ## Scene Structure
 
-The scene structure is a JSON based scene format used in the [Archilogic editor](https://spaces.archilgoc.com/3d) to describe scenes.
+The scene structure is a JSON based scene format used in the [Archilogic editor](https://spaces.archilogic.com/3d) to describe scenes.
 
 example of a simple scene structure snippet describing a furniture item:
 ```json
