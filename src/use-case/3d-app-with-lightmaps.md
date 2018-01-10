@@ -5,10 +5,10 @@
 In this example we are walking through all the steps to get from a 2D floor plan to an interactive presentation of an office space. First, here's the result:
 
 <!-- Reference the app as an iframe -->
-<iframe style="width:100%; height:400px" src="https://app.3d.io/tgzwxR"></iframe>
+<iframe style="width:100%; height:400px" src="https://app.3d.io/Uv9p9d"></iframe>
 <br>
 <br>
-Go [fullscreen](https://app.3d.io/tgzwxR) or [open and remix!](https://appcreator.3d.io/tgzwxR)
+Go [fullscreen](https://app.3d.io/Uv9p9d) or [open and remix!](https://appcreator.3d.io/Uv9p9d)
 <br>
 <br>
 
