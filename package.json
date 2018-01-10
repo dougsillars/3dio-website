@@ -28,7 +28,7 @@
     "js-yaml": "^3.9.0",
     "lite-server": "^2.3.0",
     "lodash": "^4.17.4",
-    "marked": "^0.3.6",
+    "marked": "^0.3.12",
     "pug": "^2.0.0-rc.2",
     "pygmentize-bundled": "^2.3.0",
     "through2": "^2.0.3",
