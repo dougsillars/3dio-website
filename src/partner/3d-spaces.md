@@ -7,7 +7,8 @@ LOGO: https://storage.3d.io/535e624259ee6b0200000484/2018-01-22_15-02-51_szb4QP/
 LOGO_SIZE: 90 #percent
 LOGO_BG_COLOR: '#ddd'
 IMAGE: https://storage.3d.io/535e624259ee6b0200000484/2018-01-22_15-04-34_joYnDs/3D_Spaces_Media_Hero2.png
-URL: http://planto3d.3dspacesmedia.com/order
+URL: https://www.3dspaces.com.au
+URLMODEL: http://planto3d.3dspacesmedia.com/order
 EMAIL: contact@3dspaces.com.au
 COUNTRY: Australia
 CITY: Sydney
