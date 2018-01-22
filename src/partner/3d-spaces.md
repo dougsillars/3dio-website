@@ -2,9 +2,7 @@
 PUBLISh: true
 NAME: 3D Spaces Media
 TAGLINE: Visual Interactive 3D Media For Real Estate
-DESCRIPTION: We create visual interactive experiences and immersive 3D media solutions for real estate.
-Our team of experts specialise in creating immersive, interactive and visually rich 3D media.
-Our services include 3D models, CGI visualisations & animations, 3D floor plans and interactive navigation projects.
+DESCRIPTION: We create visual interactive experiences and immersive 3D media solutions for real estate. Our team of experts specialise in creating immersive, interactive and visually rich 3D media. Our services include 3D models, CGI visualisations & animations, 3D floor plans and interactive navigation projects.
 LOGO: https://storage.3d.io/535e624259ee6b0200000484/2018-01-22_15-02-51_szb4QP/3dspaces_logo_dark.png
 LOGO_SIZE: 90 #percent
 LOGO_BG_COLOR: '#ddd'
