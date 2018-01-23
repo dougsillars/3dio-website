@@ -14,13 +14,13 @@ COUNTRY: Australia
 CITY: Sydney
 LOCATION_LAT_LNG: -33.9, 151.2
 SAMPLES:
-    - TITLE: Interactive off-the-plan residential development
+    - TITLE: Interactive navigation for residential development
       DESCRIPTION: Project for 9 level off-the-plan residential development for Stocklands, Australia. The goal was to give interested buyers a full picture of the available apartment units using renderings and interactive 3D models by Archilogic.
       IMAGE: https://storage.3d.io/535e624259ee6b0200000484/2018-01-22_15-12-26_W9qMUc/3D_Spaces_Project1.jpg
       URL: http://app.viznavigator.com/view/8FFD5CB
       PRICE: 3000
     - TITLE: Interactive off-the-plan residential development
-      DESCRIPTION: Project for 9 level off-the-plan residential development for Seven Residences, The Palm, Dubai. The project includes 14 levels and 545 apartments ranging from studio to 3 bedroom which are represented by 3D models on the Archlogic platform.
+      DESCRIPTION: Project for an off-the-plan residential development for Seven Residences, The Palm, Dubai. The project includes 14 levels and 545 apartments ranging from studio to 3 bedroom which are represented by 3D models on the Archlogic platform.
       IMAGE: https://storage.3d.io/535e624259ee6b0200000484/2018-01-22_15-13-35_xacF0j/3D_Spaces_Project2.jpg
       URL: http://app.viznavigator.com/view/CF14DE45
       PRICE: 3000
