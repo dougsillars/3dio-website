@@ -15,7 +15,7 @@ CITY: Sydney
 LOCATION_LAT_LNG: -33.9, 151.2
 SAMPLES:
     - TITLE: Interactive navigation for residential spaces
-      DESCRIPTION: Showcasing Richard Neutra's unbuilt Omega House using renderings and interactive 3D models by Archilogic.
+      DESCRIPTION: Project to showcase Richard Neutra's unbuilt Omega House. Aim was to present how it could have been. It shows the potential of interacting with a space whether already built or yet to be built. Final interactive product represented by a 3D model on the Archilogic platform. 
       IMAGE: https://storage.3d.io/535e624259ee6b0200000484/2018-01-24_14-33-58_nhk2OA/Screen_Shot_2018-01-24_at_15.33.34.png
       URL: http://view.3dspaces.com.au/3d/3DS1488
       PRICE: 750
