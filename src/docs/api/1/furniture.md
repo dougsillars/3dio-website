@@ -54,7 +54,7 @@ The following snippet reads a single piece of furniture using a specific furnitu
 
 ## getInfo
 
-Gets the [metadata](https://3d.io/docs/api/1/furniture.html#furniture-metadata) for a single furniture piece. This method skip loading geometry therefore uses less bandwith.
+Gets [metadata information](https://3d.io/docs/api/1/furniture.html#furniture-metadata) for a single furniture piece. This method skip the loading geometry and therefore uses less bandwith than `io3d.furniture.get`.
 
 ```javascript
   io3d.furniture.getInfo('943357e8-911f-4bb5-8b89-8281385ef08f').then(console.log)
