@@ -38,7 +38,7 @@ The `searchQuery` object looks like this with all fields being optional:
 
 ## get
 
-Gets a single furniture piece including its geometry data.
+Gets a single furniture piece including its geometry and [metadata](https://3d.io/docs/api/1/furniture.html#furniture-metadata).
 
 ### Example
 
@@ -52,9 +52,34 @@ The following snippet reads a single piece of furniture using a specific furnitu
 | --- | --- | --- | --- |
 | `furnitureId` | String | Yes | The ID of the furniture piece to retrieve. Obtain furnitureIds from the furniture library: at https://furniture.3d.io |
 
-## Furniture Data Structure
+## getInfo
 
-Exemplary data returned from `io3d.furniture.search` or `io3d.furniture.get` 
+Gets the [metadata](https://3d.io/docs/api/1/furniture.html#furniture-metadata) for a single furniture piece. This method skip loading geometry therefore uses less bandwith.
+
+```javascript
+  io3d.furniture.getInfo('943357e8-911f-4bb5-8b89-8281385ef08f').then(console.log)
+```
+
+| Parameter | Type | Required? | Description |
+| --- | --- | --- | --- |
+| `furnitureId` | String | Yes | The ID of the furniture piece to retrieve. Obtain furnitureIds from the furniture library: at https://furniture.3d.io | 
+
+### Example
+
+The following snippet reads the metadata of a single piece of furniture using a specific furniture ID:
+
+```javascript
+  io3d.furniture.getInfo('943357e8-911f-4bb5-8b89-8281385ef08f').then(console.log)
+```
+
+| Parameter | Type | Required? | Description |
+| --- | --- | --- | --- |
+| `furnitureId` | String | Yes | The ID of the furniture piece to retrieve. Obtain furnitureIds from the furniture library: at https://furniture.3d.io |
+
+
+## Furniture Metadata
+
+Exemplary metadata structure included in `io3d.furniture.search`, `io3d.furniture.get` and `io3d.furniture.getInfo`.
 
 ```JSON
 {
