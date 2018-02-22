@@ -15,19 +15,19 @@ CITY: Sydney
 LOCATION_LAT_LNG: -33.9, 151.2
 SAMPLES:
     - TITLE: Interactive navigation for residential spaces
-      DESCRIPTION: Project to showcase Richard Neutra's unbuilt Omega House. Aim was to present how it could have been. It shows the potential of interacting with a space whether already built or yet to be built. Final interactive product represented by a 3D model on the Archilogic platform. 
-      IMAGE: https://storage.3d.io/535e624259ee6b0200000484/2018-01-24_14-33-58_nhk2OA/Screen_Shot_2018-01-24_at_15.33.34.png
-      URL: http://view.3dspaces.com.au/3d/3DS1488
-      PRICE: 750
-    - TITLE: Interactive off-the-plan residential development
+      DESCRIPTION: Project to help visualise their building plans of their new architectural design home both internal and external. It shows the potential of interacting with a space whether already built or yet to be built. Final interactive product represented by a 3D model on the Archilogic platform.
+      IMAGE: https://storage.3d.io/535e624259ee6b0200000484/2018-02-22_09-46-01_5dYDwW/Screen_Shot_2018-02-22_at_10.45.40.png
+      URL: https://goo.gl/454jPE
+      PRICE: 195
+    - TITLE: Interactive navigation for residential & commercial buildings
       DESCRIPTION: Project for an off-the-plan residential development for Seven Residences, The Palm, Dubai. The project includes 14 levels and 545 apartments ranging from studio to 3 bedroom which are represented by 3D models on the Archlogic platform.
       IMAGE: https://storage.3d.io/535e624259ee6b0200000484/2018-01-22_15-13-35_xacF0j/3D_Spaces_Project2.jpg
       URL: http://app.viznavigator.com/view/CF14DE45
-      PRICE: 3000
-    - TITLE: Interactive commercial fit-out designs
-      DESCRIPTION: Project for 3 level off-the-plan commercial office design proposal, Brisbane, Australia. The proposed fit-out design work was represented by 3D models on the Archlogic platform.
-      IMAGE: https://storage.3d.io/535e624259ee6b0200000484/2018-01-22_15-14-29_bTWwUs/3D_Spaces_Project3.jpg
-      URL: http://app.viznavigator.com/view/7C73107F
-      PRICE: 2000
+      PRICE: 1500
+    - TITLE: Interactive navigation for commercial spaces
+      DESCRIPTION: Project for an commercial office fitout presentation. The project includes the external city and buildings in 3D with a section cut view of the building to reveal the office using the Archlogic platform.
+      IMAGE: https://storage.3d.io/535e624259ee6b0200000484/2018-02-22_09-47-14_1I1Wbv/Screen_Shot_2018-02-22_at_10.46.56.png
+      URL: https://goo.gl/gkzBz2
+      PRICE: 195
 </script>
 
