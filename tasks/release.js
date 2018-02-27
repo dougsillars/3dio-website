@@ -1,6 +1,5 @@
-const Promise = require('bluebird')
-const path = require('path')
 const gulp = require('gulp')
+const path = require('path')
 const gzip = require('gulp-gzip')
 const s3 = require('gulp-s3')
 const execSync = require('child_process').execSync
@@ -15,10 +14,9 @@ const isMaster = gitBranchName === 'master'
 // TODO: increase cdn max age to 1 day once content becomes more stable (See issue #16)
 // !! branches deployments should always be max-age 0
 const cdnMaxAge = !isMaster ? 0 : 60 * 5 // = 5 minutes
-const debug = false
 const AWS = {
   bucket: '3d.io',
-  dir:    gitBranchName === 'master' ? `` : `branch/${gitBranchName}/`,
+  dir:    isMaster ? '' : path.join('branch', gitBranchName),
   region: 'eu-west-1',
   key:    process.env.AWS_ACCESS_KEY_ID,
   secret: process.env.AWS_SECRET_ACCESS_KEY
