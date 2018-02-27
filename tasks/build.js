@@ -20,7 +20,9 @@ const gitBranchName = process.env.TRAVIS_BRANCH || execSync(`git rev-parse --abb
 const gitCommitSha1 = execSync(`git rev-parse HEAD`).toString('utf8').replace('\n', '')
 // only branches deployed by CI have root directories
 // all other environments are running on root dir
-const urlPathRoot = process.env.TRAVIS_BRANCH && process.env.TRAVIS_BRANCH !== 'master' ? '/branch/'+process.env.TRAVIS_BRANCH : ''
+const TRAVIS_BRANCH = process.env.TRAVIS_BRANCH
+console.log('TRAVIS_BRANCH is: ', TRAVIS_BRANCH)
+const urlPathRoot = TRAVIS_BRANCH && TRAVIS_BRANCH !== 'master' ? path.join('/branch', TRAVIS_BRANCH) : ''
 
 // configs
 
@@ -147,8 +149,6 @@ function generatePartnerProfilePages () {
     if (!inputFile.isBuffer()) return
     // decode text from vinyl object
     let markdownText = inputFile.contents.toString(enc)
-    const urlPath = urlPathRoot+'/'+inputFile.path.substr(inputFile.base.length)
-    const urlPathDir = path.dirname(urlPath)+'/'
     const partnerProfileTemplate = path.resolve(process.cwd(), 'src/pug-common/partner-profile-page.pug')
     getAllPartnerInfo()
     // get partner info
@@ -197,8 +197,6 @@ function generateTrustedDeveloperProfilePages() {
     if (!inputFile.isBuffer()) return
     // decode text from vinyl object
     let markdownText = inputFile.contents.toString(enc)
-    const urlPath = urlPathRoot + '/' + inputFile.path.substr(inputFile.base.length)
-    const urlPathDir = path.dirname(urlPath) + '/'
     const partnerProfileTemplate = path.resolve(process.cwd(), 'src/pug-common/partner-profile-page.pug')
     getAllTrustedDeveloperInfo()
     // get partner info
@@ -304,8 +302,7 @@ function addAnchorLinksToTitles (html, inputFile) {
 const aTagInHtmlRegex = /\<a *[^\/>]*href="([^"]*|\\")*"*[^\/>]*\>/gi
 const mdExtensionInUrlRegex = /(\.md)/gi
 function remapLinks (html, inputFile) {
-  const urlPath = urlPathRoot+'/'+inputFile.path.substr(inputFile.base.length)
-  const urlPathDir = (path.dirname(urlPath)+'/').replace('//','/')
+  const inputFileDir = path.dirname( inputFile.path.substr(inputFile.base.length) )
   return html.replace(aTagInHtmlRegex, function (tag, url) {
     if(!url) return
     if (url.substr(0, 11) === 'javascript:') {
@@ -331,7 +328,7 @@ function remapLinks (html, inputFile) {
       // add root path to relative pages
       return tag.replace(
         url,
-        url[0] === '/' ? urlPathRoot + url : urlPathDir + url
+        url[0] === '/' ? path.join( urlPathRoot, url ) : path.join( urlPathRoot, inputFileDir, url )
       // replace .md extensions by .html
       ).replace(
         mdExtensionInUrlRegex,
