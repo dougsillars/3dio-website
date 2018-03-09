@@ -10,6 +10,7 @@ $(function(){
   var $titlePicPlan = $('#title-pic-plan')
   var $titlePicArch = $('#title-pic-arch')
   var $titlePicFurniture = $('#title-pic-furniture')
+  var $toc = $('#table-of-contents')
 
   /*
    * Desktop Menu
@@ -115,6 +116,34 @@ $(function(){
     $(el).on('click', io3d.utils.ui.secretApiKey)
   })
 
+  /*
+   * Table of Contents
+   */
+  console.log($toc, 'shey toc!!')
+  if ($toc.length) {
+    // console.log('hey toc!!')
+    var ids = $('#table-of-contents a').map(function(){
+      return $(this).attr('href');
+    }).get();
+    console.log(ids)
+    $(document).on('scroll', function() {
+      var scrollPos = $(this).scrollTop()
+      var closest = Infinity
+      var currentId = null
+      ids.forEach(function(id, i) {
+        var dif = Math.abs(scrollPos - $(id).position().top)
+        if (dif < closest) {
+          closest = dif
+          currentId = id
+        }
+      })
+      $('#table-of-contents a').each(function(i) {
+        $(this).removeClass('active')
+      })
+      $('#table-of-contents a[href$="' + currentId + '"]').addClass('active')
+      console.log(currentId)
+    })
+  }
 
 })
 

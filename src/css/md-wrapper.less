@@ -1,4 +1,6 @@
 @import "common/configs.less";
+@import "common/side-menu.less";
+@import "common/secondary-sidebar.less";
 
 #content {
 
@@ -14,6 +16,12 @@
 
     .container {
         padding-top: 0px;
+        @media (min-width: 900px) {
+            margin-left: 300px;
+        }
+        @media (min-width: 1260px) {
+            margin-left: ~"calc(50% - 330px)";            
+        }
     }
 
     a {

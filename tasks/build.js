@@ -242,7 +242,13 @@ function generateTrustedDeveloperProfilePages() {
 
 
 function renderMarkdown () {
+  let apiIndexMd = fs.readFileSync('src/docs/api/1/_menu_.md', 'utf8')
+  // remove h1 header
+  apiIndexMd = apiIndexMd.replace(/^#[\S\s][^##]*##/g, '##')
+  const apiIndexHtml = marked(apiIndexMd)
   return gulp.src(src.markdown).pipe(through2.obj((inputFile, enc, cb) => {
+    const isApiDocs = inputFile.path.includes('/docs/api')
+    const docString = isApiDocs ? apiIndexHtml : ''
     // process files only
     if (!inputFile.isBuffer()) return
     // decode text from vinyl object
@@ -259,6 +265,8 @@ function renderMarkdown () {
         pretty: debug,
         // template variables
         content: content,
+        subMenu: getSubMenu(content),
+        menu: docString,
         // generic template variable
         urlPathRoot: urlPathRoot,
         githubLink: getGithubEditLink(inputFile)
@@ -293,6 +301,21 @@ function renderLess () {
 // helpers
 
 const hTagInHtmlRegex = /(<h[1-5] *[^\/>]*id="([^"]*)"*[^\/>]*\>)([^<]*)(<\/h[1-5]>)/gi
+
+function getSubMenu (html) {
+  let links = []
+  while (match = hTagInHtmlRegex.exec(html)) {
+    links.push({id: match[2], content: match[3]})
+  }
+  let htmlStr = `<div id="table-of-contents" class="nav-ist">
+    <p>Table of Contents</p>
+      <ul>`
+  links.forEach(li => {
+    htmlStr += `\n<li><a href="#${li.id}">${li.content}</a></li>`
+  })
+  return htmlStr += '\n</ul></div>'
+}
+
 function addAnchorLinksToTitles (html, inputFile) {
   return html.replace(hTagInHtmlRegex, function(tag, tagStart, id, content, tagEnd){
     return '<a href="#'+id+'" class="h-link">'+ tagStart + content + tagEnd + '</a>'
