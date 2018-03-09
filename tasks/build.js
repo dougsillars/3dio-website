@@ -35,6 +35,7 @@ const src = {
   markdown: [
     // the first ** are necessary to mark 'src' as base dir for output paths
     'src/**/*.md',
+    '!src/**/_menu_.md',
     '!src/**/partner/*.md',
     '!src/**/trusted-developer/*.md'
   ],
