@@ -242,13 +242,15 @@ function generateTrustedDeveloperProfilePages() {
 
 
 function renderMarkdown () {
-  let apiIndexMd = fs.readFileSync('src/docs/api/1/_menu_.md', 'utf8')
-  // remove h1 header
-  apiIndexMd = apiIndexMd.replace(/^#[\S\s][^##]*##/g, '##')
-  const apiIndexHtml = marked(apiIndexMd)
+  const apiIndexHtml = marked(fs.readFileSync('src/docs/api/1/_menu_.md', 'utf8'))
+  const editorIndexHtml = marked(fs.readFileSync('src/docs/editor/1/_menu_.md', 'utf8'))
+  const accountsIndexHtml = marked(fs.readFileSync('src/docs/accounts/1/_menu_.md', 'utf8'))
+
   return gulp.src(src.markdown).pipe(through2.obj((inputFile, enc, cb) => {
-    const isApiDocs = inputFile.path.includes('/docs/api')
-    const docString = isApiDocs ? apiIndexHtml : ''
+    let docString = ''
+    if (inputFile.path.includes('/docs/api')) docString = apiIndexHtml
+    else if (inputFile.path.includes('/docs/accounts')) docString = accountsIndexHtml
+    else if (inputFile.path.includes('/docs/editor')) docString = editorIndexHtml
     // process files only
     if (!inputFile.isBuffer()) return
     // decode text from vinyl object
