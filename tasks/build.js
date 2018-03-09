@@ -245,12 +245,14 @@ function renderMarkdown () {
   const apiIndexHtml = marked(fs.readFileSync('src/docs/api/1/_menu_.md', 'utf8'))
   const editorIndexHtml = marked(fs.readFileSync('src/docs/editor/1/_menu_.md', 'utf8'))
   const accountsIndexHtml = marked(fs.readFileSync('src/docs/accounts/1/_menu_.md', 'utf8'))
+  const scenesIndexHtml = marked(fs.readFileSync('src/docs/scenes/1/_menu_.md', 'utf8'))
 
   return gulp.src(src.markdown).pipe(through2.obj((inputFile, enc, cb) => {
     let docString = ''
     if (inputFile.path.includes('/docs/api')) docString = apiIndexHtml
     else if (inputFile.path.includes('/docs/accounts')) docString = accountsIndexHtml
     else if (inputFile.path.includes('/docs/editor')) docString = editorIndexHtml
+    else if (inputFile.path.includes('/docs/scenes')) docString = scenesIndexHtml
     // process files only
     if (!inputFile.isBuffer()) return
     // decode text from vinyl object

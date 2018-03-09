@@ -1,3 +1,6 @@
-# API Reference
+# 3d.io documentation
 
-[Version 1](api/1/)
+* [API](api/1/)
+* [Editor](editor/1/)
+* [Accounts](accounts/1/)
+* [Scene dashboard](scenes/1/)

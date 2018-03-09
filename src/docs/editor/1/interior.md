@@ -1,4 +1,4 @@
-# Light Baking
+# Interior
 
 ## A chair
 
