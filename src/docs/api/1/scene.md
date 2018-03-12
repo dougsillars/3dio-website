@@ -49,7 +49,7 @@ Use `io3d.scene.getStructure(sceneId)` to get the sceneStructure of an Archilogi
 
 ```js
 io3d.scene.getStructure(sceneId)
-.then(sceneStructure => { })
+.then(console.log)
 ```
 
 this returns an object with the following hierarchy:
