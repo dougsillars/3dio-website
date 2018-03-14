@@ -243,17 +243,15 @@ function generateTrustedDeveloperProfilePages() {
 
 
 function renderMarkdown () {
-  const apiIndexHtml = marked(fs.readFileSync('src/docs/api/1/_menu_.md', 'utf8'))
-  const editorIndexHtml = marked(fs.readFileSync('src/docs/editor/1/_menu_.md', 'utf8'))
-  const accountsIndexHtml = marked(fs.readFileSync('src/docs/accounts/1/_menu_.md', 'utf8'))
-  const scenesIndexHtml = marked(fs.readFileSync('src/docs/scenes/1/_menu_.md', 'utf8'))
-
   return gulp.src(src.markdown).pipe(through2.obj((inputFile, enc, cb) => {
-    let docString = ''
-    if (inputFile.path.includes('/docs/api')) docString = apiIndexHtml
-    else if (inputFile.path.includes('/docs/accounts')) docString = accountsIndexHtml
-    else if (inputFile.path.includes('/docs/editor')) docString = editorIndexHtml
-    else if (inputFile.path.includes('/docs/scenes')) docString = scenesIndexHtml
+    const ref = path.parse(inputFile.path)
+    let menuHtml = ''
+    // check if the folder of the markdown file contains a _menu_ file
+    const indexPath = path.resolve(ref.dir, '_menu_.md')
+    if (fs.existsSync(indexPath)) {
+      let menuMd = fs.readFileSync(indexPath, 'utf8')
+      menuHtml = marked(menuMd)
+    }
     // process files only
     if (!inputFile.isBuffer()) return
     // decode text from vinyl object
@@ -261,6 +259,8 @@ function renderMarkdown () {
     // convert markdown to html
     marked(markdownText, (err, content) => {
       if (err) return cb(err)
+      // prevent dulpicate ids
+      content = preventDuplicateIds(content)
       // render pug to html
       const pugMarkdownWrapper = path.resolve(process.cwd(), 'src/pug-common/md-wrapper.pug')
       html = pug.renderFile(pugMarkdownWrapper, {
@@ -270,8 +270,10 @@ function renderMarkdown () {
         pretty: debug,
         // template variables
         content: content,
+        // sidebar menu left
+        menu: menuHtml,
+        // toc menu right
         subMenu: getSubMenu(content),
-        menu: docString,
         // generic template variable
         urlPathRoot: urlPathRoot,
         githubLink: getGithubEditLink(inputFile)
@@ -307,16 +309,28 @@ function renderLess () {
 
 const hTagInHtmlRegex = /(<h[1-5] *[^\/>]*id="([^"]*)"*[^\/>]*\>)([^<]*)(<\/h[1-5]>)/gi
 
+function preventDuplicateIds (html) {
+  let ids = {}
+  return html.replace(hTagInHtmlRegex, function(tag, tagStart, id, content, tagEnd){
+    if (ids[id] !== undefined) {
+      ids[id] ++
+      tagStart = tagStart.replace(id, id + '_' + ids[id])
+    }
+    else ids[id] = 0
+    return tagStart + content + tagEnd + '</a>'
+  })
+}
+
 function getSubMenu (html) {
   let links = []
   while (match = hTagInHtmlRegex.exec(html)) {
-    links.push({id: match[2], content: match[3]})
+    links.push({tag: match[1].slice(1,3), id: match[2], content: match[3]})
   }
-  let htmlStr = `<div id="table-of-contents" class="nav-ist">
+  let htmlStr = `<div id="table-of-contents" class="nav-list">
     <p>Table of Contents</p>
       <ul>`
   links.forEach(li => {
-    htmlStr += `\n<li><a href="#${li.id}">${li.content}</a></li>`
+    htmlStr += `\n<li><a class="nav-${li.tag}" href="#${li.id}">${li.content}</a></li>`
   })
   return htmlStr += '\n</ul></div>'
 }
