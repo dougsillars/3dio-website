@@ -23,15 +23,32 @@
   }
   li {
     list-style-type: none;
+    white-space: nowrap;
     line-height: 1.5;
     padding-left: 0;
     a {
       color: #999!important;
       font-weight: 300;
       &.active {
-        color: black!important;
+        color: @royal-blue-55!important;
         font-weight: 400;
       }
+      &:hover {
+        color: @royal-blue-80!important;
+        text-decoration: none!important;
+      }
+    }
+    & .nav-h2 {
+      margin-left: 10px;
+    }
+    & .nav-h3 {
+      margin-left: 20px;
+    }
+    & .nav-h4 {
+      margin-left: 30px;
+    }
+    & .nav-h5 {
+      margin-left: 40px;
     }
   }
 }
