@@ -243,13 +243,15 @@ function generateTrustedDeveloperProfilePages() {
 
 
 function renderMarkdown () {
-  let apiIndexMd = fs.readFileSync('src/docs/api/1/_menu_.md', 'utf8')
-  // remove h1 header
-  apiIndexMd = apiIndexMd.replace(/^#[\S\s][^##]*##/g, '##')
-  const apiIndexHtml = marked(apiIndexMd)
   return gulp.src(src.markdown).pipe(through2.obj((inputFile, enc, cb) => {
-    const isApiDocs = inputFile.path.includes('/docs/api')
-    const docString = isApiDocs ? apiIndexHtml : ''
+    const ref = path.parse(inputFile.path)
+    let menuHtml = ''
+    // check if the folder of the markdown file contains a _menu_ file
+    const indexPath = path.resolve(ref.dir, '_menu_.md')
+    if (fs.existsSync(indexPath)) {
+      let menuMd = fs.readFileSync(indexPath, 'utf8')
+      menuHtml = marked(menuMd)
+    }
     // process files only
     if (!inputFile.isBuffer()) return
     // decode text from vinyl object
@@ -268,8 +270,10 @@ function renderMarkdown () {
         pretty: debug,
         // template variables
         content: content,
+        // sidebar menu left
+        menu: menuHtml,
+        // toc menu right
         subMenu: getSubMenu(content),
-        menu: docString,
         // generic template variable
         urlPathRoot: urlPathRoot,
         githubLink: getGithubEditLink(inputFile)
