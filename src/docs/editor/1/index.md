@@ -5,6 +5,7 @@ This is the editor docs page, hurray =)
 ## Get Started
 
 Are you into editing?
-* [Light Baking](light-baking.md)
+* [Camera Bookmarks](camera-bookmarks.md)
+* [Realistic Lighting](realistic-lighting.md)
 * [Interior](interior.md)
 * [Architecture](architecture.md)
