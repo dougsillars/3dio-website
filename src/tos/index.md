@@ -6,7 +6,7 @@ By clicking a box indicating your acceptance of these terms of use, entering int
 
 If you are using the Services as an individual you represent that you are at least 18 years of age and can form legally binding contracts and if you are using such Services on behalf of an organisation, you are agreeing to this Agreement for that organisation and representing that you have the authority to bind that organisation to this Agreement. In that case, “you” and “your” will refer to that organisation.
 
-## 1. Definitions.
+## 1. Definitions
 
 Capitalised terms not otherwise defined in Agreement have the meanings given to them below:
 
@@ -45,7 +45,7 @@ Where you are accessing our Free Services you will register for a free version a
 
 <span style="text-decoration: underline">Paid Services</span>: Where you are purchasing a Paid Services Package, subject to your compliance with the terms of this Agreement and in consideration of payment of the applicable Subscription Fees for such Package, we grant you and your [Authorised Users] a limited, non-exclusive, non-transferable right for the applicable Subscription Term to use the Paid Services in accordance with the Scope of use for the applicable Paid Services Package purchased by you and the terms of this Agreement and solely for your internal business operations or your personal and domestic purposes, as applicable.
 
-## 3. Use Restrictions:
+## 3. Use Restrictions
 
 Except as expressly set out in this Agreement or permitted by local law, you agree:
 
@@ -88,19 +88,19 @@ You represent and warrant that any Content:
 
 Archilogic has the right (though not the obligation) to, in Archilogic's sole discretion, refuse or remove any Content that, in Archilogic's reasonable opinion, violates any terms of this Agreement or is in any way harmful or objectionable or infringes or violates any third party’s rights. You acknowledge that we also have the right to disclose your identity to any third party who is claiming that any Content shared by you constitutes a violation of their intellectual property rights, or of their right to privacy.
 
-## 6. Our Rights to the Content.
+## 6. Our Rights to the Content
 
 Archilogic acknowledges that, as between you and Archilogic, you are the owner of the Content you share on or through the Services, (except for any Content or part thereof which is generally available publicly or through other sources separate to this Agreement).
 
 In order to use the Services we require you to, and you hereby agree to, grant us and our third party service providers the non-exclusive, royalty-free, worldwide, perpetual, transferable right to use, reproduce, distribute, prepare derivative works of, display and perform the Content for and in connection with: (i) the operation of the Services; and (ii) generating and featuring the 3D Model on our Services; provided that such use after the expiration or termination of the Subscription Term does not include any of your personal data without your express written permission. You acknowledge and agree that we may use anonymised Content at any time for the purposes of providing our services to our customers.
 
-## 7. Intellectual Property.
+## 7. Intellectual Property
 
 We are the owner or licensee of all intellectual property rights in our Services and the 3D Models (subject to section 6 above) and all related software, documentation and materials accessed through the Services, and the material published on it. These works are protected by copyright laws and treaties around the world. All such rights are reserved. Except as expressly stated herein or enabled by the proper operation of the Services, this Agreement does not grant you any rights to or in intellectual property rights or licences in respect of the Services.
 
 Archilogic reserves the right to display attribution on the 3D Model(s) such as ‘Powered by Archilogic'. Any such attributions or other footer credits or attributes may not be altered or removed.
 
-## 8. Subscriptions and payment.
+## 8. Subscriptions and payment
 
 Subscription Fees: Unless otherwise agreed in the applicable Order, you agree to pay us the relevant fees for the Paid Services Package you have selected to purchase which, depending on the relevant Package, will be either: (i)the monthly or yearly subscription fees for such Package, as applicable, payable in advance; or (ii) the “pay as you go” fees for such Package, and as indicated in the applicable Order ("**Subscription Fees**​"). Details of those fees are as set out on the Business page of our website found at spaces.archilogic.com/business. For monthly/yearly Subscription Fees, we will charge you for the first instalment of such fees in advance on the date you first purchase a Package for the Paid Services ("**Initial Charge Date​**"). Thereafter we will charge you on each monthly or yearly anniversary of the Initial Charge Date (depending on the Package selected by you) for the duration of the Subscription Term. For any “pay as you go” fees, you will be charged [either at the time of each request or monthly in arrears for those Paid Services used under such Package, as indicated in the applicable Order and are due immediately]. Unless otherwise agreed by us in the applicable Order, all such payments and charges shall be made on your payment card in accordance with the payment section below.
 
@@ -114,13 +114,13 @@ Subscription Fees: Unless otherwise agreed in the applicable Order, you agree to
 <span style="text-decoration: underline">Fee changes</span>: We reserve the right to change the fees, subject to providing you with sufficient notice of the fee change in advance. Fee changes will take effect: (a) in the case of monthly Subscription Fee, at the start of the next subscription period; or (b) in the case of annual subscriptions, on the date notified to you with the fee being adjusted on a pro-rata basis and any additional fees owing to us being charged to your credit card. Your continued use of the Services after the fee change becomes effective constitutes your agreement to pay the new fee.  
 If you change, upgrade or downgrade your Paid Services Package, the fee change will take effect from the start of the next applicable subscription period.
 
-## 9. Subscription Term.
+## 9. Subscription Term
 
 <span style="text-decoration: underline">Free Services Term</span>: Your right to use the Free Services shall commence upon the date you create a Free Services account and shall continue until you move to a Paid Services Package or such access is otherwise terminated in accordance with section 10 below ("**Free​ ​Services​ ​Term​**").
 
 <span style="text-decoration: underline">Paid Services Subscription Term</span>: Your right to access and use the Paid Services shall continue for the applicable Subscription Term unless terminated earlier in accordance with section 10\. The Initial Subscription Term will renew for further periods which are the same as the Initial Subscription Term ("**Renewal Terms**​") unless terminated earlier in accordance with section 10.
 
-## 10\. Termination Rights and Refunds.
+## 10\. Termination Rights and Refunds
 
 <span style="text-decoration: underline">Your Termination of Free Services</span>: You have the right to terminate the Free Services for any reason and at any time. Simply cease using the Services and deactivate your account.
 
@@ -142,18 +142,18 @@ We may further terminate this Agreement (for the Free Services and/or Paid Servi
 
 <span style="text-decoration: underline">Surviving provisions</span>: All provisions of this Agreement which by their nature should survive termination shall survive termination, including, without limitation, ownership provisions, warranty disclaimers, indemnity and limitations of liability.
 
-## 11. Privacy and Content Security.
+## 11. Privacy and Content Security
 
 See our [Privacy Policy](/privacy) for more information about what, how, where and to whom your personal data will be processed by us.  
 As part of the Services offered, we shall store all Content in accordance with reasonable standards of care and levels of security. However, and subject to our obligations under data protection laws and regulations as detailed in our [Privacy Policy](/privacy), we are not responsible for backing up the Content and for this reason, we ask that you keep your own copy of all such Content at all times.
 
-## 12. Disclaimer and Warranties.
+## 12. Disclaimer and Warranties
 
 In addition to the disclaimer of warranties set out in section 4 we make no warranties that defects in the Services will be corrected or that the Services or the server that makes the Services available is free of viruses or anything else which may be harmful or destructive.  
 You acknowledge that the Services has not been developed to meet your individual requirements, and that it is your responsibility to ensure that the facilities and functions of the Services meet your requirements. You assume full responsibility for results obtained from the use of the Services, and from conclusions drawn from such use, including damage caused by errors or omissions in any information, instructions or scripts provided to us by you in connection with your use of the Services or any actions taken by us at your direction.  
 To the fullest extent permitted by law, Archilogic hereby disclaims all other warranties, representations, conditions and all other terms of any kind implied by statute or common law.
 
-## 13. Limitation of Liability.
+## 13. Limitation of Liability
 
 To the fullest extent permitted by law, we shall not be liable whether in tort (including for negligence or breach of statutory duty), contract, misrepresentation or otherwise for (i) any special, indirect or consequential loss or damages, (ii) the cost of procurement for substitute products or services; (iii) interruption of use or loss or corruption of data; or (iv) loss of profits, loss of business or depletion of goodwill, arising out of or in connection with this Agreement.
 
@@ -172,7 +172,7 @@ Nothing in this Agreement excludes or limits our liability for death or personal
 You assume sole responsibility for results obtained from your use of the Services and 3D Models, and for conclusions drawn from such use. We shall have no liability for any damage caused by errors or omissions in any information, instructions or materials provided to us by you in connection with the Services or any actions taken by us at your direction.  
 The Services may contain links to other websites. These third party websites are provided either to allow you to use certain features of the Services or for your information only. We make no representation or commitment and shall have no liability or obligation whatsoever in relation to the content or use of, or correspondence with, any such third-party website or any performance of any contract entered into by you with such third party. We recommend that you refer to the third party’s website terms and conditions and privacy policy prior to using the relevant third party website. We do not endorse or approve any third-party website nor the content or services of any third-party website made available via the Services.
 
-## 14. Indemnification.
+## 14. Indemnification
 
 You agree to defend, indemnify and hold harmless Archilogic from and against any and all claims, losses, damages, expenses and costs, including without limitation reasonable court costs and legal fees, arising out of or in connection with your use of the Services in violation of this Agreement.
 
