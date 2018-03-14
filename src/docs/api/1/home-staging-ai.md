@@ -171,3 +171,60 @@ io3d.scene.getStructure(sceneId)
 * [Load an Archilogic model and generate a UI to furnish each space](https://github.com/archilogic-com/3dio-js/blob/master/examples-browser/staging/stage-scene-structure/index.html)
 * [Drawing a room in Augmented Reality and furnishing it](https://github.com/archilogic-com/3dio-js/tree/master/examples-browser/staging/stage-room-ar)
 * [Recognize a labeled floor plan image and furnish one room](https://github.com/archilogic-com/3dio-js/blob/master/examples-browser/staging/stage-floor-plan/index.html)
+
+
+## Replace Furniture
+
+`io3d.staging.replaceFurniture(sceneStructure, options)` let's you replace furniture ids in a sceneStructure object with alternatives.
+The method can be used to turn the generic furniture items from the home staging ai into real products or to replace individual items on user interaction.
+Furniture dimensions and metadata are used to find the best match.
+
+### Options:
+
+| Parameter | Type | Description | Optional |
+| --- | --- | --- | --- |
+| `sceneStructure` | `object` | sceneStructure object containing [furniture items](scene-structure-specifications.md#interior) | `false` |
+| `options` | `object` | | `true` |
+| `options.query` | `string` | search string to refine the replacement, like manufacturer or style | `true` |
+
+### Example replacing single furniture element
+
+```html
+<!DOCTYPE html>
+<html>
+<body>
+<a-scene>
+  <a-entity io3d-furniture="id:345f3fb8-f834-491b-8ea8-a90bbbbeb3ef" position="0 0 -5"></a-entity>
+</a-scene>
+<script>
+const el = document.querySelector('[io3d-furniture]')
+// get sceneStructure from the A-frame elements
+const sceneStructure = io3d.scene.getSceneStructureFromAframeElements(el)
+// find replacements
+io3d.staging.replaceFurniture(sceneStructure)
+.then(result => {
+	el.setAttribute('io3d-furniture', {id:result.src.substring(1)})
+  el.setAttribute('position', {x: result.x, y: result.y, z:result.z})
+})
+</script>
+</body>
+</html>
+```
+
+### Example replacing home staging ai result directly
+
+for details on how to use home staging ai go [here](#example-with-default-parameters)
+
+* without options
+```javascript
+io3d.staging.getFurnishings(sceneStructure)
+.then(io3d.staging.replaceFurniture)
+```
+
+* with options
+```javascript
+io3d.staging.getFurnishings(sceneStructure)
+.then(result => {
+  return io3d.staging.replaceFurniture(result, {query: 'nordic'})
+})
+```
