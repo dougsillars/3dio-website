@@ -1,3 +1,5 @@
+@import './configs.less';
+
 .sidebar {
   background: white;
   box-shadow: 0 0 10px rgba(0,0,0,0.2);
@@ -43,11 +45,12 @@
       color: #999!important;
       font-weight: 300;
       white-space: nowrap;
-      .active {
-        color: black!important;
+      &.active {
+        color: @royal-blue-55!important;
+        font-weight: 400;
       }
       &:hover {
-        color: black!important;
+        color: @royal-blue-80!important;
         text-decoration: none!important;
       }
     }

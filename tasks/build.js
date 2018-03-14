@@ -257,6 +257,8 @@ function renderMarkdown () {
     // convert markdown to html
     marked(markdownText, (err, content) => {
       if (err) return cb(err)
+      // prevent dulpicate ids
+      content = preventDuplicateIds(content)
       // render pug to html
       const pugMarkdownWrapper = path.resolve(process.cwd(), 'src/pug-common/md-wrapper.pug')
       html = pug.renderFile(pugMarkdownWrapper, {
@@ -303,16 +305,28 @@ function renderLess () {
 
 const hTagInHtmlRegex = /(<h[1-5] *[^\/>]*id="([^"]*)"*[^\/>]*\>)([^<]*)(<\/h[1-5]>)/gi
 
+function preventDuplicateIds (html) {
+  let ids = {}
+  return html.replace(hTagInHtmlRegex, function(tag, tagStart, id, content, tagEnd){
+    if (ids[id] !== undefined) {
+      ids[id] ++
+      tagStart = tagStart.replace(id, id + '_' + ids[id])
+    }
+    else ids[id] = 0
+    return tagStart + content + tagEnd + '</a>'
+  })
+}
+
 function getSubMenu (html) {
   let links = []
   while (match = hTagInHtmlRegex.exec(html)) {
-    links.push({id: match[2], content: match[3]})
+    links.push({tag: match[1].slice(1,3), id: match[2], content: match[3]})
   }
-  let htmlStr = `<div id="table-of-contents" class="nav-ist">
+  let htmlStr = `<div id="table-of-contents" class="nav-list">
     <p>Table of Contents</p>
       <ul>`
   links.forEach(li => {
-    htmlStr += `\n<li><a href="#${li.id}">${li.content}</a></li>`
+    htmlStr += `\n<li><a class="nav-${li.tag}" href="#${li.id}">${li.content}</a></li>`
   })
   return htmlStr += '\n</ul></div>'
 }

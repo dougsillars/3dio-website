@@ -11,6 +11,7 @@ $(function(){
   var $titlePicArch = $('#title-pic-arch')
   var $titlePicFurniture = $('#title-pic-furniture')
   var $toc = $('#table-of-contents')
+  var $sidebar = $('#sidebar')
 
   /*
    * Desktop Menu
@@ -117,17 +118,32 @@ $(function(){
   })
 
   /*
-   * Table of Contents
+   *  Set active link in side menu
    */
-  console.log($toc, 'shey toc!!')
+  if ($sidebar.length) {
+    var links = $('#sidebar a')
+    links.each(function() {
+      if ($(this).attr('href') === location.pathname) $(this).addClass('active')
+      else $(this).removeClass('active')
+    })
+  } 
+
+  /*
+   * reactive Table of Contents links
+   */
   if ($toc.length) {
     // console.log('hey toc!!')
     var ids = $('#table-of-contents a').map(function(){
       return $(this).attr('href');
     }).get();
-    console.log(ids)
+    // initial setting
+    setTocLink()
+    // change on scroll
     $(document).on('scroll', function() {
-      var scrollPos = $(this).scrollTop()
+      setTocLink(this)
+    })
+    function setTocLink(el) {
+      var scrollPos = el ? $(el).scrollTop() : 0
       var closest = Infinity
       var currentId = null
       ids.forEach(function(id, i) {
@@ -141,8 +157,7 @@ $(function(){
         $(this).removeClass('active')
       })
       $('#table-of-contents a[href$="' + currentId + '"]').addClass('active')
-      console.log(currentId)
-    })
+    }
   }
 
 })
