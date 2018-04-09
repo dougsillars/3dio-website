@@ -5,5 +5,8 @@
 [Scenes](../../scenes/1)
 
 Editor
+* [Camera Bookmarks](camera-bookmarks.md)
+* [Realistic Lighting](realistic-lighting.md)
 * [Interior](interior.md)
-* [Light Baking](light-baking.md)
+* [Export](export.md)
+* [Architecture](architecture.md)
