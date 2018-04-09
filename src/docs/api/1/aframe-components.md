@@ -121,7 +121,7 @@ You can list all available materials by using the JavaScript API:
 ```javascript
 var shelf = document.querySelector('a-entity[io3d-furniture]')
 var component = shelf.components['io3d-furniture']
-console.log(component.data.availableMaterials)
+console.log(component.availableMaterials)
 ```
 
 If the furniture has multiple materials available, this will log an object with the different parts of the furniture as properties. Each property contains an array of names for the different materials.
@@ -129,7 +129,7 @@ If the furniture has multiple materials available, this will log an object with 
 For example, the shelf may have a single piece (`Wood`) with a set of available materials:
 
 ```javascript
-// console.log(component.data.availableMaterials)
+// console.log(component.availableMaterials)
 {
   Wood: [
     Oak stained aqua blue,
