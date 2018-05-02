@@ -4,7 +4,6 @@
   background: white;
   box-shadow: 0 0 10px rgba(0,0,0,0.2);
   box-sizing: border-box;
-  height: 100%;
   left: 0;
   padding: 40px;
   position: fixed;
@@ -20,7 +19,6 @@
   z-index: 8;
   @media screen and (min-width: 900px) {
     box-shadow: none;
-    height: ~"calc(100vh - 80px)";
     position: fixed;
     padding-right: 0;
     padding-top: 0;
@@ -29,6 +27,11 @@
     transform: translate(0, 0);
     transition: none;
   };
+  &--floating {
+    position: absolute;
+    top: auto;
+    bottom: 0;
+  }
   p {
     text-transform: uppercase;
     font-size: 14px;

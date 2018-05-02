@@ -126,7 +126,7 @@ $(function(){
       if ($(this).attr('href') === location.pathname) $(this).addClass('active')
       else $(this).removeClass('active')
     })
-  } 
+  }
 
   /*
    * reactive Table of Contents links
@@ -141,6 +141,7 @@ $(function(){
     // change on scroll
     $(document).on('scroll', function() {
       setTocLink(this)
+      checkOffset()
     })
     function setTocLink(el) {
       var scrollPos = el ? $(el).scrollTop() : 0
@@ -157,6 +158,13 @@ $(function(){
         $(this).removeClass('active')
       })
       $('#table-of-contents a[href$="' + currentId + '"]').addClass('active')
+    }
+    function checkOffset() {
+      var footerHeight = $('#footer').height()
+      if($('#sidebar').offset().top + $('#sidebar').height() >= $('#footer').offset().top - 10)
+          $('#sidebar').addClass('sidebar--floating')
+      if($(document).scrollTop() + window.innerHeight < $('#footer').offset().top + footerHeight)
+          $('#sidebar').removeClass('sidebar--floating'); // restore when you scroll up
     }
   }
 
