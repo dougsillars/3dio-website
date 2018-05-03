@@ -7,6 +7,7 @@
     padding: 50px 0 100px 0;
     min-height: 80vh;
     background: white;
+    position: relative;
 
     font-family: "Fira Sans", Helvetica, Arial, sans-serif;
     font-size: 16px;
@@ -16,11 +17,17 @@
 
     .container {
         padding-top: 0px;
-        @media (min-width: 900px) {
-            margin-left: 300px;
-        }
-        @media (min-width: 1260px) {
-            margin-left: ~"calc(50% - 330px)";            
+
+        &.markdown {
+            @media (min-width: 900px) {
+                margin-left: 300px;
+            }
+            @media (min-width: 1260px) {
+                margin-left: ~"calc(50% - 330px)";            
+            }
+            & a, & .h-link:hover {
+                color: @royal-blue-50;
+            }
         }
     }
 
@@ -47,14 +54,16 @@
         padding-top: 40px;
         font-size: 52px;
     }
+    // negative margin for proper hash link vertical alignment
     h2 {
-        margin-top: 0;
-        padding-top: 32px;
+        margin-top: -15px;
+        padding-top: 47px;
         font-size: 36px;
     }
+    // negative margin for proper hash link vertical alignment
     h3, h4 {
-        margin-top: 0;
-        padding-top: 20px;
+        margin-top: -40px;
+        padding-top: 60px;
         font-weight: 600;
     }
 

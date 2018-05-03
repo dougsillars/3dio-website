@@ -5,7 +5,7 @@
 [Scenes](../../scenes/1)
 
 Apis - Get Started
-* [Browser](get-started-browser.md)
+* [Browser](./)
 * [Node Server](get-started-node-server.md)
 * [Configs](configs.md)
 * [Authentication](authentication.md)
@@ -29,3 +29,11 @@ Products
 
 Utils
 * [UI](ui.md)
+
+Distribution
+* [Browser](https://dist.3d.io)
+* [Node](https://www.npmjs.com/package/3dio)
+
+Contribute
+* [Guidelines](https://github.com/archilogic-com/3dio-js/blob/master/CONTRIBUTING.md)
+* [Github](https://github.com/archilogic-com/3dio-js)

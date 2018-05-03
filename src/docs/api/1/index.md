@@ -1,38 +1,76 @@
-# API v1 Reference
+# Get Started
 
-Expect changes: APIs are in first public beta release state.<br>
-Questions? [Ask us on Stack Overflow.](https://stackoverflow.com/questions/tagged/aframe%20and%203d.io%20or%20archilogic)
+[Basics](#browser) | [Package Manager](#package-manager-support) | [Publishable API Keys](#using-publishable-api-keys)
 
-## Get Started
-* [Browser](get-started-browser.md)
-* [Node Server](get-started-node-server.md)
-* [Configs](configs.md)
-* [Authentication](authentication.md)
+## Browser
 
-## Products
-* [A-Frame components](aframe-components.md)
-* [Architecture toolkit](architecture-toolkit.md)
-* [Storage](storage.md)
-* [Furniture](furniture.md)
-* [Scene](scene.md)
-* [SceneStructure Specifications](scene-structure-specifications.md)
-* [SceneStructure Validation](scene-structure-validation.md)
-* [Home staging AI](home-staging-ai.md)
-* [Convert floor plan to 3D](convert-floor-plan-to-3d.md)
-* Import 3D model
-* Import matterport (3D scan)
-* [Export 3D model](model-export.md)
-* Materials
-* [Lightmap baking](lightmap-baking.md)
-* [Modify 3D model](modify.md)
+```html
+<head>
+  <script src="https://aframe.io/releases/0.7.1/aframe.min.js"></script>
+  <script src="https://dist.3d.io/3dio-js/1.1.x/3dio.min.js"></script>
+</head>
+<body>
+  <script>
+    io3d.utils.ui.message.success('Hello World')
+  </script>
+</body>
+```
 
-## Utils
-* [UI](ui.md)
+Using 3dio without A-Frame is also possible. This is particulary useful if you don't need to render a 3D view:
 
-## Distribution
-* Browser: https://dist.3d.io
-* Node: https://www.npmjs.com/package/3dio
+```html
+<script src="https://dist.3d.io/3dio-js/1.1.x/3dio.min.js"></script>
+<script>
+  io3d.utils.ui.message.success('Hello World')
+</script>
+```
 
-## Contribute
-* [Guidelines](https://github.com/archilogic-com/3dio-js/blob/master/CONTRIBUTING.md)
-* Github: https://github.com/archilogic-com/3dio-js
+## Package Manager Support
+
+We support Bower, Webpack, Require.js and similar. 3dio is packaged in UMD (Universal Module Definition) format so that it can be used as CommonJS or AMD module.
+
+1. Install library from npm `npm install 3dio --save`
+2. Use it your code base:
+  ```javascript
+  var io3d = require('3dio')
+  io3d.utils.ui.message.success('Hello World')
+  ```
+
+## Using Publishable API Keys
+
+For some extended functionality with subscription based quotas a <a class="open-publishable-api-keys-menu">publishable API key</a> is required. The [authentication docs](authentication.md) provide a detailed overview of what exactly you can do with publishable API keys.
+
+Specify your publishable API key in the 3dio script URL:
+
+```html
+<script src="https://dist.3d.io/3dio-js/1.1.x/3dio.min.js?pk=YOUR_PUBLISHABLE_API_KEY"></script>
+```
+
+Alternatively you can set a publishable API key dynamically using the config method:
+
+```html
+<script src="https://dist.3d.io/3dio-js/1.1.x/3dio.min.js"></script>
+<script>
+  io3d.config({
+    publishableApiKey:'YOUR_PUBLISHABLE_API_KEY'
+  })
+</script>
+```
+
+Config is also the recommended method when using a package manager like Bower, Webpack, Require.js or similar:
+
+```javascript
+var io3d = require('3dio')
+io3d.config({
+  publishableApiKey: 'YOUR_PUBLISHABLE_API_KEY'
+})
+```
+
+## Secret API Key
+
+Please do not use secret API keys in browser environments. Doing so would expose it to everybody. Secret API keys should be kept secret and used only in secure environments. Expose your secret API key only to trusted 3rd parties.
+
+## Next Steps
+
+* [Authentication overview](authentication.md)
+* [Config options](configs.md)
