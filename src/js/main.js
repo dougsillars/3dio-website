@@ -10,6 +10,9 @@ $(function(){
   var $titlePicPlan = $('#title-pic-plan')
   var $titlePicArch = $('#title-pic-arch')
   var $titlePicFurniture = $('#title-pic-furniture')
+  var $toc = $('#table-of-contents')
+  var $sidebar = $('#sidebar')
+  var $secondarySidebar = $('.secondary-sidebar')
 
   /*
    * Desktop Menu
@@ -43,6 +46,12 @@ $(function(){
       } else {
         $menuTopShadow.css({ opacity: 0 })
       }
+    }
+
+    // adapt docs sidemenus to scroll position
+    if ($toc.length) {
+      setTocLink()
+      sideMenuOffset()
     }
 
   })
@@ -115,6 +124,67 @@ $(function(){
     $(el).on('click', io3d.utils.ui.secretApiKey)
   })
 
+  /*
+   *  Set active link in side menu
+   */
+  if ($sidebar.length) {
+    var links = $('#sidebar a')
+    links.each(function() {
+      if ($(this).attr('href') === location.pathname) $(this).addClass('active')
+      else $(this).removeClass('active')
+    })
+  }
+
+  /*
+   * reactive Table of Contents links
+   */
+  if ($toc.length) {
+    // console.log('hey toc!!')
+    var ids = $('#table-of-contents a').map(function(){
+      return $(this).attr('href');
+    }).get();
+    // initial setting
+    setTocLink()
+    sideMenuOffset()
+  }
+
+  // highlight current position in toc list
+  function setTocLink() {
+    var hashId = location.hash
+    var scrollPos = $doc.scrollTop()
+    var closest = Infinity
+    var currentId = null
+    ids.forEach(function(id, i) {
+      var dif = Math.abs(scrollPos - $(id).position().top)
+      // priotize active hash links
+      if (id === hashId) dif -= 200
+      if (dif < closest) {
+        closest = dif
+        currentId = id
+      }
+    })
+    $('#table-of-contents a').each(function(i) {
+      $(this).removeClass('active')
+    })
+    $('#table-of-contents a[href$="' + currentId + '"]').addClass('active')
+  }
+
+  // toggle sidemenus from fixed to absolute when touching footer
+  function sideMenuOffset() {
+    var footerTop = $('#footer').offset().top
+    var sidebarHeight = $sidebar.outerHeight()
+    var sidebarPos = $sidebar.offset().top + sidebarHeight
+    var sidebarFloat = $doc.scrollTop() + sidebarHeight + 50
+
+    var tocHeight = $secondarySidebar.outerHeight()
+    var tocPos = $secondarySidebar.offset().top + tocHeight
+    var tocFloat = $doc.scrollTop() + tocHeight + 50
+    
+    if (sidebarPos > footerTop) $sidebar.addClass('sidebar--floating')
+    if (tocPos > footerTop) $secondarySidebar.addClass('sidebar--floating')
+    if (sidebarFloat < footerTop - 25) $sidebar.removeClass('sidebar--floating')
+    if (tocFloat < footerTop - 25) $secondarySidebar.removeClass('sidebar--floating')
+  }
 
 })
 
