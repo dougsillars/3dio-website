@@ -150,11 +150,14 @@ $(function(){
 
   // highlight current position in toc list
   function setTocLink() {
+    var hashId = location.hash
     var scrollPos = $doc.scrollTop()
     var closest = Infinity
     var currentId = null
     ids.forEach(function(id, i) {
       var dif = Math.abs(scrollPos - $(id).position().top)
+      // priotize active hash links
+      if (id === hashId) dif -= 200
       if (dif < closest) {
         closest = dif
         currentId = id
