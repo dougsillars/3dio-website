@@ -8,6 +8,7 @@ Content:
 * [`getStructure(sceneId)`](#get-structure)
 * [`getAframeElements(sceneId)`](#get-a-frame-elements)
 * [`getAframeElementsFromSceneStructure(sceneStructure)`](#get-a-frame-elements-from-scene-structure)
+* [`getSceneStructureFromAframeElements(elements)`](#get-scene-structure-from-a-frame-elements)
 * [`normalizeSceneStructure(sceneStructure)`](#normalize-scene-structure)
 * [`validateSceneStructure(sceneStructure)`](#validate-scene-structure)
 * [`getViewerUrl(sceneId)`](#get-viewer-url)
@@ -47,6 +48,9 @@ Take a look at the [Scene Structure Specifications](scene-structure-specificatio
 
 Use `io3d.scene.getStructure(sceneId)` to get the sceneStructure of an Archilogic model
 
+| input | type | return |
+| --- | --- | --- |
+| sceneId | `string` | Promise => sceneStructure [`json`] |
 ```js
 io3d.scene.getStructure(sceneId)
 .then(console.log)
@@ -75,6 +79,9 @@ this returns an object with the following hierarchy:
 `io3d.scene.getAframeElements(sceneId)` is a wrapper function for [getStructure()](#get-structure) and [getAframeElementsFromSceneStructure()](#get-a-frame-elements-from-scene-structure)<br>
 The function returns an A-Frame DOM element with children nodes according to the hierarchy of the scene structure.
 
+| input | type | return |
+| --- | --- | --- |
+| sceneId | `string` | Promise => A-Frame DOM elements |
 To add an Archiogic scene to your A-Frame scene you can do:
 ```js
 const sceneEl = document.querySelector('a-scene')
@@ -96,7 +103,11 @@ io3d.scene.getAframeElements(sceneId)
 `io3d.scene.getAframeElementsFromSceneStructure(sceneStructure)` converts scene structure into A-Frame DOM elements
 This is needed when working for instance with our [Home Staging AI](home-staging-ai.md)
 The sample converts a furniture item described in scene structure into an A-Frame entity using the [io3d-furniture](aframe-components.html#io3d-furniture) component
-```
+
+| input | type | return |
+| --- | --- | --- |
+| sceneStructure | `json` | A-Frame DOM elements |
+```js
 const element3d = {
   "type": "interior",
   "x": 3.4,
@@ -106,16 +117,45 @@ const element3d = {
 }
 const sceneEl = document.querySelector('a-scene')
 
-io3d.scene.getAframeElementsFromSceneStructure(element3d)
-  .then(result => {
-    sceneEl.appendChild(result)
-  })
+const element = io3d.scene.getAframeElementsFromSceneStructure(element3d)
+sceneEl.appendChild(element)
 ```
 result:
 ```html
 <a-scene>
     <a-entity io3d-furniture="id:3aff54e2-fdff-44a3-9646-f2db1ea3bbfc" position="3.4 0 1.4"></a-entity>
 </a-scene>
+```
+
+### Get Scene Structure From A-Frame Elements
+
+`io3d.scene.getSceneStructureFromAframeElements(elements)` converts A-Frame DOM elements to scene structure
+This is needed when working for instance with the [Replace Furniture Method](home-staging-ai.md#example-replacing-single-furniture-element)
+The sample converts a furniture item described in scene structure into an A-Frame entity using the [io3d-furniture](aframe-components.html#io3d-furniture) component
+
+| input | type | return |
+| --- | --- | --- |
+| A-Frame DOM elements | `DOM elements` | sceneStructure [`json`] |
+```html
+<a-scene>
+    <a-entity io3d-furniture="id:3aff54e2-fdff-44a3-9646-f2db1ea3bbfc" position="3.4 0 1.4"></a-entity>
+</a-scene>
+
+<script>
+  const el = document.querySelector('[io3d-furniture]')
+  const sceneStructure = io3d.scene.getSceneStructureFromAframeElements(el)
+
+  console.log(sceneStructure)
+
+  // result:
+  // {
+  //   "type": "interior",
+  //   "x": 3.4,
+  //   "y": 0,
+  //   "z": 1.4,
+  //   "src": "!3aff54e2-fdff-44a3-9646-f2db1ea3bbfc"
+  // }
+</script>
 ```
 
 ### Normalize scene structure
@@ -125,6 +165,9 @@ This includes:
 * adding default values if not specified
 * adding a uuid to each element if not existant
 
+| input | type | return |
+| --- | --- | --- |
+| sceneStructure | `json` | Promise => sceneStructure [`json`] |
 ```
 const element3d = {
   "type": "interior",
@@ -155,6 +198,9 @@ io3d.scene.normalizeSceneStructure(element3d)
 `io3d.scene.validateSceneStructure(sceneStructure)` allows you to validate a scene structure object.<br>
 This is useful when converting third party formats into scene structure or creating scene structure on the fly like in this [Augmented Reality Demo](https://github.com/archilogic-com/3dio-js/tree/master/examples-browser/staging/stage-room-ar)
 
+| input | type | return |
+| --- | --- | --- |
+| sceneStructure | `json` | Promise => validation result [`json`] |
 ```js
 io3d.scene.validateSceneStructure({type:"foo"}).then(console.log)
 ```
@@ -186,6 +232,10 @@ Error codes:
 ### Get viewer url
 
 returns Archilogic Viewer Url from a scene Id
+
+| input | type | return |
+| --- | --- | --- |
+| sceneId | `string` | viewer url [`string`] |
 ```js
 io3d.scene.getViewerUrl('5dc58829-ecd3-4b33-bdaf-f798b7edecd4')
 ```
@@ -196,6 +246,10 @@ https://spaces.archilogic.com/3d/!5dc58829-ecd3-4b33-bdaf-f798b7edecd4
 ### Export svg
 
 converts sceneStructure into a 2D svg floor plan
+
+| input | type | return |
+| --- | --- | --- |
+| sceneStructure | `json` | Promise => `{ content: svgString }` |
 ```javascript
 io3d.config({
   // Replace this with your own publishable key for use on your own domain
@@ -208,11 +262,8 @@ io3d.config({
 const sceneId = '27fbe564-6cf4-48aa-8a19-6f0fb6cca7c4'
 
 io3d.scene.exportSvg(sceneStructure)
-.then(svg => {
-  document.body.appendChild(svg)
+.then(result => {
+  document.body.appendChild(result.content)
 })
 ```
-returns
-
-https://spaces.archilogic.com/3d/!5dc58829-ecd3-4b33-bdaf-f798b7edecd4
 
