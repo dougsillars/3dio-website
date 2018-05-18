@@ -22,7 +22,7 @@ Visitor Analytics | ASESSIONID | This cookie allows us to estimate the audience
 Login session | JSESSIONID | This cookie is essential for us to identify logged in customers and authorize them to access their private resources
 Cookie policy popover | hideCookiePopover | This cookie allows us to recognise returning visitors and hide the cookie policy popover once it has been acknowledged
 
-Please note that third parties (including, for example, advertising networks and providers of external services like web traffic analysis services) may also use cookies, over which we have no control. These cookies are likely to be analytical/performance cookies or targeting cookies.
+Please note that third parties (including, for example, advertising networks and providers of external services like web traffic analysis services) may also use cookies, over which we have no control. These cookies are likely to be analytical/performance cookies or targeting cookies. Some of these third party cookies currently in place are Google Analytics and Hotjar.
 
 You block cookies by activating the setting on your browser that allows you to refuse the setting of all or some cookies. However, if you use your browser settings to block all cookies (including essential cookies) you may not be able to access all or parts of our site.
 
