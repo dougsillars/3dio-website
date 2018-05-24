@@ -66,7 +66,7 @@ Authorised Users: Where a Package has a maximum permitted number of users ("**Au
 
 Availability: Archilogic will use its reasonable endeavours to make the Services available 24 hours a day, seven days a week, except for maintenance services which may be carried out at any time, with or without notice. Access to the Services is provided on an "as is" and “as available” basis which means that we do not warrant the Services will be available, uninterrupted or error-free at all times, and we shall not be liable to you for failure of the same. In particular, you acknowledge that Services may be subject to limitations, delays and other problems inherent in the use of communication networks and facilities and we have no liability for any delay or failure to access the Services as a result of such problems.
 
-Support: We offer certain support with your use of the services during Business Hours only and you may access "how to" links and/or contact us with support queries by clicking on the question mark(?) icon on our website
+Support: We offer certain support with your use of the services during Business Hours only and you may access "how to" links and/or contact us with support queries by clicking on the question mark icon (?) on our website.
 
 ## 5. Your Responsibilities
 
@@ -160,7 +160,7 @@ Surviving provisions: All provisions of this Agreement which by their nature sho
 
 ## 11. Privacy and Content Security
 
-Data Privacy. In this clause 11 "**Personal Data"** means data about an individual who can be identified either from that data or by combining the data with other information which we have access to.
+Data Privacy: In this clause 11 "**Personal Data"** means data about an individual who can be identified either from that data or by combining the data with other information which we have access to.
 
 Both of us must comply with all laws relating to the protection of Personal Data which apply to our respective businesses.
 
@@ -249,5 +249,6 @@ Waiver: If we fail to insist that you perform any of your obligations under this
 Severability: Each of the terms and conditions of this Agreement operates separately. If any court or competent authority decides that any of them are unlawful or unenforceable, the remaining conditions will remain in full force and effect.
 
 Governing law and Jurisdiction: Please note that this Agreement, its subject matter and its formation, are governed by substantive Swiss law excluding conflict of law rules. You and we both agree that the courts of Zurich, Switzerland shall have exclusive jurisdiction to settle any disputes which may arise out of or in connection with this Agreement.
+
 
 *Last Updated: May 23 2018*
