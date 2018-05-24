@@ -147,6 +147,7 @@ Note that we may process your personal data for more than one lawful ground depe
   </tr>
   <tr>
     <td>To process and deliver orders for our products and services including:
+         <br>
 (a) Manage payments, fees and charges
          <br>
 (b) Collect and recover money owed to us</td>
@@ -163,6 +164,7 @@ Note that we may process your personal data for more than one lawful ground depe
   </tr>
   <tr>
     <td>To manage our relationship with you which will include:
+         <br>
 (a) Notifying you about changes to our terms or privacy policy
          <br>
 (b) Asking you to leave a review or take a survey
