@@ -1,6 +1,6 @@
-**Archilogic Cookies Policy**
+# Archilogic Cookie Policy
 
-**Information about our use of cookies**
+## Information about our use of cookies
 
 Our website uses cookies to distinguish you from other users of our website. This helps us to provide you with a good experience when you browse our website and also allows us to improve our site. By continuing to browse the site, you are agreeing to our use of cookies.
 
