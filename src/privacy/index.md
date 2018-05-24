@@ -1,92 +1,325 @@
 # Archilogic Privacy Policy
 
-Archilogic AG whose registered address is at Sonneggstrasse 76, 8006 Zurich, Switzerland ("**We​**" / “**Us​**” / “**Archilogic​**”) are committed to protecting and respecting your privacy.
+## Introduction
 
-This policy (together with our Services Terms of Use (“**Terms of Service**”) (found at [3d.io/tos](/tos) ) and any other documents referred to in them) sets out the basis on which any personal data we collect from you, or that you provide to us, will be processed by us. Please read the following carefully to understand our views and practices regarding your personal data and how we will treat it. By visiting our websites [spaces.archilogic.com](https://spaces.archilogic.com) and/or [3d.io](https://3d.io/) and/or using our services you are accepting and consenting to the practices described in this policy. If you have any questions regarding this policy, please contact us by emailing support@archilogic.com or in writing at the address stated above.
+Archilogic AG respects your privacy and is committed to protecting your personal data.
 
-## 1. Information we may collect from you
+This privacy notice tells you the types of information we collect about you when you visit our websites, [http://spaces.archilogic.com](http://spaces.archilogic.com) and/or [https://3d.io/](https://3d.io/) (the "Sites") and use our products and services or which we otherwise obtain directly from you or from a third party, how we use that information, and the instances in which we share your information.  This privacy notice may change from time to time so please check this policy regularly.
 
-We may collect and process the following data about you:
+Our Sites, products and services are not intended for children and we do not knowingly collect data relating to children.
 
-*   Information you give us. You may give us information about you by filling in forms on our websites spaces.archilogic.com and/or 3d.io (our sites​), submitting, inputting or sending information through your use of the services or by corresponding with us by phone, e-mail or otherwise. This includes information you provide when you register to use either of our sites, subscribe to and use our service(s), place an order on our site, exchange information with other uses of the site and/or services, participate in discussion boards or other social media functions on our site, enter a competition, promotion or survey and when you report a problem with our site. The information you give us may include (but shall not be limited to) your name, address, e-mail address, company address, phone numbers, IP address, data about you such as your age, gender, country and preferred language (“demographic data”)], your mobile phone device (including a unique identifier for your device), responses to queries between users of the site and/or services and financial and credit card information.
-*   Information we collect about you. With regard to each of your visits to our site and/or your use of our services we may automatically collect the following information:
-    *   technical information, including the Internet protocol (IP) address used to connect your computer to the Internet, your login information, browser type and version, time zone setting, browser plug-in types and versions, operating system and platform;
-    *   information about your visit, including the full Uniform Resource Locators (URL) clickstream to, through and from our sites (including date and time); products you viewed or searched for or purchased; page response times, download errors, length of visits to certain pages, page interaction information (such as scrolling, clicks, and mouse-overs), and methods used to browse away from the page and any phone number used to call our customer service number.
-    *   Error reports and support data required to diagnose a fault or issue with our services, including chat sessions with our support representatives.
-    *   Information about the content you are viewing or other information learned about you over time through your use of our site and services, including your interests and favourites.
-*   Information we receive from other sources. We may receive information about you if you use any other websites that we operate, other services we provide or third party services which you may access through our site and/or services. In this case we will have informed you when we collected that data that it may be shared internally and combined with data collected on this site. If you have requested or consented to location services on your mobile phone we may receive information about your location if you access our website or services using your mobile device.* We are also working closely with third parties (including, for example, business partners, third party service providers sub-contractors in technical and payment services, advertising networks, analytics providers, search information providers, credit reference agencies) and may receive information about you from them. We may also supplement the above information with information from other sources such as third party verification services, mailing list providers and publicly available sources.
+For the purposes of this privacy notice, the term "personal data" means any information which identifies you or which allows you to be identified when combined with other information.
 
-* Most mobile devices allow you to disable location services. This can normally be done by accessing the device’s settings menu.
+## 1. Important information and who we are
 
-## 2. Cookies
+**Controller**
 
-Our website uses cookies to distinguish you from other users of our website. This helps us to provide you with a good experience when you browse our website and also allows us to improve our site. For detailed information on the cookies we use and the purposes for which we use them see our [Cookie Policy](/cookies).
+Archilogic AG (a company incorporated in Switzerland under company number CHE-132.789.964) is the controller and responsible for your personal data (referred to as **"we", "us"** or **"our"** in this privacy notice).
 
-## 3. Uses made of the information
+We have appointed a data privacy manager who is responsible for overseeing questions in relation to this privacy notice. If you have any questions about this privacy notice, including any requests to exercise your legal rights, please contact the data privacy manager using the details set out below.
 
-We use information held about you in the following ways:
+**Contact details**
 
-*   Information​ ​you​ ​give​ ​to​ ​us.​ We will use this information:
-    *   to carry out our obligations arising from any contracts entered into between you and us and to provide you with the information and the services that you request from us;
-    *   for billing, identification and authentication purposes.
-    *   For distribution to third party suppliers that provide services to Archilogic and to partners of Archilogic for the provision of the services to you.
-    *   to provide you with information about other services we offer that are similar to those that you have already purchased or enquired about;
-    *   to provide you, or permit selected third parties to provide you, with information about goods or services we feel may interest you. If you are an existing customer, we will only contact you by electronic means (e-mail) with information about goods and services similar to those which were the subject of a previous sale or negotiations of a sale to you. If you are a new customer, and where we permit selected third parties to use your data, we (or they) will contact you by electronic means only if you have consented to this. If you do not want us to use your data in this way, or to pass your details on to third parties for marketing purposes, please tick the relevant box situated on the form on which we collect your data (the order form OR registration form, as applicable);
-    *   to notify you about changes to our service;
-    *   to ensure that content from our site is presented in the most effective manner for you and for your computer;
-    *   for any other purpose with your consent.
-*   Information​ ​we​ ​collect​ ​about​ ​you.​ We will use this information for reasons including:
-    *   to administer our sites and services and for internal operations, including troubleshooting, data analysis, testing, research, statistical and survey purposes;
-    *   to improve our site and services to ensure that content is presented in the most effective manner for you and for your device;
-    *   to allow you to participate in interactive features of our services, when you choose to do so;
-    *   to enable us to customise our services to align them more closely with your business needs and preferences;
-    *   to estimate audience numbers and usage patterns;
-    *   as part of our efforts to keep our site and your use of our services safe and secure;
-    *   to measure or understand the effectiveness of advertising we serve to you and others, and to deliver relevant advertising to you;
-    *   to make suggestions and recommendations to you and other users of our site about goods or services that may interest you or them.
-*   Information we receive from other sources. ​We may combine this information with information you give to us and information we collect about you. We may use this information and the combined information for the purposes set out above (depending on the types of information we receive).
+Our full details are:
 
-## 4. Disclosure of your information
+Full name of legal entity: Archilogic AG
 
-We may share your information with selected third parties including:
+Title of data privacy manager:  Data Privacy Representative
 
-*   Business partners, third party service providers, suppliers and subcontractors for the performance (or support) of any contract we enter into with them or you.
-*   Advertisers and advertising networks that require the data to select and serve relevant adverts to you and others. The adverts you see may be selected based on for example, your current location, or content you are viewing or may be based on your likely interests or other information learned about you over time using demographic data, interests and favourites and usage data from our own sites and the sites of our advertisers and partners. We do not disclose information about identifiable individuals to our advertisers, but we will provide them with aggregate information about our users (for example, we may inform them that 500 men aged under 30 have clicked on their advertisement on any given day). We may also use such aggregate information to help advertisers reach the kind of audience they want to target (for example, women in a certain area code). We may make use of the personal data we have collected from you to enable us to comply with our advertisers’ wishes by displaying their advertisement to that target audience.
-*   Parties with whom we partner in order to offer you promotions or offers for our services.
-*   Analytics and search engine providers that assist us in the improvement and optimisation of our site.
+Email address: [privacy@archilogic.com](mailto:privacy@archilogic.com)
 
-We may disclose your personal information to third parties:
+Postal address:  Sonneggstrasse 76, 8006 Zurich, Switzerland
 
-*   In order to enforce our Terms of Service.
-*   In the event that we sell or buy any business or assets, in which case we may disclose your personal data to the prospective seller or buyer of such business or assets.
-*   If you access third party services through our site and/or services which necessitates the sharing of information with third parties (such third parties being responsible for their own privacy practices).
-*   If Archilogic is reorganised, restructured, merges or is sold, information may be transferred to another member of the group.
-*   If Archilogic or substantially all of its assets are acquired by a third party, in which case personal data held by it about its customers will be one of the transferred assets.
-*   (a) If we are under a duty to disclose or share your personal data or we reasonably believe such disclosure is needed in order to comply with any legal obligation; or (b) in order to enforce or apply our Terms of Service (http://spaces.archilogic.com) and other agreements; or (c) to protect the rights, property, or safety of Archilogic or any member of the group, our customers, the public or others which includes exchanging information with other companies and organisation for the purposes of protection and credit risk reduction; or (d) to detect, prevent or otherwise address illegal or unlawful or suspected illegal or unlawful activities (including fraud), security or technical issues.
+You have the right to make a complaint at any time to the Swiss Data Protection Authority or other applicable competent supervisory authority for data protection issues. We would, however, appreciate the chance to deal with your concerns before you approach the such authorities, so please contact us in the first instance.
 
-## 5. Where we store your personal data
+**Changes to the privacy notice and your duty to inform us of changes**
 
-The data that we collect from you may be transferred to, and stored at, a destination outside the European Economic Area ("EEA"). It may also be processed by staff operating outside the EEA who work for us or for one of our suppliers. Such staff maybe engaged in, among other things, the fulfilment of your order, the processing of your payment details and the provision of services and support services. By submitting your personal data, you agree to this transfer, storing or processing. We will take all steps reasonably necessary to ensure that your data is treated securely and in accordance with this privacy policy.
+This version was last updated on 23rd May 2018.
 
-Where we have given you (or where you have chosen) a password which enables you to access certain parts of our site, you are responsible for keeping this password confidential. We ask you not to share a password with anyone
+It is important that the personal data we hold about you is accurate and current. Please keep us informed if your personal data changes during your relationship with us.
 
-Unfortunately, the transmission of information via the internet is not completely secure. Although we will do our best to protect your personal data, we cannot guarantee the security of your data transmitted to our site(s); any transmission is at your own risk. Once we have received your information, we will use strict procedures and security features to try to prevent unauthorised access.
+**Third-party links**
 
-## 6. Your rights
+The Sites may include links to third-party websites, plug-ins and applications. Clicking on those links or enabling those connections may allow third parties to collect or share data about you. We do not control these third-party websites and are not responsible for their privacy statements. When you leave our Sites, we encourage you to read the privacy notice of every website you visit.
 
-You have the right to ask us not to process your personal data for marketing purposes at any time. We will usually inform you (before collecting your data) if we intend to use your data for such purposes or if we intend to disclose your information to any third party for such purposes. You can exercise your right to prevent such processing by checking certain boxes on the forms we use to collect your data. You can also exercise the right at any time by contacting us at support@archilogic.com.  
-Our site and/or services may, from time to time, contain links to and from the websites of our partner networks, third party service providers, advertisers and affiliates. If you follow a link to any of these websites, please note that these websites have their own privacy policies and that we do not accept any responsibility or liability for these policies. Please check these policies before you submit any personal data to these websites.
+## 2. The data we collect about you
 
-## 7. Access to information
+We may collect, use, store and transfer different kinds of personal data about you which we have grouped together follows:
 
-You local data protection laws may give you the right to access information held about you. Any such right of access can be exercised in accordance with such local data protection laws.
+* **Identity Data** includes first name, maiden name, last name, username or similar identifier and title.
 
-## 8. Changes to our privacy policy
+* **Contact Data** includes billing address and email address.
 
-Any changes we may make to our privacy policy in the future will be posted on this page and, where appropriate, notified to you by e-mail. Please check back frequently to see any updates or changes to our privacy policy. Your continued use of our services and website will constitute your acceptance of such changes.
+* **Transaction Data** includes details about payments to and from you and other details of products and services (including subscription type) you have purchased from, us including the type of card used for a particular transaction (but not any other card details).
 
-## 9. Contact
+* **Technical Data** includes internet protocol (IP) address, your login data, browser type and version, time zone setting and location, browser plug-in types and versions, operating system and platform and other technology on the devices you use to access the Sites.
 
-Questions, comments and requests regarding this privacy policy are welcomed and should be sent to support@archilogic.com.
+* **Profile Data** includes your username and password, purchases or orders made by you, the date your first became a customer, country where you are located, your job title, your profession, your employer, your interests, preferences, feedback and survey responses.  
 
-Version date: 15.09.17
+* **Usage Data** includes information about how you use our Sites, products and services.
+
+* **Marketing and Communications Data** includes your preferences in receiving marketing from us and your communication preferences.
+
+* **Content Data** includes any content which you upload onto the Sites through your use of our products and services such as text or images that may contain personal data.
+
+* **Employment Data** includes your current and past employment experience, qualifications, skills, interests and any other information disclosed by you in relation to an application for a role within Archilogic.
+
+We also collect, use and may share **Aggregated Data** such as statistical or demographic data for any purpose. Aggregated Data may be derived from your personal data but is not considered personal data in law as this data does **not** directly or indirectly reveal your identity. For example, we may aggregate your Usage Data to calculate the percentage of users accessing a specific Sites feature. However, if we combine or connect Aggregated Data with your personal data so that it can directly or indirectly identify you, we treat the combined data as personal data which will be used in accordance with this privacy notice.
+
+We do not collect any **Special Categories of Personal Data** about you (this includes details about your race or ethnicity, religious or philosophical beliefs, sex life, sexual orientation, political opinions, trade union membership, information about your health and genetic and biometric data). Nor do we collect any information about criminal convictions and offences.
+
+## 3. How is your personal data collected?
+
+We use different methods to collect data from and about you including through:
+
+* **Direct interactions.** You may give us your Identity and Contact by filling in forms or by corresponding with us by post, phone, email, online or otherwise. This includes personal data you provide when you:
+
+ * apply for our products or services;
+
+ * complete a form on our Sites requesting us to contact you;
+
+ * create an account on our Sites;
+
+ * subscribe to our service;
+
+ * request marketing to be sent to you;
+
+ * enter a competition, promotion or survey;
+
+ * submit an application for a role within Archilogic; or
+
+ * give us some feedback.
+
+* **Data you upload onto our Sites.** You may upload Content Data on our Sites when you use our products and services.
+
+* **Automated technologies or interactions.** As you interact with our Sites, we may automatically collect Technical Data about your equipment and Usage Data about your browsing actions and patterns. We collect this personal data by using cookies and other similar technologies.
+
+* **Third parties or publicly available sources.** We may receive personal data about you from various third parties and public sources as set out below:
+
+* Technical Data from the following parties:
+
+        1. analytics providers; and
+
+        2. search information providers.
+
+* Contact and Transaction Data from providers of payment services.
+
+* Identity, Profile and Contact Data from publicly available sources such as Companies House.
+
+* Identity, Profile and Contact Data from data providers who obtain such data from publicly available sources.
+
+* Employment, Identity and Contact Data from third party recruitment agencies or other third parties which advertise jobs on our behalf (such as LinkedIn).
+
+## 4. How we use your personal data
+
+We will only use your personal data when the law allows us to. Most commonly, we will use your personal data in the following circumstances:
+
+* Where we need to perform the contract we are about to enter into or have entered into with you.
+
+* Where it is necessary for our legitimate interests (or those of a third party) and your interests and fundamental rights do not override those interests.
+
+* Where we need to comply with a legal or regulatory obligation.
+
+Generally we do not rely on consent as a legal basis for processing your personal data. You have the right to withdraw consent to marketing at any time by contacting us.
+
+## 5. Purposes for which we will use your personal data
+
+We have set out below, in a table format, a description of all the ways we plan to use your personal data, and which of the legal bases we rely on to do so. We have also identified what our legitimate interests are where appropriate.
+
+Note that we may process your personal data for more than one lawful ground depending on the specific purpose for which we are using your data. Please contact us by emailing [privacy@archilogic.com](mailto:privacy@archilogic.com) if you need details about the specific legal ground we are relying on to process your personal data where more than one ground has been set out in the table below.
+
+<table>
+  <tr>
+    <th>Purpose/Activity</th>
+    <th>Type of data</th>
+    <th>Lawful basis for processing including basis of legitimate interest</th>
+  </tr>
+  <tr>
+    <td>To register you as a new customer/user </td>
+    <td>(a) Identity
+(b) Contact
+(c) Profile</td>
+    <td>(a)  Performance of a contract with you (where you are using the Sites as an individual)
+(b) Necessary for our legitimate interests (where you are using the Sites as an authorised user or one of our enterprise customers, in order for us to perform our contract with that customer, to optimise your onboarding and user experience by ensuring you receive relevant instructions and tutorials regarding the use of our Sites, products and service)</td>
+  </tr>
+  <tr>
+    <td>To process and deliver orders for our products and services including:
+(a) Manage payments, fees and charges
+(b) Collect and recover money owed to us</td>
+    <td>(a) Identity
+(b) Contact  
+(c) Transaction
+(d) Marketing and Communications</td>
+    <td>(a) Performance of a contract with you
+(b) Necessary for our legitimate interests (to recover debts due to us and verify you are entitled to any discount we offer)</td>
+  </tr>
+  <tr>
+    <td>To manage our relationship with you which will include:
+(a) Notifying you about changes to our terms or privacy policy
+(b) Asking you to leave a review or take a survey
+(c) Dealing with your enquiries and complaints</td>
+    <td>(a) Identity
+(b) Contact
+(c) Profile
+(d) Marketing and Communications</td>
+    <td>(a) Performance of a contract with you
+(b) Necessary to comply with a legal obligation
+(c) Necessary for our legitimate interests (to keep our records updated and to study how customers use our Sites, products and services)</td>
+  </tr>
+  <tr>
+    <td>To enable you to partake in a survey or a prize draw or competition</td>
+    <td>(a) Identity
+(b) Contact
+(c) Profile
+(d) Usage
+(e) Marketing and Communications</td>
+    <td>(a) Performance of a contract with you
+(b) Necessary for our legitimate interests (to study how customers use our Sites, products and services, to develop them and grow our business)</td>
+  </tr>
+  <tr>
+    <td>To administer and protect our business and the Sites (including troubleshooting, data analysis, testing, system maintenance, support, reporting and hosting of data)  </td>
+    <td>(a) Identity
+(b) Contact
+(c) Content
+(d) Technical</td>
+    <td>(a) Necessary for our legitimate interests (for running our business, provision of administration and IT services, network security, to prevent fraud and in the context of a business reorganisation or group restructuring exercise)
+(b) Necessary to comply with a legal obligation</td>
+  </tr>
+  <tr>
+    <td>To deliver relevant Sites content and advertisements to you and measure or understand the effectiveness of the advertising we serve to you</td>
+    <td>(a) Identity
+(b) Contact
+(c) Profile
+(d) Usage
+(e) Marketing and Communications
+(f) Technical
+(g) Content </td>
+    <td>Necessary for our legitimate interests (to study how customers use our Sites, products and services, to develop them,  to grow our business and to inform our marketing strategy)</td>
+  </tr>
+  <tr>
+    <td>To use data analytics to improve our Sites, products and services, marketing, customer relationships and experiences</td>
+    <td>(a) Technical
+(b) Usage
+(c) Content</td>
+    <td>Necessary for our legitimate interests (to define types of customers for our products and services, to keep our Sites updated and relevant, to develop our business and to inform our marketing strategy)</td>
+  </tr>
+  <tr>
+    <td>To make suggestions and recommendations to you about goods or services that may be of interest to you</td>
+    <td>(a) Identity
+(b) Contact
+(c) Technical
+(d) Usage
+(e) Profile
+[(f) Content]</td>
+    <td>Necessary for our legitimate interests (to develop our products/services and grow our business)</td>
+  </tr>
+  <tr>
+    <td>To process your application for a role within Archilogic</td>
+    <td>(a) Identity
+(b) Contact
+(c) Employment</td>
+    <td>(a) Necessary for our legitimate interests (to consider your application for a role within Archilogic)
+(b) Performance of a contract with you
+(c) Necessary to comply with a legal obligation
+</td>
+  </tr>
+</table>
+
+
+**Marketing**
+
+We strive to provide you with choices regarding certain personal data uses, particularly around marketing and advertising.
+
+We may use your Identity, Contact, Technical, Usage and Profile Data to form a view on what we think you may want or need, or what may be of interest to you. This is how we decide which products, services and offers may be relevant for you.
+
+You will receive marketing communications from us if you have requested information from us or purchased products or services from us or if you provided us with your details when you entered a competition or registered for a promotion and, in each case, you have not opted out of receiving that marketing.
+
+**Opting out**
+
+You can ask us to stop sending you marketing messages at any time by following the opt-out links on any marketing message sent to you or by contacting us by email at [privacy@archilogic.com](mailto:privacy@archilogic.com) at any time.
+
+**Cookies**
+
+Our Sites uses cookies and similar technologies to distinguish you from other users of our Sites. This helps us to provide you with a good experience when you browse our Sites and allows us to improve our Sites. We may also use such technologies to track you across the Internet and to display targeted advertisements to you on our Sites and third party websites and social media platforms based on your preferences and likely interests.
+
+You can set your browser to refuse all or some browser cookies, or to alert you when websites set or access cookies. If you disable or refuse cookies, please note that some parts of the Webites may become inaccessible or not function properly. For more information about the cookies we use, please see our [Cookie Policy](/cookies).
+
+## 6. Disclosures of your personal data
+
+We may have to share your personal data with the parties set out below for the purposes set out in the table in paragraph 4 above.
+
+* Our third party service providers who perform functions on our behalf in connection with the operation of our business such as IT and system administration services and third parties who host and manage data, provide programming or technical support, or provide customer service tools such as online chat services and helpdesks, or conduct reference checks on candidates on our behalf.
+
+* Professional advisers including lawyers, bankers, auditors and insurers who provide consultancy, banking, legal, insurance and accounting services.
+
+* Our third party analytics partners to analyse Sites traffic and understand customer needs and trends.  
+
+* Third parties if we are required to do so by law, or if we believe that such action is necessary to: (a) fulfil a government, or regulatory authority request; (b) conform with the requirements of the law or legal process; (c) protect or defend our legal rights or property, our Sites or customers.
+
+* Third parties to whom we may choose to sell, transfer, or merge parts of our business or our assets. Alternatively, we may seek to acquire other businesses or merge with them. If a change happens to our business, then the new owners may use your personal data in the same way as set out in this Privacy Policy.
+
+We require all third parties to respect the security of your personal data and to treat it in accordance with the law. We do not allow our third party service providers to use your personal data for their own purposes and only permit them to process your personal data for specified purposes and in accordance with our instructions.
+
+## 7. International transfers
+
+Our third party service providers may be based outside the European Economic Area (**EEA**) so their processing of your personal data will involve a transfer of data outside the EEA.
+
+Whenever we transfer your personal data out of the EEA, we ensure a similar degree of protection is afforded to it by ensuring at least one of the following safeguards is implemented:
+
+* We will only transfer your personal data to countries that have been deemed to provide an adequate level of protection for personal data by the European Commission. For further details, see European Commission: Adequacy of the protection of personal data in non-EU countries.
+
+* Where we use certain service providers, we may use specific contracts approved by the European Commission which give personal data the same protection it has in Europe. For further details, see European Commission: Model contracts for the transfer of personal data to third countries.  
+
+* Where we use providers based in the US, we may transfer data to them if they are part of the Privacy Shield which requires them to provide similar protection to personal data shared between the Europe and the US. For further details, see European Commission: Swiss-US / EU-US Privacy Shield.
+
+Please contact us by emailing [privacy@archilogic.com](mailto:privacy@archilogic.com) if you want further information on the specific mechanism used by us when transferring your personal data out of the EEA.
+
+## 8. Data security
+
+We have put in place appropriate security measures to prevent your personal data from being accidentally lost, used or accessed in an unauthorised way, altered or disclosed. In addition, we limit access to your personal data to those employees, agents, contractors and other third parties who have a business need to know. They will only process your personal data on our instructions and they are subject to a duty of confidentiality.
+
+We have put in place procedures to deal with any suspected personal data breach and will notify you and any applicable regulator of a breach where we are legally required to do so.
+
+## 9. Data retention
+
+We will only retain your personal data for as long as necessary to fulfil the purposes we collected it for, including for the purposes of satisfying any legal, accounting, or reporting requirements.
+
+To determine the appropriate retention period for personal data, we consider the amount, nature, and sensitivity of the personal data, the potential risk of harm from unauthorised use or disclosure of your personal data, the purposes for which we process your personal data and whether we can achieve those purposes through other means, and the applicable legal requirements.
+
+You can request further details of retention periods for different aspects of your personal data by contacting us at [privacy@archilogic.com](mailto:privacy@archilogic.com).
+
+In some circumstances you can ask us to delete your data: see "Your legal rights" below for further information.
+
+In some circumstances we may anonymise your personal data (so that it can no longer be associated with you) for research or statistical purposes in which case we may use this information indefinitely without further notice to you.
+
+## 10. Your legal rights
+
+Under certain circumstances, you have the following rights under data protection laws in relation to your personal data:
+
+* **Request access** to your personal data (commonly known as a "data subject access request"). This enables you to receive a copy of the personal data we hold about you and to check that we are lawfully processing it.
+
+* **Request correction** of the personal data that we hold about you. This enables you to have any incomplete or inaccurate data we hold about you corrected, though we may need to verify the accuracy of the new data you provide to us.
+
+* **Request erasure** of your personal data. This enables you to ask us to delete or remove personal data where there is no good reason for us continuing to process it. You also have the right to ask us to delete or remove your personal data where you have successfully exercised your right to object to processing (see below), where we may have processed your information unlawfully or where we are required to erase your personal data to comply with local law. Note, however, that we may not always be able to comply with your request of erasure for specific legal reasons which will be notified to you, if applicable, at the time of your request.
+
+* **Object to processing** of your personal data where we are relying on a legitimate interest (or those of a third party) and there is something about your particular situation which makes you want to object to processing on this ground as you feel it impacts on your fundamental rights and freedoms. You also have the right to object where we are processing your personal data for direct marketing purposes. In some cases, we may demonstrate that we have compelling legitimate grounds to process your information which override your rights and freedoms.
+
+* **Request restriction of processing** of your personal data. This enables you to ask us to suspend the processing of your personal data in the following scenarios: (a) if you want us to establish the data's accuracy; (b) where our use of the data is unlawful but you do not want us to erase it; (c) where you need us to hold the data even if we no longer require it as you need it to establish, exercise or defend legal claims; or (d) you have objected to our use of your data but we need to verify whether we have overriding legitimate grounds to use it.
+
+* **Request the transfer** of your personal data to you or to a third party. We will provide to you, or a third party you have chosen, your personal data in a structured, commonly used, machine-readable format. Note that this right only applies to automated information which you initially provided consent for us to use or where we used the information to perform a contract with you.
+
+* **Withdraw consent at any time** where we are relying on consent to process your personal data. However, this will not affect the lawfulness of any processing carried out before you withdraw your consent. If you withdraw your consent, we may not be able to provide certain products or services to you. We will advise you if this is the case at the time you withdraw your consent.
+
+If you wish to exercise any of the rights set out above, please contact us at [privacy@archilogic.com](mailto:privacy@archilogic.com).
+
+## 11. No fee usually required
+
+You will not have to pay a fee to access your personal data (or to exercise any of the other rights). However, we may charge a reasonable fee if your request is clearly unfounded, repetitive or excessive. Alternatively, we may refuse to comply with your request in these circumstances.
+
+## 12. What we may need from you
+
+We may need to request specific information from you to help us confirm your identity and ensure your right to access your personal data (or to exercise any of your other rights). This is a security measure to ensure that personal data is not disclosed to any person who has no right to receive it. We may also contact you to ask you for further information in relation to your request to speed up our response.
+
+## 13. Time limit to respond
+
+We try to respond to all legitimate requests within one month. Occasionally it may take us longer than a month if your request is particularly complex or you have made a number of requests. In this case, we will notify you and keep you updated.
