@@ -78,23 +78,23 @@ Content: For any materials, data or information which you or your [Authorised Us
 
 You represent and warrant that any Content:
 
-    1. will not infringe the proprietary rights, including but not limited to the intellectual property rights, of any third party;
+1. will not infringe the proprietary rights, including but not limited to the intellectual property rights, of any third party;
 
-    2. is accurate (where it states fact) and is genuinely held (where it states opinions);
+2. is accurate (where it states fact) and is genuinely held (where it states opinions);
 
-    3. complies with applicable laws and regulations in any country from which the Content is posted;
+3. complies with applicable laws and regulations in any country from which the Content is posted;
 
-    4. will not contain any material which is defamatory, obscene, offensive, hateful, inflammatory or illegal;
+4. will not contain any material which is defamatory, obscene, offensive, hateful, inflammatory or illegal;
 
-    5. will not contain or install any viruses, worms, malware, Trojan horses or other harmful or destructive content;
+5. will not contain or install any viruses, worms, malware, Trojan horses or other harmful or destructive content;
 
-    6. will not promote sexually explicit material, violence, discrimination based on race, sex, religion, nationality, disability, sexual orientation or age;
+6. will not promote sexually explicit material, violence, discrimination based on race, sex, religion, nationality, disability, sexual orientation or age;
 
-    7. is not made or operated in breach of any legal duty owed to a third party, such as a contractual duty or a duty of confidence;
+7. is not made or operated in breach of any legal duty owed to a third party, such as a contractual duty or a duty of confidence;
 
-    8. will not violate the privacy or publicity rights of any third party; and
+8. will not violate the privacy or publicity rights of any third party; and
 
-    9. is not likely to mislead any person, including into thinking that you are another person or company or as to the source of the Content (such as spoofing).
+9. is not likely to mislead any person, including into thinking that you are another person or company or as to the source of the Content (such as spoofing).
 
 Archilogic has the right (though not the obligation) to, in Archilogic's sole discretion, refuse or remove any Content that, in Archilogic's reasonable opinion, violates any terms of this Agreement or is in any way harmful or objectionable or infringes or violates any third party’s rights. You acknowledge that we also have the right to disclose your identity to any third party who is claiming that any Content shared by you constitutes a violation of their intellectual property rights, or of their right to privacy.
 
