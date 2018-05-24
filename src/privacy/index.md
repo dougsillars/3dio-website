@@ -142,86 +142,124 @@ Note that we may process your personal data for more than one lawful ground depe
            <br>
            (c) Profile</td>
     <td>(a)  Performance of a contract with you (where you are using the Sites as an individual)
+         <br>
 (b) Necessary for our legitimate interests (where you are using the Sites as an authorised user or one of our enterprise customers, in order for us to perform our contract with that customer, to optimise your onboarding and user experience by ensuring you receive relevant instructions and tutorials regarding the use of our Sites, products and service)</td>
   </tr>
   <tr>
     <td>To process and deliver orders for our products and services including:
 (a) Manage payments, fees and charges
+         <br>
 (b) Collect and recover money owed to us</td>
     <td>(a) Identity
+         <br>
 (b) Contact  
+         <br>
 (c) Transaction
+         <br>
 (d) Marketing and Communications</td>
     <td>(a) Performance of a contract with you
+         <br>
 (b) Necessary for our legitimate interests (to recover debts due to us and verify you are entitled to any discount we offer)</td>
   </tr>
   <tr>
     <td>To manage our relationship with you which will include:
 (a) Notifying you about changes to our terms or privacy policy
+         <br>
 (b) Asking you to leave a review or take a survey
+         <br>
 (c) Dealing with your enquiries and complaints</td>
     <td>(a) Identity
+         <br>
 (b) Contact
+         <br>
 (c) Profile
+         <br>
 (d) Marketing and Communications</td>
     <td>(a) Performance of a contract with you
+         <br>
 (b) Necessary to comply with a legal obligation
+         <br>
 (c) Necessary for our legitimate interests (to keep our records updated and to study how customers use our Sites, products and services)</td>
   </tr>
   <tr>
     <td>To enable you to partake in a survey or a prize draw or competition</td>
     <td>(a) Identity
+         <br>
 (b) Contact
+         <br>
 (c) Profile
+         <br>
 (d) Usage
+         <br>
 (e) Marketing and Communications</td>
     <td>(a) Performance of a contract with you
+         <br>
 (b) Necessary for our legitimate interests (to study how customers use our Sites, products and services, to develop them and grow our business)</td>
   </tr>
   <tr>
     <td>To administer and protect our business and the Sites (including troubleshooting, data analysis, testing, system maintenance, support, reporting and hosting of data)  </td>
     <td>(a) Identity
+         <br>
 (b) Contact
+         <br>
 (c) Content
 (d) Technical</td>
     <td>(a) Necessary for our legitimate interests (for running our business, provision of administration and IT services, network security, to prevent fraud and in the context of a business reorganisation or group restructuring exercise)
+         <br>
 (b) Necessary to comply with a legal obligation</td>
   </tr>
   <tr>
     <td>To deliver relevant Sites content and advertisements to you and measure or understand the effectiveness of the advertising we serve to you</td>
     <td>(a) Identity
+         <br>
 (b) Contact
+         <br>
 (c) Profile
+         <br>
 (d) Usage
+         <br>
 (e) Marketing and Communications
+         <br>
 (f) Technical
+         <br>
 (g) Content </td>
     <td>Necessary for our legitimate interests (to study how customers use our Sites, products and services, to develop them,  to grow our business and to inform our marketing strategy)</td>
   </tr>
   <tr>
     <td>To use data analytics to improve our Sites, products and services, marketing, customer relationships and experiences</td>
     <td>(a) Technical
+         <br>
 (b) Usage
+         <br>
 (c) Content</td>
     <td>Necessary for our legitimate interests (to define types of customers for our products and services, to keep our Sites updated and relevant, to develop our business and to inform our marketing strategy)</td>
   </tr>
   <tr>
     <td>To make suggestions and recommendations to you about goods or services that may be of interest to you</td>
     <td>(a) Identity
+         <br>
 (b) Contact
+         <br>
 (c) Technical
+         <br>
 (d) Usage
+         <br>
 (e) Profile
+         <br>
 (f) Content</td>
     <td>Necessary for our legitimate interests (to develop our products/services and grow our business)</td>
   </tr>
   <tr>
     <td>To process your application for a role within Archilogic</td>
     <td>(a) Identity
+         <br>
 (b) Contact
+         <br>
 (c) Employment</td>
     <td>(a) Necessary for our legitimate interests (to consider your application for a role within Archilogic)
+         <br>
 (b) Performance of a contract with you
+         <br>
 (c) Necessary to comply with a legal obligation
 </td>
   </tr>
