@@ -188,11 +188,11 @@ To the extent you upload any Content through your use of the Services containing
 
 Where we are acting as a processor of your Personal Data, you consent to us using subcontractors to process your Personal Data as long as:
 
-    1. we let you know if we are going to change one of them at least ten (10) days before we do so;
+1. we let you know if we are going to change one of them at least ten (10) days before we do so;
 
-    2. we ensure that they are subject to terms which comply with applicable law regarding the protection of Personal Data; and
+2. we ensure that they are subject to terms which comply with applicable law regarding the protection of Personal Data; and
 
-    3. we remain liable for any breach of this clause 11 by them.
+3. we remain liable for any breach of this clause 11 by them.
 
 Back Up.  You acknowledge and agree that we are not responsible for backing up the Content and for this reason, we ask that you keep your own copy of all such Content at all times.
 
