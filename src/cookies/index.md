@@ -20,34 +20,29 @@ You can find more information about the individual cookies we use and the purpos
 
 <table>
   <tr>
-    <td>Cookie</td>
-    <td>Name</td>
-    <td>Purpose</td>
-    <td>More information</td>
+    <td>**Cookie**</td>
+    <td>**Name**</td>
+    <td>**Purpose**</td>
   </tr>
   <tr>
     <td>First aid overlay</td>
     <td>no_firstaid</td>
     <td>This cookie enables us to determine whether to show the overlay that explains how to navigate our application or not. If the user has seen the overlay and closes it, we won’t show the overlay again.</td>
-    <td></td>
   </tr>
   <tr>
     <td>Visitor analytics</td>
     <td>ASESSIONID</td>
     <td>This cookie allows us to estimate the audience size and usage patterns</td>
-    <td></td>
   </tr>
   <tr>
     <td>Login session</td>
     <td>JSESSIONID</td>
     <td>This cookie is essential for us to identify logged in customers and authorize them to access their private resources</td>
-    <td></td>
   </tr>
   <tr>
     <td>Cookie policy popover</td>
     <td> hideCookiePopover</td>
     <td> This cookie allows us to recognise returning visitors and hide the cookie policy popover once it has been acknowledged</td>
-    <td></td>
   </tr>
 </table>
 
