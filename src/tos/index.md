@@ -124,7 +124,7 @@ Suspension of Services: If we are unable to collect from your payment card the r
 
 Fee changes: We reserve the right to change the fees, subject to providing you with sufficient notice of the fee change in advance. Fee changes will take effect: (a) in the case of monthly Subscription Fee, at the start of the next subscription period; or (b) in the case of annual subscriptions, on the date notified to you with the fee being adjusted on a pro-rata basis and any additional fees owing to us being charged to your credit card. Your continued use of the Services after the fee change becomes effective constitutes your agreement to pay the new fee.
 
-If you change, upgrade or downgrade your Paid Services Package, the fee change will take effect from the start of the next applicable subscription period**.**
+If you change, upgrade or downgrade your Paid Services Package, the fee change will take effect from the start of the next applicable subscription period.
 
 ## 9. Subscription Term
 
