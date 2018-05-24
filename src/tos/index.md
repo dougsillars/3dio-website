@@ -210,17 +210,17 @@ To the fullest extent permitted by law, we shall not be liable whether in tort (
 
 To the fullest extent permitted by law, in addition to the other exclusions set out in this section 13, We shall have no liability:
 
-        1. for any other third party products or services accessed and/or used by you through the Services;
+1. for any other third party products or services accessed and/or used by you through the Services;
 
-        2. where any failure to provide the Services is caused by a network, hardware or software fault in equipment which is not under our control;
+2. where any failure to provide the Services is caused by a network, hardware or software fault in equipment which is not under our control;
 
-        3. for your acts or omissions;
+3. for your acts or omissions;
 
-        4. for your use of the Services in breach of this Agreement;
+4. for your use of the Services in breach of this Agreement;
 
-        5. for your use of the 3D Model when not hosted via our Services; or
+5. for your use of the 3D Model when not hosted via our Services; or
 
-        6. for any unauthorised access to the Services including a malicious security breach.
+6. for any unauthorised access to the Services including a malicious security breach.
 
 To the fullest extent permitted by law, our total aggregate liability to you arising out of or in connection with the performance or contemplated performance of this Agreement shall be the higher of: (a) the total fees paid by you to us under this Agreement during the twelve (12) month period prior to the date the cause of action arose; or (b) $100.  
 
