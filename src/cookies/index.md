@@ -20,9 +20,9 @@ You can find more information about the individual cookies we use and the purpos
 
 <table>
   <tr>
-    <td>**Cookie**</td>
-    <td>**Name**</td>
-    <td>**Purpose**</td>
+    <th>Cookie</th>
+    <th>Name</th>
+    <th>Purpose</th>
   </tr>
   <tr>
     <td>First aid overlay</td>
