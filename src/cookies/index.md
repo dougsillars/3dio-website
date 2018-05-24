@@ -32,17 +32,17 @@ You can find more information about the individual cookies we use and the purpos
   <tr>
     <td>Visitor analytics</td>
     <td>ASESSIONID</td>
-    <td>This cookie allows us to estimate the audience size and usage patterns</td>
+    <td>This cookie allows us to estimate the audience size and usage patterns.</td>
   </tr>
   <tr>
     <td>Login session</td>
     <td>JSESSIONID</td>
-    <td>This cookie is essential for us to identify logged in customers and authorize them to access their private resources</td>
+    <td>This cookie is essential for us to identify logged in customers and authorize them to access their private resources.</td>
   </tr>
   <tr>
     <td>Cookie policy popover</td>
     <td> hideCookiePopover</td>
-    <td> This cookie allows us to recognise returning visitors and hide the cookie policy popover once it has been acknowledged</td>
+    <td> This cookie allows us to recognise returning visitors and hide the cookie policy popover once it has been acknowledged.</td>
   </tr>
 </table>
 
