@@ -98,9 +98,9 @@ We use different methods to collect data from and about you including through:
 
 * Technical Data from the following parties:
 
-        1. analytics providers; and
+ 1. analytics providers; and
 
-        2. search information providers.
+ 2. search information providers.
 
 * Contact and Transaction Data from providers of payment services.
 
