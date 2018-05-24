@@ -137,7 +137,9 @@ Note that we may process your personal data for more than one lawful ground depe
   <tr>
     <td>To register you as a new customer/user </td>
        <td>(a) Identity
+           <br>
            (b) Contact
+           <br>
            (c) Profile</td>
     <td>(a)  Performance of a contract with you (where you are using the Sites as an individual)
 (b) Necessary for our legitimate interests (where you are using the Sites as an authorised user or one of our enterprise customers, in order for us to perform our contract with that customer, to optimise your onboarding and user experience by ensuring you receive relevant instructions and tutorials regarding the use of our Sites, products and service)</td>
