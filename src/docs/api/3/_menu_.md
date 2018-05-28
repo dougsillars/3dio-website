@@ -17,4 +17,4 @@ A-Frame
 * Furniture Library 
 
 Scene Structure
-* Specification
+* Specifications
