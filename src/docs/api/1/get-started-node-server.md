@@ -33,5 +33,6 @@ io3d.config({
 
 ## Next Steps
 
-* [Authentication overview](authentication.md)
 * [Config options](configs.md)
+* [Authentication overview](authentication.md)
+

@@ -12,9 +12,11 @@ API
 * Edit Scene
 
 A-Frame
-* Get Started
-* Components
-* Furniture Library 
+* [Get Started](aframe-get-started.md)
+* [Components](aframe-components.md)
+* [Scenes and Lighting](aframe-scenes.md)
+* [Camera Placement]
+* [Furniture Library](https://furniture.3d.io/)
 
 Scene Structure
-* Specifications
+* [Specifications](scene-structure-specifications.md)
