@@ -1,4 +1,4 @@
-# API Methods
+# Data Import Methods
 * [IFC Import](#ifc-import)
 
 ## Ifc Import
