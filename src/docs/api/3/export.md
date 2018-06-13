@@ -1,4 +1,4 @@
-# Data Export Methods
+# Data Export
 * [DXF Export](#dxf-export)
 * [SVG Floor Plan Export](#svg-floor-plan-export)
 
