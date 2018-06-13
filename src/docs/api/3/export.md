@@ -4,7 +4,7 @@
 
 ## DXF export
 
-Converts sceneStructure to [DXF 2D] Format
+Converts sceneStructure to [DXF 2D](https://en.wikipedia.org/wiki/AutoCAD_DXF) Format.
 
 #### Params
 
