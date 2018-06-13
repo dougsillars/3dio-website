@@ -2,7 +2,7 @@
 
 ## Overview
 
-You've built the "Hello Wall" example, but now you're ready to do more!  Let's walk through the additional components and features you can add to your [A-Frame](https://aframe.io) model.  This document will walk through the components you can add to your model.
+You've built the ["Hello Wall"](aframe-get-started.html) example, but now you're ready to do more!  Let's walk through the additional components and features you can add to your [A-Frame](https://aframe.io) model.  This document lists the architectural components you can add to your model.
 
 ## Types
 * [3D-object](#3d-object)
@@ -54,7 +54,7 @@ Example
 ```
 
 ## Column
-simple structural column object, round or square
+Simple structural column object, round or square.
 
 <img src="../../../img/docs/scene-structure-specs/icon-column.png" alt="column icon" style="max-width: 200px; max-height: 200px; width: initial;"/>
 
@@ -102,7 +102,7 @@ A-Frame Component
 ```
 
 ## Kitchen
-A pre-constructed kitchen that fits along the wall.
+A pre-constructed kitchen that fits along the wall.  Parameters include adding sinks, cooktops and different cabinet types.
 
 <img src="../../../img/docs/scene-structure-specs/icon-kitchen.png" alt="kitchen icon" style="max-width: 200px; max-height: 200px; width: initial;"/>
 
@@ -164,7 +164,7 @@ Example
 
 
 ## Window
-Windows with possible segmentation.
+Windows with possible segmentation.  Typically used as a child object to a wall.
 
 <img src="../../../img/docs/scene-structure-specs/icon-window.png" alt="window icon" style="max-width: 200px; max-height: 200px; width: initial;"/>
 

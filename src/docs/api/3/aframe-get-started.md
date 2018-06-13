@@ -31,7 +31,7 @@ This html page loads the A-Frame and 3dio JavaScript, sets the background to gre
 
 You can pivot the view with your mouse, and navigate with the WASD keys of your keyboard. 
 
-Of course, no model is complete by building a simple wall.  First, let's change the parameters of the wall: [todo add link to scene structure for wall]
+Of course, no model is complete by building a simple wall.  First, let's [modify the parameters](scene-structure-reference.md#wall) of the wall:
 
 ```html
 <a-entity io3d-wall="l: 5; h: 2.4; w: 0.15;"  position="0 0 -5"></a-entity>
@@ -45,7 +45,7 @@ Now the wall is 5 meters long, 2.4m high, and .15m thick.  We can add a window, 
       <a-entity io3d-window="l: 1.6; h: 1.5;" position="3 0.5 0"></a-entity>
     </a-entity>
 ```
-The window is 1.6mx1.5m, and begins 3m from the edge of the wall, at 0.5m height.  We can add additional child elements to the wall, like a door:
+The window is 1.6m x 1.5m, and begins 3m from the edge of the wall, at 0.5m height.  We can add additional child elements to the wall, like a door:
 
 ```html
   <a-entity io3d-wall="l: 5; h: 2.4; w: 0.15;"  position="0 0 -5">
@@ -56,7 +56,7 @@ The window is 1.6mx1.5m, and begins 3m from the edge of the wall, at 0.5m height
 ```
 ![Image](img/hellowall2.png)
 
-In addition to dimensions, the door has additional parameters like the direction the door opens (front), and if the hinge is on the left or right.
+In addition to it's dimensions, doors have additional parameters like the direction the door opens (forward or backward), and if the hinge is on the left or right.
 
 Building out a small room, we can add an additional wall and a bookshelf:
 and a bookshelf:
@@ -82,10 +82,10 @@ We then place the bookself on the 2nd wall.  We set Z=-4 to center it on the wal
 
 
 
-Use the A-Frame components and [Furniture Library](https://furniture.3d.io/) to add more items to the example! [To Do, Add links to the components When page is built]
+Use the [A-Frame components](aframe-components.md) and [Furniture Library](https://furniture.3d.io/) to add more items to the example! [To Do, Add links to the components When page is built]
 
 
 ## Next Steps
-* [A-Frame Scenes and Components](aframe-components.md)
-* [A-Frame Lighting](aframe-lighting.md)
-* [A-Frame Camera](
+* [A-Frame Components](aframe-components.md)
+* [A-Frame Scenes and Lighting](aframe-scenes.md)
+* [A-Frame Camera](aframe-camera.md)
