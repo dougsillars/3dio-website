@@ -1,4 +1,4 @@
-# API Methods
+# Data Export Methods
 * [DXF Export](#dxf-export)
 * [SVG Floor Plan Export](#svg-floor-plan-export)
 
