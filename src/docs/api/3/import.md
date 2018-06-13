@@ -1,4 +1,4 @@
-# Data Import Methods
+# Data Import
 * [IFC Import](#ifc-import)
 
 ## Ifc Import
