@@ -1,8 +1,8 @@
 API
 * Get Started
 * Convert 2D to 3D
-* Import
-* Export
+* [Import](import.md)
+* [Export](export.md)
 * Scene
 
 3D Viewer
