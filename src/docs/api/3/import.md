@@ -7,9 +7,9 @@ converts IFC to sceneStructure
 
 #### Parameters
 
-| Name | Type    | Default | Optional |
+| Name | Type    | Required | Default | 
 | :------------- | :------------- | :------------- | :------------- |
-| content | string       | none       | false|
+| content | string   |  required | none       |
 
 #### Usage
 

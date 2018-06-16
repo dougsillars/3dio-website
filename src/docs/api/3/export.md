@@ -8,10 +8,10 @@ Converts sceneStructure to [DXF 2D](https://en.wikipedia.org/wiki/AutoCAD_DXF) F
 
 #### Parameters
 
-| Name | Type    | Default | Optional|
+| Name 				| Type    | 	Required | Default | 
 | :------------- | :------------- | :------------- | :------------- |
-| sceneStructure | object       | -       |   False|
-| options | object       | -      | True|
+| sceneStructure | object       | required |	-       |  
+| options 			| object      | optional  | -      | 
 
 #### Usage
 
@@ -81,10 +81,10 @@ converts sceneStructure to svg
 
 #### Parameters
 
-| Name | Type    | Default | Optional|
+| Name | Type    | 					Required | Default | 
 | :------------- | :------------- | :------------- |:------------- |
-| sceneStructure | object       | -       | False|
-| options | object       | -      | true|
+| sceneStructure | object       	|	required	| -       | 
+| options | object       | 				optional |-      | 
 
 #### Usage
 
