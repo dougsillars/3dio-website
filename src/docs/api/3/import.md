@@ -1,15 +1,15 @@
 # Data Import
 * [IFC Import](#ifc-import)
 
-## Ifc Import
+## IFC Import
 
-converts ifc to sceneStructure
+converts IFC to sceneStructure
 
-#### Params
+#### Parameters
 
-| params | type    | default |
-| :------------- | :------------- | :------------- |
-| content | string       | none       |
+| Name | Type    | Default | Optional |
+| :------------- | :------------- | :------------- | :------------- |
+| content | string       | none       | false|
 
 #### Usage
 
@@ -18,7 +18,7 @@ io3d.utils.services.call('Scene.importIfc', { arguments: {content: ifc}})
 .then(console.log)
 ```
 
-#### Returns
+#### Response
 
 sceneStructure object
 

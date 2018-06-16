@@ -6,12 +6,12 @@
 
 Converts sceneStructure to [DXF 2D](https://en.wikipedia.org/wiki/AutoCAD_DXF) Format.
 
-#### Params
+#### Parameters
 
-| params | type    | default |
-| :------------- | :------------- | :------------- |
-| sceneStructure | object       | -       |
-| options | object       | -      |
+| Name | Type    | Default | Optional|
+| :------------- | :------------- | :------------- | :------------- |
+| sceneStructure | object       | -       |   False|
+| options | object       | -      | True|
 
 #### Usage
 
@@ -47,7 +47,7 @@ fetch(url, {
 })
 ```
 
-#### Returns
+#### Response
 
 JSON-RPC with DXF string.
 
@@ -79,12 +79,12 @@ EOF
 
 converts sceneStructure to svg
 
-#### Params
+#### Parameters
 
-| params | type    | default |
-| :------------- | :------------- | :------------- |
-| sceneStructure | object       | -       |
-| options | object       | -      |
+| Name | Type    | Default | Optional|
+| :------------- | :------------- | :------------- |:------------- |
+| sceneStructure | object       | -       | False|
+| options | object       | -      | true|
 
 #### Usage
 
@@ -99,7 +99,7 @@ io3d.utils.services.call('Scene.exportSvg', { arguments: {sceneStructure}})
 .then(console.log)
 ```
 
-#### Returns
+#### Response
 
 SVG string
 
