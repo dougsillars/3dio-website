@@ -1,4 +1,4 @@
-# Getting Started
+# A-Frame Getting Started
 
 
 
@@ -27,7 +27,7 @@ Interested in building a 3D model in your browser?  Simply copy this code into h
 
 This html page loads the A-Frame and 3dio JavaScript, sets the background to green (so that we can see the white wall), and displays a 3dio wall segment using the default parameters.  If you load this page in a browser, you'll see a nice white wall.
 
-![Image](img/hellowall1.png)
+![Image](img/hellowall1.jpg)
 
 You can pivot the view with your mouse, and navigate with the WASD keys of your keyboard. 
 
@@ -54,7 +54,7 @@ The window is 1.6m x 1.5m, and begins 3m from the edge of the wall, at 0.5m heig
   </a-entity>
  
 ```
-![Image](img/hellowall2.png)
+![Image](img/hellowall2.jpg)
 
 In addition to it's dimensions, doors have additional parameters like the direction the door opens (forward or backward), and if the hinge is on the left or right.
 
@@ -74,7 +74,7 @@ and a bookshelf:
 
 ```
 
-![Image](img/hellowall3.png)
+![Image](img/hellowall3.jpg)
 
 This inserts a 2nd wall at the edge of the first wall. The 90 degree rotation around the y axis gives us the clean right angle we are looking for.
 

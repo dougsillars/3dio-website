@@ -1,0 +1,1206 @@
+
+<!DOCTYPE html><html lang="en"><head>
+  <meta charset="utf-8">
+  <title>
+    PRODUCTION archilogic.com
+  </title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex, nofollow">
+  <link rel="stylesheet" href="https://use.typekit.net/uut6ooa.css">
+  <script src="viewer-min.js"></script>
+<link rel="shortcut icon" href="/favicon.ico"><style type="text/css">/*
+ * Color
+*/
+/*
+* mixins
+*/
+/*
+* Transitions
+ */
+.popup-fade-enter, .popup-fade-leave-active {
+  opacity: 0;
+}
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1,
+h2 {
+  font-weight: normal;
+}
+h1 {
+  line-height: 35px;
+  font-size: 32px;
+}
+h2 {
+  font-size: 30px;
+}
+@media screen and (max-width: 768px) {
+h2 {
+      font-size: 22px;
+}
+}
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+li {
+  display: inline-block;
+  margin: 0 10px;
+}
+p {
+  font-size: 16px;
+}
+@media screen and (max-width: 768px) {
+p {
+      font-size: 14px;
+}
+}
+input {
+  font-weight: 300;
+  font-family: gibson, sans-serif;
+  letter-spacing: 0.3px;
+  box-shadow: none;
+  background: 0 0;
+  outline: 0;
+  border: 0;
+}
+.row {
+  margin-bottom: 20px;
+}
+.section {
+  padding: 0;
+  flex: 1;
+  max-width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.section--bg-right {
+    background-size: auto 120%;
+    background-repeat: no-repeat;
+    background-color: #27292b;
+    background-image: linear-gradient(to right, #27292b 30%, transparent 50%), url("https://testing.archilogic.com/src/assets/solution-embed-bg.jpg");
+    background-blend-mode: normal;
+    background-position: center right;
+}
+@media screen and (max-width: 768px) {
+.section--bg-right {
+        background: #27292b;
+}
+}
+.section__container {
+    max-width: 1024px;
+    min-height: 680px;
+    flex-direction: row;
+    display: flex;
+    flex: 1;
+    margin: auto;
+    justify-content: center;
+    align-items: stretch;
+    width: 100%;
+}
+@media screen and (max-width: 1024px) and (min-width: 768px) {
+.section__container {
+        padding: 0 24px;
+}
+}
+@media screen and (max-width: 768px) {
+.section__container {
+        flex-direction: column;
+        text-align: center;
+}
+}
+.section__content {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+    flex: 1;
+}
+.section__content--left {
+      padding-left: 0;
+}
+.section__content--right {
+      justify-content: right;
+}
+@media screen and (max-width: 768px) {
+.section__content {
+        align-items: center;
+}
+}
+.section__img {
+    width: 100%;
+}
+.section__panel {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex: 1;
+    flex-grow: 1;
+    flex-shrink: 1;
+    justify-content: center;
+    padding: 0;
+}
+@media screen and (max-width: 768px) {
+.section__panel {
+        align-items: center;
+}
+}
+.section__panel--left {
+      justify-content: flex-start;
+}
+@media screen and (max-width: 768px) {
+.section__panel--bg-center {
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-color: #27292b;
+        background-image: url("https://testing.archilogic.com/src/assets/solution-embed-bg.jpg");
+        background-blend-mode: normal;
+        background-position: center center;
+}
+}
+
+/*
+* Buttons
+*/
+.btn {
+  cursor: pointer;
+  display: inline-block;
+  font-size: 16px;
+  border-radius: 3px;
+  font-weight: 500;
+  white-space: nowrap;
+  padding: 10px 20px;
+  border: 0;
+  text-decoration: none;
+  color: #3d4044;
+  background-color: #e4e5e7;
+  margin-bottom: 2px;
+  box-shadow: 0 2px 0 0 #e4e5e7;
+  -webkit-transition: all 200ms cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  -moz-transition: all 200ms cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  -o-transition: all 200ms cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  transition: all 200ms cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+.btn ~ .btn {
+    margin-left: 10px;
+}
+.btn:hover {
+    box-shadow: 0 2px 0 0 #d1d3d5;
+}
+.btn--small {
+    height: 26px;
+    line-height: 26px;
+    padding: 0 10px;
+    margin-top: 10px;
+}
+.btn--large {
+    height: 40px;
+    font-weight: 500;
+    padding: 12px 20px;
+    width: 200px;
+}
+.btn--white {
+    border: 1px solid #d1d3d5;
+    background: #fcfcfe;
+    box-shadow: 0 0 0 0 rgba(248, 248, 250, 0.15);
+}
+.btn--white:hover {
+      border: 1px solid #d1d3d5;
+      background: #f8f8fa;
+      box-shadow: 0 0 0 0.5rem rgba(208, 208, 210, 0.15);
+}
+.btn--blue {
+    color: white;
+    background-color: #1a6aff;
+    box-shadow: 0 0 0 0 #1a6aff;
+}
+.btn--blue:hover {
+      background-color: #065bf9;
+      box-shadow: 0 0 0 0.5rem rgba(6, 82, 224, 0.15);
+}
+.btn--green {
+    color: #3d4044;
+    background-color: #3df5a2;
+    box-shadow: 0 0 0 0 rgba(6, 82, 224, 0.15);
+}
+.btn--green:hover {
+      background-color: #13e788;
+      box-shadow: 0 0 0 0.5rem rgba(6, 82, 224, 0.15);
+}
+.btn--black {
+    color: #ffffff;
+    background-color: #61666b;
+    box-shadow: 0 2px 0 0 #61666b;
+}
+.btn--black:hover {
+      background-color: #575c60;
+      box-shadow: 0 2px 0 0 #000000;
+}
+.btn--inactive {
+    cursor: initial;
+    border: 1px solid #e4e5e7;
+    background: #fcfcfe;
+    box-shadow: 0 2px 0 0 #fcfcfe;
+}
+.btn--inactive:hover {
+      box-shadow: 0 2px 0 0 #fcfcfe;
+}
+
+/*
+ * Backgrounds
+ */
+.dot-background {
+  background: linear-gradient(-90deg, transparent 0%, transparent 30%, white 30%, white 100%), linear-gradient(0deg, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0.5) 30%, white 30%, white 100%);
+  background-size: 0.3em 0.3em;
+}
+
+/*
+ * Templates
+ */
+.policy-template__container {
+  max-width: 1024px;
+  margin: auto;
+}
+.policy-template li {
+  display: block;
+}
+.policy-template .explore-container {
+  margin-right: auto;
+  margin-left: auto;
+  margin-bottom: 50px;
+  padding: 0 15px;
+  font-weight: 300;
+}
+.policy-template .main {
+  margin-bottom: 20px;
+}
+.policy-template h1 {
+  padding-top: 0.5em;
+  margin-top: 0;
+  font-size: 30px;
+  font-weight: 400;
+}
+.policy-template a {
+  color: #4678bc;
+  text-decoration: none;
+}
+.policy-template a:hover {
+  text-decoration: underline;
+}
+.policy-template td,
+.policy-template th {
+  display: table-cell;
+  vertical-align: inherit;
+}
+.policy-template tr,
+.policy-template th,
+.policy-template td {
+  text-align: left;
+  padding: 0.5em 0;
+}
+.policy-template table {
+  margin-left: 100px;
+  padding: 3px;
+  display: table;
+  border-collapse: separate;
+  border-spacing: 2px;
+  border-color: grey;
+}
+.policy-template div {
+  display: block;
+  margin-bottom: 80px;
+}
+.policy-template tbody tr:hover {
+  background: #e4e5e7;
+}
+.policy-template p {
+  padding: 0.3em 0 0.3em 0;
+  color: #3d4044;
+}
+.policy-template h1,
+.policy-template h2 {
+  color: black;
+  margin: 20px 0;
+}
+.policy-template .markdown {
+  max-width: 700px;
+  font-family: 'Fira Sans', Helvetica, Arial, sans-serif;
+}
+#app {
+  pointer-events: all;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  font-family: 'Gibson', museo-sans, sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: #2c3e50;
+}
+</style><style type="text/css">/*
+ * Color
+*/
+/*
+* mixins
+*/
+/*
+* Transitions
+ */
+.popup-fade-enter, .popup-fade-leave-active {
+  opacity: 0;
+}
+
+/*
+*  header
+*/
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  text-align: left;
+  display: flex;
+  z-index: 100;
+  background: rgba(255, 255, 255, 0.96);
+  height: 64px;
+  box-shadow: none;
+  transition: 400ms ease all;
+  -webkit-transition: transform 400ms ease;
+  -moz-transition: transform 400ms ease;
+  -o-transition: transform 400ms ease;
+  transition: transform 400ms ease;
+}
+.header__wrapper {
+    max-width: 1024px;
+    flex: 1;
+    display: flex;
+    margin: auto;
+    align-items: center;
+}
+.header__content {
+    max-width: 1024px;
+    width: 100%;
+    margin: auto;
+    display: flex;
+    height: 100%;
+    justify-content: space-between;
+    align-items: center;
+}
+@media screen and (max-width: 1024px) {
+.header__content {
+        padding: 0 30px;
+}
+}
+.header--hidden {
+    transform: translateY(-100%);
+}
+.header--scrolled {
+    box-shadow: 0 5px 20px 0 rgba(0, 0, 0, 0.05);
+}
+.header__menu {
+    display: flex;
+    justify-content: center;
+    flex: 1;
+}
+@media (max-width: 768px) {
+.header__menu {
+        display: none;
+}
+}
+.header__cta {
+    display: flex;
+    flex: 1;
+    justify-content: flex-end;
+}
+.header__menu-item {
+    padding: 10px;
+}
+.header__link {
+    font-weight: 100;
+    display: flex;
+    text-decoration: none;
+    align-items: center;
+    color: black;
+}
+.header__link:visited {
+      color: black;
+}
+.header__logo {
+    display: flex;
+    flex: 1;
+    align-items: center;
+}
+.header__logo-image {
+    width: 50px;
+    height: 35px;
+    background-image: url(/AL-logo-simple.png?3c60b6a186bbce1fa73a8b9c0ab60416);
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+.header__logo-label {
+    font-weight: 400;
+    font-size: 28px;
+}
+.header + *:before {
+  content: '';
+  height: 64px;
+  display: flex;
+}
+</style><style type="text/css">/*
+ * Color
+*/
+/*
+* mixins
+*/
+/*
+* Transitions
+ */
+.popup-fade-enter, .popup-fade-leave-active {
+  opacity: 0;
+}
+.home__btn {
+  margin-top: 20px;
+}
+p {
+  line-height: 150%;
+}
+.list {
+  display: flex;
+  flex-direction: row;
+}
+.list h2 {
+    min-height: 100px;
+}
+.list p {
+    min-height: 100px;
+}
+</style><style type="text/css">/*
+ * Color
+*/
+/*
+* mixins
+*/
+/*
+* Transitions
+ */
+.popup-fade-enter[data-v-6b832fcc], .popup-fade-leave-active[data-v-6b832fcc] {
+  opacity: 0;
+}
+.hero[data-v-6b832fcc] {
+  min-height: calc(100vh - 64px);
+  background: linear-gradient(white, #f0f0f2);
+}
+.hero__container[data-v-6b832fcc] {
+    min-height: auto;
+}
+.hero__content[data-v-6b832fcc] {
+    padding: 0;
+    height: 100%;
+}
+.hero__title[data-v-6b832fcc] {
+    font-size: 46px;
+    line-height: 46px;
+    min-width: 400px;
+}
+@media screen and (max-width: 768px) {
+.hero__title[data-v-6b832fcc] {
+        font-size: 32px;
+        max-width: 400px;
+}
+}
+.hero__text[data-v-6b832fcc] {
+    margin-top: 32px;
+    font-weight: 100;
+    font-size: 16px;
+}
+@media screen and (max-width: 768px) {
+.hero__text[data-v-6b832fcc] {
+        max-width: 400px;
+}
+}
+.hero__btn-group[data-v-6b832fcc] {
+    margin-top: 28px;
+    display: flex;
+    justify-content: flex-start;
+}
+@media (max-width: 768px) {
+.hero__btn-group[data-v-6b832fcc] {
+        justify-content: center;
+}
+}
+.hero__btn-text[data-v-6b832fcc] {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #1a6aff;
+    margin-left: 24px;
+    text-decoration: none;
+}
+.hero__panel-3d[data-v-6b832fcc] {
+    padding: 0;
+    flex: 1.5;
+}
+@media (max-width: 768px) {
+.hero__panel-3d[data-v-6b832fcc] {
+        flex: 4;
+}
+}
+</style><style type="text/css">/*
+ * Color
+*/
+/*
+* mixins
+*/
+/*
+* Transitions
+ */
+.popup-fade-enter, .popup-fade-leave-active {
+  opacity: 0;
+}
+.model-3d {
+  pointer-events: none;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  flex: 1;
+  max-width: 100%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+}
+.model-3d__container {
+    height: 100%;
+    width: 100%;
+    flex: 1;
+    position: relative;
+}
+.model-3d__container canvas {
+      pointer-events: none;
+}
+.buttonBar {
+  display: none;
+}
+#versionContainer {
+  display: none;
+}
+</style><style type="text/css">/*
+ * Color
+*/
+/*
+* mixins
+*/
+/*
+* Transitions
+ */
+.popup-fade-enter, .popup-fade-leave-active {
+  opacity: 0;
+}
+.banner {
+  background: white;
+  width: 100%;
+}
+@media screen and (max-width: 1024px) and (min-width: 768px) {
+.banner {
+      padding: 0 24px;
+}
+}
+.banner__container {
+    margin: auto;
+    max-width: 1024px;
+    box-shadow: 0 2px 1px -1px rgba(0, 0, 0, 0.05);
+}
+.banner__item {
+    padding: 24px 12px;
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+@media screen and (max-width: 768px) {
+.banner__item {
+        justify-content: space-evenly;
+}
+}
+.banner__img {
+    width: 10%;
+    -webkit-filter: grayscale(100%);
+    /* Safari 6.0 - 9.0 */
+    filter: grayscale(100%);
+    opacity: 0.5;
+    filter: alpha(opacity=50);
+    /* For IE8 and earlier */
+}
+@media screen and (max-width: 768px) {
+.banner__img {
+        padding: 8px 18px;
+        width: 26%;
+}
+}
+</style><style type="text/css">/*
+ * Color
+*/
+/*
+* mixins
+*/
+/*
+* Transitions
+ */
+.popup-fade-enter, .popup-fade-leave-active {
+  opacity: 0;
+}
+@media screen and (max-width: 768px) {
+.intro {
+    padding: 48px;
+}
+}
+.intro__text {
+  text-align: left;
+  margin-top: 24px;
+  font-weight: 100;
+}
+@media screen and (max-width: 768px) {
+.intro__text {
+      max-width: 400px;
+      text-align: center;
+}
+}
+.intro__panel--left {
+  align-items: center;
+  justify-content: center;
+}
+.intro__title {
+  text-align: left;
+}
+@media screen and (max-width: 768px) {
+.intro__content {
+    margin: 32px 0;
+}
+}
+.intro__content--left {
+  align-items: flex-start;
+}
+@media screen and (max-width: 768px) {
+.intro__content--left {
+      align-items: center;
+      margin-bottom: 48px;
+}
+}
+</style><style type="text/css">/*
+ * Color
+*/
+/*
+* mixins
+*/
+/*
+* Transitions
+ */
+.popup-fade-enter, .popup-fade-leave-active {
+  opacity: 0;
+}
+.image-slider {
+  user-select: none;
+}
+.image-slider__handle {
+    top: 0;
+    right: 0;
+    position: absolute;
+    height: 100%;
+    width: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.image-slider__label {
+    text-transform: uppercase;
+    padding-top: 12px;
+}
+.image-slider__label--left {
+      position: absolute;
+      color: #c5c7c9;
+}
+.image-slider__label--right {
+      position: absolute;
+      right: 0;
+}
+.image-slider__control {
+    width: 50px;
+    height: 50px;
+    border-radius: 25px;
+    transform: translateX(-25px);
+    border: 2px solid gray;
+    background-color: white;
+    position: absolute;
+    display: flex;
+    color: gray;
+    align-items: center;
+    justify-content: space-around;
+    z-index: 99;
+}
+.image-slider__control > div {
+      font-size: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transform: rotateZ(-90deg);
+}
+.image-slider__control > div:last-child {
+      transform: rotateZ(90deg);
+}
+.image-slider-wrapper {
+  position: relative;
+  display: inline-block;
+}
+.image-slider-wrapper > * {
+  pointer-events: none;
+}
+.image-slider-wrapper img {
+  user-select: none;
+  max-width: 360px;
+}
+.image-slider-mask {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: 50%;
+  max-width: 100%;
+  overflow: hidden;
+  resize: horizontal;
+}
+.mask-transition {
+  transition: 400ms ease-out all;
+}
+</style><style type="text/css">/*
+ * Color
+*/
+/*
+* mixins
+*/
+/*
+* Transitions
+ */
+.popup-fade-enter, .popup-fade-leave-active {
+  opacity: 0;
+}
+@media screen and (max-width: 768px) {
+.solution-preview-embed__container {
+    flex-direction: column-reverse;
+}
+}
+@media screen and (max-width: 768px) {
+.solution-preview-embed__panel {
+    min-height: 460px;
+}
+}
+</style><style type="text/css">/*
+ * Color
+*/
+/*
+* mixins
+*/
+/*
+* Transitions
+ */
+.popup-fade-enter, .popup-fade-leave-active {
+  opacity: 0;
+}
+.solution-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  flex-direction: column;
+  padding: 48px;
+  background-color: white;
+}
+@media screen and (max-width: 768px) {
+.solution-header {
+      flex: 1;
+      width: 100%;
+}
+}
+.solution-header--inverted {
+    background-color: #27292b;
+    color: white;
+}
+.solution-header--transparent {
+    background-color: rgba(255, 255, 255, 0);
+}
+.solution-header__icon {
+    margin-top: 48px;
+}
+.solution-header__title {
+    margin-top: 24px;
+}
+.solution-header__text {
+    margin-top: 24px;
+    max-width: 400px;
+    font-weight: 100;
+}
+.solution-header__btn {
+    margin: 48px 0;
+}
+.solution-header__label {
+    margin: 48px 0;
+    color: #1a6aff;
+    background-color: transparent;
+    text-decoration: none;
+}
+.solution-header__label:hover {
+    margin: 48px 0;
+    color: #1a6aff;
+    background-color: transparent;
+}
+@media screen and (max-width: 768px) {
+.solution-header {
+      align-items: center;
+}
+}
+</style><style type="text/css">
+.svg-icon[data-v-387453e9] {
+  height: 40px;
+  width: 40px;
+}
+.svg-icon--inverted[data-v-387453e9] {
+    filter: grayscale(100%) invert(100%);
+}
+.svg-icon[data-v-387453e9]:hover {
+  transition: 400ms all;
+  transform: scale(1.05);
+}
+</style><style type="text/css">/*
+ * Color
+*/
+/*
+* mixins
+*/
+/*
+* Transitions
+ */
+.popup-fade-enter, .popup-fade-leave-active {
+  opacity: 0;
+}
+.solution-preview-floorplan__panel {
+  flex: 2;
+}
+.solution-preview-floorplan__panel--left {
+    flex: 3;
+}
+@media screen and (max-width: 768px) {
+.solution-preview-floorplan__panel--left {
+        flex: 1;
+}
+}
+@media screen and (max-width: 768px) {
+.solution-preview-floorplan__panel {
+      flex: 1;
+}
+}
+</style><style type="text/css">/*
+ * Color
+*/
+/*
+* mixins
+*/
+/*
+* Transitions
+ */
+.popup-fade-enter, .popup-fade-leave-active {
+  opacity: 0;
+}
+.solution-preview-data-io {
+  background-image: url("https://testing.archilogic.com/src/assets/solution-data-io-bg.jpg");
+}
+@media screen and (max-width: 768px) {
+.solution-preview-data-io__container {
+      flex-direction: column-reverse;
+}
+}
+@media screen and (max-width: 768px) {
+.solution-preview-data-io__panel {
+      min-height: 460px;
+      background-image: url("https://testing.archilogic.com/src/assets/solution-data-io-bg.jpg");
+}
+}
+</style><style type="text/css">/*
+ * Color
+*/
+/*
+* mixins
+*/
+/*
+* Transitions
+ */
+.popup-fade-enter, .popup-fade-leave-active {
+  opacity: 0;
+}
+.solution-preview-office__container {
+  box-shadow: 0 2px 1px -1px rgba(0, 0, 0, 0.05);
+}
+.solution-preview-office__panel {
+  flex: 2;
+}
+.solution-preview-office__panel--left {
+    flex: 3;
+}
+.solution-preview-office__img-frame {
+  padding: 20px;
+}
+@media screen and (max-width: 1024px) {
+.solution-preview-office__img-frame {
+      padding-top: 48px;
+}
+}
+.solution-preview-office__img-frame:before {
+  content: '';
+  position: absolute;
+  width: 100px;
+  height: 500px;
+  background-image: linear-gradient(to right, white, transparent);
+}
+</style><style type="text/css">/*
+ * Color
+*/
+/*
+* mixins
+*/
+/*
+* Transitions
+ */
+.popup-fade-enter, .popup-fade-leave-active {
+  opacity: 0;
+}
+.showcase {
+  min-height: 600px;
+}
+.showcase__text {
+    max-width: 600px;
+    margin: 24px 0;
+    text-align: center;
+    font-weight: 100;
+}
+@media screen and (max-width: 768px) {
+.showcase {
+      height: auto;
+      padding: 40px;
+}
+}
+.showcase__content {
+    align-items: center;
+    padding: 48px 0;
+}
+.showcase__items {
+    display: flex;
+    margin: 24px 0;
+    width: 100%;
+    justify-content: space-between;
+}
+@media screen and (max-width: 768px) {
+.showcase__items {
+        flex-direction: column;
+}
+}
+.showcase__item {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    align-items: center;
+}
+.showcase__item + .showcase__item {
+    margin-left: 24px;
+}
+@media screen and (max-width: 768px) {
+.showcase__item + .showcase__item {
+        margin-left: 0;
+}
+}
+.showcase__title {
+    margin-top: 16px;
+    text-align: center;
+    line-height: 2em;
+    margin-bottom: 16px;
+}
+.showcase__item-title {
+    line-height: 1.5;
+    padding: 32px 0 4px 0;
+    text-align: center;
+    text-transform: uppercase;
+    color: #1a6aff;
+    font-weight: 400;
+}
+.showcase__item-text {
+    text-align: center;
+    font-weight: 100;
+    margin: 18px 0;
+    font-size: 16px;
+}
+@media screen and (max-width: 768px) {
+.showcase__item-text {
+        margin-bottom: 32px;
+}
+}
+.showcase__item-label {
+    font-size: 16px;
+}
+.showcase__item-img {
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: contain;
+    flex: 1;
+    width: 100%;
+    height: 100%;
+}
+.showcase__item-frame {
+    background-color: #f0f0f2;
+    flex: 1;
+    padding: 2em 2em;
+    width: 100%;
+    max-width: 100%;
+    min-height: 260px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+@media screen and (max-width: 768px) {
+.showcase__item-frame {
+        height: 200px;
+}
+}
+</style><style type="text/css">
+.contact {
+  flex: 1;
+  color: white;
+  background-image: url("https://testing.archilogic.com/src/assets/contact-bg.png");
+  min-height: auto;
+}
+.contact .section__container {
+    min-height: auto;
+    height: 400px;
+}
+.contact__text {
+    max-width: 400px;
+    margin-bottom: 24px;
+    margin-top: 24px;
+}
+</style><style type="text/css">/*
+ * Color
+*/
+/*
+* mixins
+*/
+/*
+* Transitions
+ */
+.popup-fade-enter[data-v-2cb694b4], .popup-fade-leave-active[data-v-2cb694b4] {
+  opacity: 0;
+}
+.footer[data-v-2cb694b4] {
+  flex-grow: 0;
+  min-height: 0;
+  color: #fcfcfe;
+  background-color: #3d4044;
+}
+@media screen and (max-width: 1024px) and (min-width: 768px) {
+.footer[data-v-2cb694b4] {
+      padding: 0 24px;
+}
+}
+.footer__content[data-v-2cb694b4] {
+    display: inline-block;
+    margin: auto;
+    width: 100%;
+    flex: 1;
+    max-width: 1024px;
+}
+.footer__columns[data-v-2cb694b4] {
+    display: flex;
+    margin: 20px 20px 20px 0;
+}
+@media screen and (max-width: 720px) {
+.footer__columns[data-v-2cb694b4] {
+        flex-direction: column;
+        text-align: left;
+}
+}
+.footer__column[data-v-2cb694b4] {
+    flex: 1;
+}
+.footer__column--middle[data-v-2cb694b4] {
+    flex: 2;
+}
+.footer__bottom[data-v-2cb694b4] {
+    border-top: 1px solid #fcfcfe;
+    padding: 20px 0;
+    display: flex;
+}
+.footer__li[data-v-2cb694b4] {
+    margin-right: 20px;
+    margin-left: 0;
+}
+.footer__li--first[data-v-2cb694b4] {
+      margin-right: auto;
+}
+.footer__li--last[data-v-2cb694b4] {
+      margin-right: 0;
+}
+.footer__link[data-v-2cb694b4] {
+    display: inline-block;
+    color: #fcfcfe;
+}
+</style></head>
+
+<body>
+  <div id="app"><header class="header"><div class="header__wrapper"><div class="header__content"><div class="header__logo"><a href="/" class="header__link router-link-exact-active router-link-active"><div class="header__logo-image"></div> <div class="header__logo-label">
+            Archilogic
+          </div></a></div> <div class="header__menu"><div class="header__menu-item"><a href="/#solutions" class="header__link">Solutions</a></div> <div class="header__menu-item"><a href="" class="header__link">References</a></div> <div class="header__menu-item"><a href="/#contact" class="header__link">Contact</a></div></div> <div class="header__cta"><a href="https://testing-dashboard.archilogic.com" target="_blank" class="btn btn--blue">Sign Up</a></div></div></div></header> <div class="home"><section data-v-6b832fcc="" class="section hero"><div data-v-6b832fcc="" class="section__container hero__container"><div data-v-6b832fcc="" class="section__panel"><div data-v-6b832fcc="" class="section__content section__content--left"><h1 data-v-6b832fcc="" class="hero__title">
+          The New Standard for Communicating Interiors
+        </h1> <p data-v-6b832fcc="" class="hero__text">
+          Whether you want to show beautiful 3D models, create custom floor plans, or simply need to turn a floor plan sketch into accurate building data - Archilogic has you covered.
+        </p> <div data-v-6b832fcc="" class="hero__btn-group"><div data-v-6b832fcc="" class="btn btn--blue">
+            Get in touch
+          </div> <a data-v-6b832fcc="" href="/#solutions" class="hero__btn-text">
+            Learn more
+          </a></div></div></div> <div data-v-6b832fcc="" class="section__panel hero__panel-3d"><div data-v-6b832fcc="" class="section__content hero__content"><div data-v-6b832fcc="" class="model-3d"><div class="model-3d__container"><canvas id="canvas" width="352" height="455" style="touch-action: none; user-select: none; -webkit-user-drag: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0); position: absolute; top: 0px; left: 0px;"></canvas><div class="buttonBar"><div class="bookmarkContainer hidden"></div><div id="bnCameraBirdView" class="button active"><svg viewBox="0 0 100 100" width="100%" height="100%"><path id="bird" d="M17,59.37v1a1,1,0,0,0,.78-.35,1,1,0,0,0,.22-.39l0-.16v-.1c0-.1,0-.33,0-.66V35h-.31l.24.21.07-.21h-.31l.24.21L17.77,35l0,.3.19-.1L17.77,35l0,.3L62.5,28.22h.06l.46.09L82.72,38.88h0V63.69H83l-.23-.2-.06.2H83l-.23-.2.23.2L83,63.4l-.18.09.23.2L83,63.4,39.69,71.18h-.05l-.25,0-.15,0L18.11,58.79l-.38-.22-.11-.07,0,0-.14.24.15-.24h0l-.14.24.15-.24-.49.8.51-.79h0l-.49.8.51-.79-.57.86.6-.84,0,0-.56.86.6-.84-.61.85.68-.79-.07-.05-.61.85.68-.79-.68.79.78-.69-.1-.1-.68.79.78-.69-.78.69.89-.54-.12-.15-.78.69.89-.54-.89.54h1a1,1,0,0,0-.15-.54l-.89.54h0v0H16a1,1,0,0,0,.15.54l.18.22.13.1.07,0,.53.31L38.19,72.91a3,3,0,0,0,1.45.36l.42,0,43.28-7.78a1.82,1.82,0,0,0,1.47-1.76V38.88A2.18,2.18,0,0,0,83.71,37L64,26.47a3.19,3.19,0,0,0-1.44-.34l-.38,0L17.5,33.22A1.8,1.8,0,0,0,16,35V59.33l.69,0-.69,0v0l.69,0-.69,0,1,.06-1-.11v.05l1,.06-1-.11,1,.11-1-.22,0,.11,1,.11-1-.23,1,.23-1-.42-.06.2,1,.22-1-.42,1,.42-.78-.68-.17.26,1,.42-.78-.68.78.68v-1a1,1,0,0,0-.78.36l.78.68v-1H16v1Z"></path><polyline points="63.96 44.08 63.96 27.39 61.87 27.39 61.87 44.08"></polyline><polyline id="bird" points="40.15 48.73 83.57 40.41 83.17 38.36 39.75 46.68"></polyline><polyline points="16.52 35.25 39.43 48.6 40.48 46.8 17.57 33.45"></polyline><polyline points="38.94 46.16 38.94 71.18 41.02 71.18 41.02 46.16"></polyline></svg></div><div id="bnCameraFloor" class="button"><svg viewBox="0 0 100 100" width="100%" height="100%"><path id="person" d="M75.2,48.21l-4.69-13.6a3.28,3.28,0,0,0-1.74-1.92L57.19,27.42a3.26,3.26,0,0,0-1.32-.27v0h-7.8a3.28,3.28,0,0,0-2.52,1.52l-6.79,10.8L29,42.39a3.28,3.28,0,0,0,1.88,6.29l11-3.28A3.29,3.29,0,0,0,43.66,44L45,41.79v11L41.67,66a3.28,3.28,0,0,0,0,1.53l3.48,15.55a3.29,3.29,0,0,0,3.2,2.57,3.34,3.34,0,0,0,.72-.08,3.28,3.28,0,0,0,2.49-3.92L48.22,66.84,51.51,54a3.27,3.27,0,0,0,.1-.81V52.8h.94V82.34a3.28,3.28,0,0,0,6.56,0V35.51l5.65,2.58L69,50.35a3.28,3.28,0,1,0,6.21-2.14Z"></path><circle cx="52" cy="19.94" r="5.94" style="fill:none;stroke:#000;stroke-miterlimit:10;stroke-width:2px"></circle></svg></div><div id="bnCameraNextBookmark" class="button"><svg viewBox="0 0 100 100" width="100%" height="100%"><path id="bookmark" d="M36.15,28.2h30a.15.15,0,0,1,.15.14L67,71.45a.15.15,0,0,1-.23.12L51.25,61.23a.15.15,0,0,0-.16,0L36.23,71.57a.15.15,0,0,1-.23-.12V28.35A.15.15,0,0,1,36.15,28.2Z"></path></svg></div><div id="bnCameraPresentation" class="button"><svg viewBox="0 0 100 100" width="100%" height="100%"><path id="play" d="M69.1,48.82,37.31,30.36a.21.21,0,0,0-.31.18V67.46a.21.21,0,0,0,.31.18L69.1,49.18A.21.21,0,0,0,69.1,48.82Z"></path></svg></div><div id="bnFullScreen" class="button active"><svg viewBox="0 0 100 100" width="100%" height="100%"><polygon id="fullscreen" transform="translate(50.000001, 50.000001) rotate(90.000000) translate(-50.000001, -50.000001) " points="65.0002411 64.2933035 35.7066984 34.9997608 45.9971296 34.9997608 45.9971296 34 34 34 34 45.9971296 34.9997608 45.9971296 34.9997608 35.7066984 64.2933035 65.0002411 54.0028723 65.0002411 54.0028723 66.0000019 66.0000019 66.0000019 66.0000019 54.0028723 65.0002411 54.0028723"></polygon></svg></div></div></div></div></div></div></div> <div data-v-6b832fcc="" class="banner"><div class="banner__container"><div class="banner__item"><img src="https://testing.archilogic.com/src/assets/logo-banner-jll.png" alt="JLL logo" class="banner__img"><img src="https://testing.archilogic.com/src/assets/logo-banner-bnp.png" alt="BNP PARIBAS logo" class="banner__img"><img src="https://testing.archilogic.com/src/assets/logo-banner-schwabisch-hall.png" alt="Schwäbisch Hall logo" class="banner__img"><img src="https://testing.archilogic.com/src/assets/logo-banner-cubicasa.png" alt="CUBICASA logo" class="banner__img"><img src="https://testing.archilogic.com/src/assets/logo-banner-designfunktion.png" alt="Design Funktion logo" class="banner__img"></div></div></div></section> <section class="section intro"><div class="section__container"><div class="section__panel intro__panel"><div class="section__content intro__content intro__content--left"><div class="image-slider-wrapper intro__image-slider"><div class="image-slider-mask" style="width: 180px;"><img src="https://testing.archilogic.com/floor-plan-2d.png?60b08c4597b16f2aecd06148ddd5b2c2"></div> <div class="image-slider__handle" style="left: 180px;"><div class="image-slider__control"><div>⌃</div> <div>⌃</div></div></div> <img src="https://testing.archilogic.com/floor-plan-3d.png?62fd4baa14655d026e4e8e893efe37ce"> <div class="image-slider__label image-slider__label--left">before</div> <div class="image-slider__label image-slider__label--right">after</div></div></div></div> <div class="section__panel"><div class="section__content intro__content"><h2 class="intro__title">
+          Let us do the hard work for you
+        </h2> <p class="intro__text">
+          Don’t worry about the quality of your plans - our technology will help you make them beautiful. The magic happens in the background, and once we’re done you’ll get to choose how to interact with your clients. Upload one or thousands - we’re ready.
+        </p></div></div></div></section> <section id="solutions" class="section section--bg-right solution-preview-embed__header"><div class="section__container solution-preview-embed__container"><div class="section__panel solution-preview-embed__panel"><div class="section__content section__content--left"><div class="solution-header"><img data-v-387453e9="" src="https://testing.archilogic.com/src/assets/solution-embed-icon.svg" class="svg-icon solution-header__icon"> <h2 class="solution-header__title">3D Floor Plans in any website made easy</h2> <div class="solution-header__text">Present apartments and offices in intuitive 3D. Easy to embed in websites and share with clients. </div> <div class="solution-header__btn btn btn--blue">
+    Learn more
+  </div></div></div></div> <div class="section__panel solution-preview-embed__panel section__panel--bg-center"><div class="section__content"></div></div></div></section> <section class="section solution-preview-floorplan"><div class="section__container"><div class="section__panel solution-preview-floorplan__panel--left"><div class="section__img-frame"><img src="https://testing.archilogic.com/src/assets/solution-floorplan.png" alt="" class="section__img"></div></div> <div class="section__panel solution-preview-floorplan__panel"><div class="section__content"><div class="solution-header"><img data-v-387453e9="" src="https://testing.archilogic.com/src/assets/solution-floorplan-icon.svg" class="svg-icon solution-header__icon"> <h2 class="solution-header__title">Floor Plans with a Personal Touch</h2> <div class="solution-header__text">Help potential buyers and renters to understand a property with our beautiful floor plans. Just upload your existing materials and let us prepare them for your online and offline presentations. </div> <div class="solution-header__btn btn btn--blue">
+    Learn more
+  </div></div></div></div></div></section> <section class="section section--bg-right solution-preview-data-io"><div class="section__container solution-preview-data-io__container"><div class="section__panel solution-preview-data-io__panel"><div class="section__content section__content--left"><div class="solution-header solution-header--inverted"><img data-v-387453e9="" src="https://testing.archilogic.com/src/assets/solution-data-io-icon.svg" class="svg-icon solution-header__icon svg-icon--inverted"> <h2 class="solution-header__title">Data I/O for integration into your existing workflows</h2> <div class="solution-header__text">Have plans which are unsuitable for your existing drawing tools? Select any uploaded plan and export clean, standardised BIM data for use in your other workflows. </div> <div class="solution-header__btn btn btn--white">
+    Learn more
+  </div></div></div></div> <div class="section__panel solution-preview-data-io__panel section__panel--bg-center"><div class="section__content"></div></div></div></section> <section class="section solution-preview-office"><div class="section__container solution-preview-office__container"><div class="section__panel solution-preview-office__panel--left"><div class="section__content"><div class="solution-preview-office__img-frame"><img src="https://testing.archilogic.com/src/assets/solution-office-alt.png" alt="" class="section__img"></div></div></div> <div class="section__panel solution-preview-office__panel"><div class="section__content"><div class="solution-header"><img data-v-387453e9="" src="https://testing.archilogic.com/src/assets/solution-office-icon.svg" class="svg-icon solution-header__icon"> <h2 class="solution-header__title">Premium Office 3D Floor Plans</h2> <div class="solution-header__text">Send us your office plan and supporting materials and receive a state-of-the-art, web-based 3D Model. We’ll make sure one of our experts includes your feedback and requirements. </div> <div class="solution-header__btn btn btn--blue">
+    Learn more
+  </div></div></div></div></div></section> <section class="section showcase"><div class="section__container"><div class="section__panel"><div class="section__content showcase__content"><h1 class="showcase__title">Ready for scale</h1> <p class="showcase__text">All of our services are made with developers in mind. They are available as APIs for easy integration into your existing infrastructure and work-flows. We can handle very large volumes of requests - try us! See what others have done:</p> <div class="showcase__items"><div class="showcase__item"><div class="showcase__item-frame"><div class="showcase__item-img" style="background-image: url(&quot;"https://testing.archilogic.com/src/assets/showcase-homestory.png&quot;);"></div></div> <div class="showcase__item-title">Homestory</div> <div class="showcase__item-label">put a homestaging AI agent in your pocket</div> <div class="showcase__item-text">Archilogic's homestaging AI computes solutions for your own living room </div></div><div class="showcase__item"><div class="showcase__item-frame"><div class="showcase__item-img" style="background-image: url(&quot;"https://testing.archilogic.com/src/assets/showcase-newhome.png&quot;);"></div></div> <div class="showcase__item-title">Archilyse</div> <div class="showcase__item-label">put a homestaging AI agent in your pocket</div> <div class="showcase__item-text">Archilogic's homestaging AI computes solutions for your own living room </div></div><div class="showcase__item"><div class="showcase__item-frame"><div class="showcase__item-img" style="background-image: url(&quot;"https://testing.archilogic.com/src/assets/showcase-archilyse.png&quot;);"></div></div> <div class="showcase__item-title">Newhome</div> <div class="showcase__item-label">put a homestaging AI agent in your pocket</div> <div class="showcase__item-text">Archilogic's homestaging AI computes solutions for your own living room </div></div></div></div></div></div></section></div> <section id="contact" class="section contact"><div class="section__container"><div class="section__panel"><h2 class="contact__title">You need something special?</h2> <p class="contact__text">
+        You have thousands of floor plans that are hard to deal with?
+        <br> You have great ideas that you want us to help you with
+      </p> <div class="btn btn--green home__btn">
+        Get in touch
+      </div></div></div></section> <section data-v-2cb694b4="" class="section footer"><div data-v-2cb694b4="" class="footer__content"><div data-v-2cb694b4="" class="footer__columns"><div data-v-2cb694b4="" class="footer__column">
+        Archilogic
+      </div> <div data-v-2cb694b4="" class="footer__column--middle">
+        Latest blog posts
+      </div> <div data-v-2cb694b4="" class="footer__column">
+        Explore
+      </div></div> <div data-v-2cb694b4="" class="footer__bottom"><li data-v-2cb694b4="" class="footer__li footer__li--first">© Copyright 2018, Archilogic</li> <li data-v-2cb694b4="" class="footer__li"><a data-v-2cb694b4="" href="/tos" class="footer__link">
+          Terms of services
+        </a></li> <li data-v-2cb694b4="" class="footer__li"><a data-v-2cb694b4="" href="/privacy-policy" class="footer__link">
+          Privacy policy
+        </a></li> <li data-v-2cb694b4="" class="footer__li footer__li--last"><a data-v-2cb694b4="" href="/cookies" class="footer__link">
+          Cookies
+        </a></li></div></div></section></div>
+<script type="text/javascript" src="build.js"></script><div id="versionContainer" class="fade-in"><div>Version 0.7.3, Build 2018.06.09</div><div id="versionContainerButton">(view <a href="devlog/devlog.html" target="_blank">devlog</a>)</div></div>
+
+</body></html>

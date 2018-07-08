@@ -6,10 +6,10 @@ API
 * Scene
 
 3D Viewer
-* Get Started
-* Embed
-* Customize
-* Edit Scene
+* [Get Started](3dviewer-getstarted.md)
+* [Embed](3dviewer-embed.md)
+* [Customize](3dviewer-customize.md)
+
 
 A-Frame
 * [Get Started](aframe-get-started.md)
